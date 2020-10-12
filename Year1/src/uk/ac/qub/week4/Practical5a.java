@@ -3,6 +3,7 @@
  */
 package uk.ac.qub.week4;
 
+import java.util.Random;
 /**
  * @author geraldcraig
  *
@@ -12,6 +13,9 @@ public class Practical5a {
 	/**
 	 * @param args
 	 */
+	
+	Random rand = new Random();
+	
 	public static void main(String[] args) {
 
 		oddEven(10);
@@ -47,4 +51,7 @@ public class Practical5a {
 		 }
 	 }
 
+	 public static void randomNumbers() {
+		 
+	 }
 }
