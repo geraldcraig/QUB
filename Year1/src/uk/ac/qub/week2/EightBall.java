@@ -1,7 +1,7 @@
 /**
  * 
  */
-package uk.ac.qub.week4;
+package uk.ac.qub.week2;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -10,13 +10,12 @@ import java.util.Scanner;
  * @author geraldcraig
  *
  */
-public class Magic8Ball {
+public class EightBall {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-
 		Scanner scan = new Scanner(System.in);
 		Random rand = new Random();
 
@@ -59,6 +58,7 @@ public class Magic8Ball {
 			System.out.println("I don't know");
 		}
 		scan.close();
+
 	}
 
 }
