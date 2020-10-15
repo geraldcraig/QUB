@@ -14,13 +14,14 @@ public class Practical5a {
 	 * @param args
 	 */
 	
-	Random rand = new Random();
+	
 	
 	public static void main(String[] args) {
 
 		oddEven(10);
 		upperToLower('a');
 		isMultiple(4, 15);
+		randomNumbers();
 
 	}
 
@@ -52,6 +53,11 @@ public class Practical5a {
 	 }
 
 	 public static void randomNumbers() {
-		 
+		 Random rand = new Random();
+		 int num = 0;
+		 for (int i = 0; i < 10; i++) {
+			 num = rand.nextInt(100) + 1;
+			 System.out.println(num);
+		 }
 	 }
 }

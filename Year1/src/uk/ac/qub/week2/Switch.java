@@ -16,9 +16,10 @@ public class Switch {
 		// output text
 		int number;
 		number = 1;
-		
+
 		switch (number + 2) {
-		case 1: System.out.println("It's a one");
+		case 1:
+			System.out.println("It's a one");
 			System.out.println("And a nice one at that");
 			break;
 		case 2:
