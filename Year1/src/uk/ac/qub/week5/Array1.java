@@ -16,14 +16,18 @@ public class Array1 {
 		double total = 0;
 		double avg = 0;
 		double[] shoeSize = { 11, 10, 10, 9, 11, 9, 11, 8.5 };
+		
+		System.out.printf("%s%18s\n", "Shoe Size", "Current Avg");
 		for (int i = 0; i < shoeSize.length; i++) {
 			
 			total = total + shoeSize[i];
 			avg = total/shoeSize.length;
 			
-			System.out.println(total);
-			System.out.println(avg);
+			System.out.printf("%s%18s\n", shoeSize[i], avg);
+			
 		}
+		
+		System.out.println("\nOverall average is : " + avg);
 	}
 
 }
