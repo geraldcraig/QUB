@@ -7,7 +7,7 @@ package uk.ac.qub.week5;
  * @author geraldcraig
  *
  */
-public class Practical5a {
+public class Practical6a {
 	
 	public static final double Rate = 10.25;
 
