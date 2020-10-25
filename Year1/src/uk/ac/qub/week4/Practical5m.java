@@ -21,23 +21,20 @@ public class Practical5m {
 
 		String coinCall;
 		
-		int count1 = 0;
-		int count2 = 0;
+		int count = 0;
 		System.out.println("Heads or Tails?");
-		coinCall = scan.next().toLowerCase();
+		coinCall = scan.next();
 		System.out.println(coinCall);
 		
-		coinToss();
-
-		if (coinCall == "heads") {
-			count1 = 1;
-			System.out.println(count1);
-		} if (coinCall == "tails") {
-			count2 = 2;
-			System.out.println(count2);
+		if (coinCall.equalsIgnoreCase("Heads")) {
+			count = 1;
+			System.out.println(count);
+		} else {
+			count = 2;
+			System.out.println(count);
 		}
 		
-
+		coinToss();
 		scan.close();
 	}
 
