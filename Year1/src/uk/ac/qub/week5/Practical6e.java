@@ -3,8 +3,6 @@
  */
 package uk.ac.qub.week5;
 
-import java.util.Scanner;
-
 /**
  * @author geraldcraig
  *
@@ -15,38 +13,33 @@ public class Practical6e {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		String name;
-		int a = 0;
-		int e = 0;
-		int i = 0;
-		int o = 0;
-		int u = 0;
-		System.out.println("Enter first name");
-		name = scan.next().toLowerCase();
 
-		for (int j = 0; j < name.length(); j++) {
-			if (name.charAt(j) == 'a') {
-				a = a + 1;
-				System.out.println("Total for 'a' is : " + a);
-			}
-			if (name.charAt(j) == 'e') {
-				e = e + 1;
-				System.out.println("Total for 'e' is : " + e);
-			}
-			if (name.charAt(j) == 'i') {
-				i = i + 1;
-				System.out.println("Total for 'i' is : " + i);
-			}
-			if (name.charAt(j) == 'o') {
-				o = o + 1;
-				System.out.println("Total for 'o' is : " + o);
-			}
-			if (name.charAt(j) == 'u') {
-				u = u + 1;
-				System.out.println("Total for 'u' is : " + u);
-			}
-		}
-		scan.close();
+		double temperatures[] = { 3.4, 4.2, 9.0, 2.2, 4.5, 6.4, 3.1 };
+
+		avgTemp(temperatures);
+
 	}
+
+	public static void avgTemp(double[] temps) {
+		double max = temps[0];
+		double min = temps[0];
+		double avg = 0;
+
+		for (int i = 0; i < temps.length; i++) {
+			avg = avg + temps[i];
+
+			if (temps[i] > max) {
+				max = temps[i];
+			}
+			if (temps[i] < min) {
+				min = temps[i];
+			}
+
+		}
+		System.out.printf("Total is : %.2f\n", avg);
+		System.out.printf("Average temperature is : %.2f\n", avg / temps.length);
+		System.out.printf("Max temperature is : %.2f\n", max);
+		System.out.printf("Min temperature is : %.2f\n", min);
+	}
+
 }

@@ -20,12 +20,12 @@ public class Practical6b {
 	
 		}
 	public static void avgTemp(double[] temps) {
-		double count = 0;
+		double avg = 0;
 		for (int i = 0; i < temps.length; i++) {
-			count = count + temps[i];
+			avg = avg + temps[i];
 		}
-		System.out.printf("Total : %.2f\n", count);
-		System.out.printf("Average is : %.2f", count/temps.length);
+		System.out.printf("Total : %.2f\n", avg);
+		System.out.printf("Average is : %.2f", avg/temps.length);
 	}
 	
 	
