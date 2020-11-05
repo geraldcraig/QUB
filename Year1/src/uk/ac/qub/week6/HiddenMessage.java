@@ -22,14 +22,24 @@ public class HiddenMessage {
 				{ "was ", "always ", "Andy's ", "wow" }, { "toy.", "i" }, { "was", "never", "keen" },
 				{ "because ", "I ", "don't " }, { "rate", "Tom", "Hanks.", "Woody ", "is", "quite", "dour" },
 				{ "but", " Lightyear,", "could fly, sort of...", "Anyhow" }, { "the", "movies", "are", "classic" } };
-
-		/*for (int i = 0; i < message.length; i++) {
+		String hiddenMessage = "";
+		for (int row = 0; row < message.length; row++) {
+			for (int col = 0; col < message[row].length; col++) {
+				System.out.println(message[row][col]);
 			
-		}*/
-		for (String[] row : message) 
-		System.out.println(Arrays.toString(row));
+		}
+			int lastIndex = message[row].length - 1;
+			//System.out.println(message[row][lastIndex]);
+			String lastWord = message[row][lastIndex];
+			lastWord = lastWord.toUpperCase();
+			char lastChar = lastWord.charAt(lastWord.length()-1);
+			hiddenMessage += lastChar;
 		
+			
 		
-	}
+		}
+		System.out.print("Hidden message is : " + hiddenMessage);
+		
 
+}
 }
