@@ -23,8 +23,8 @@ public class CoinToss {
 		String call;
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Heads or tails?");
-		call = scan.next().toLowerCase(); 
-		
+		call = scan.next().toLowerCase();
+
 		// map the call to a numeric value. 1 = heads and 2 = tails
 		if (call == "heads") {
 			callConvert = 1;
@@ -50,9 +50,7 @@ public class CoinToss {
 		} else {
 			System.out.print(" you lose");
 		}
-	}
-		
-
+		scan.close();
 	}
 
-
+}

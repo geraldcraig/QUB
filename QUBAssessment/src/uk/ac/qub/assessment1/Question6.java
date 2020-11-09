@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author geraldcraig
  *
  */
-public class QUB {
+public class Question6 {
 
 	/**
 	 * @param args
