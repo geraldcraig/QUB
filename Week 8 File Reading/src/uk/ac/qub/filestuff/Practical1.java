@@ -21,9 +21,14 @@ public class Practical1 {
 	public static void main(String[] args) {
 
 		// get access to a file
-		File file = new File("Catch 22.txt");
+		File file = new File("Catch 1.txt");
 		String line;
-		int count = 0;
+		int numLines = 0;
+		int numWords = 0;
+		int numChars = 0;
+		int numYossarian = 0;
+		int numA = 0;
+		
 
 		// read the file
 		try {
@@ -35,11 +40,20 @@ public class Practical1 {
 			// output to screen
 			while (line != null) {
 				System.out.println(line);
-				count++;
+				numLines++;
 				line = br.readLine();
+				
+				if (line.contains("Yossaria")) {
+					numYossarian++;
+				}
+				
 			}
 			
-			System.out.println("The number of lines is : " + count);
+			System.out.println("The number of lines is : " + numLines);
+			
+			
+			
+			System.out.println(numYossarian);
 
 			// end of file
 
