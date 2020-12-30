@@ -7,7 +7,7 @@ package uk.ac.qub.oop.constructor;
  * @author geraldcraig
  *
  */
-public class EmpployeeTester {
+public class EmployeeTester {
 
 	/**
 	 * @param args
