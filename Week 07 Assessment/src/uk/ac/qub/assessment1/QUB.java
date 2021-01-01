@@ -1,6 +1,4 @@
-/  **
- * 
- */
+
 package uk.ac.qub.assessment1;
 
 import java.util.Arrays;
