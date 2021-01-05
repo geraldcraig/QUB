@@ -15,7 +15,8 @@ public class CarApp {
 	public static void main(String[] args) {
 		
 		Car make = new Car();
-		make.toString("Ford");
+		
+		
 
 	}
 

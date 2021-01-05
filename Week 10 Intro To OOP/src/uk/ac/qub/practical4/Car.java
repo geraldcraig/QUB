@@ -24,9 +24,11 @@ public class Car {
 	public void stopCar() {
 		
 	}
-	
-	public String toString(String properties) {
-		return properties;
+
+	@Override
+	public String toString() {
+		return "Car [name=" + name + ", model=" + model + ", colour=" + colour + ", numberOfDoors=" + numberOfDoors
+				+ ", engineSize=" + engineSize + ", maxSpeed=" + maxSpeed + ", started=" + started + "]";
 	}
 
 }
