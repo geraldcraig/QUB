@@ -30,18 +30,20 @@ public class AmazonWebApp {
 				AmazonBook book2 = new AmazonBook("Ulysses", "James Joyce", 2.25, 736, "1840226358", 5, "English");
 				System.out.println(book2.toString());
 				
-				/*longestBook(book1, book2);
+				/*longestBook(book1,book2);
 				
-				public static void longestBook(AmazonBook b1, AmazonBook b2) {
-					if (b1.getPages() > b2.getPages()) {
-						System.out.println(b1.getTitle() + " is longer than " + b2.getTitle()); 
-						}else {
-							System.out.println(b2.getTitle() + " is longer than " + b1.getTitle());
-						}
-						}*/
-		
-		
-				
+				public static void longestBook(AmazonBook bk1, AmazonBook bk2) {
+					if (bk1.getPages() > bk2.getPages()) {
+						System.out.println("book 1 longer than book 2");
+					} else if (bk1.getPages() < bk2.getPages()) {
+						System.out.println("book 2 longer than book 1");
+					} else {
+						System.out.println("books are same length");
+					}
+					
+					
+				}*/
+							
 	}
 
 }
