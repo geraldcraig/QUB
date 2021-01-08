@@ -13,7 +13,10 @@ public class CarphoneWarehouse {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		MobilePhone p1 = new MobilePhone("Apple iPhone", "11", 4);
+		
+		System.out.println(p1.toString());
 
 	}
 
