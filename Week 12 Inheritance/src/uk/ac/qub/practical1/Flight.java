@@ -71,7 +71,13 @@ public class Flight {
 	 * @param duration the duration to set
 	 */
 	public void setDuration(double duration) {
-		this.duration = duration;
+		if (this.getDuration() >= 18) {
+			this.duration = 0;
+			System.out.println("input duration 1 - 18");
+		} else {
+			this.duration = duration;	
+		}
+		
 	}
 	@Override
 	public String toString() {
