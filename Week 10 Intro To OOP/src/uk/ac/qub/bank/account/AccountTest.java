@@ -22,6 +22,7 @@ public class AccountTest {
 		// create an Account object and assign it to myAccount
 		Account myAccount = new Account();
 		
+		
 		// display initial value of name (null)
 		System.out.printf("Initial name is : %s%n%n", myAccount.getName());
 		
