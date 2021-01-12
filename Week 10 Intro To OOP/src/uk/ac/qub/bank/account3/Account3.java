@@ -16,23 +16,32 @@ public class Account3 {
 	private double balance;
 	
 	// Account constructor that receives two parameters
-	public Account3(String name) {
-		// assign name to instance variable name
+	public Account3(String name, double balance) {
+	// assign name to instance variable name
 		this.name = name;
-		// validate that the balance is greater than 0.0; if it's not
-		//instance variable balance keeps its default initial value of 0.0
-		// if the balance is valid
-		
-		// assign it to instance variable balance
+	// validate that the balance is greater than 0.0; if it's not
+	//instance variable balance keeps its default initial value of 0.0
+	// if the balance is valid
+		if (balance > 0.0 ) {
+	// assign it to instance variable balance
+			this.balance = balance;
+		}			
 	}
 	
 	// method that deposits (adds) only a valid amount to the balance
-	
+	public void deposit(double depositAmount) {
 	// if the depositAmout is valid
+		if (depositAmount > 0.0) {
+	// add it to the balance	
+			balance = balance + depositAmount;
+		}
+	}
 	
-	// add it to the balance
 	
 	// method returns the account balance
+	public double getBalance() {
+		return balance;
+	}
 	
 	
 	// method that sets the name
