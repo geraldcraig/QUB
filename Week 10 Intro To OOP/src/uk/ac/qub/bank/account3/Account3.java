@@ -35,7 +35,7 @@ public class Account3 {
 	// add it to the balance	
 			balance = balance + depositAmount;
 		}
-	}
+	}  
 	
 	
 	// method returns the account balance
