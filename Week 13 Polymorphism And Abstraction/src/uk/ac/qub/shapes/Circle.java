@@ -7,7 +7,7 @@ package uk.ac.qub.shapes;
  * @author geraldcraig
  *
  */
-public class Circle {
+public class Circle extends Shape {
 
 	private double radius;
 	

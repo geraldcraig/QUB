@@ -9,6 +9,10 @@ package uk.ac.qub.shapes;
  */
 public class Shape {
 	
+	public Shape() {
+		
+	}
+	
 	public void area() {
 		System.out.println("Need some details to do this ?");
 	}
