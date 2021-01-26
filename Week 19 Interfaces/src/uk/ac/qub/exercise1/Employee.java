@@ -18,7 +18,7 @@ public class Employee implements IPayable {
 	@Override
 	public double calculateWages(double hoursWorked, double payRate) {
 		return hoursWorked * payRate;
-	}
+	} 
 
 	public String getName() {
 		return name;
