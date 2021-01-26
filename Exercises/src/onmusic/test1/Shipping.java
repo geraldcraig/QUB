@@ -9,9 +9,13 @@ package onmusic.test1;
  */
 public class Shipping {
 	
-	public static int MinimalNumberOfPackages(int items, int availableLargePackages, int availableSmallPackages) {
+	public static int minimalNumberOfPackages(int items, int largeParcel, int smallParcel) {
 		//throw new NotImplementedException();
-		return -1;
+		if ((largeParcel * 5) + (smallParcel * 2) == items ) {
+			return largeParcel + smallParcel;
+		} else {
+			return -1;
+		}
 	}
 
 	/**
@@ -19,7 +23,7 @@ public class Shipping {
 	 */
 	public static void main(String[] args) {
 		
-		System.out.println(Shipping.MinimalNumberOfPackages(16, 2, 10));
+		System.out.println(Shipping.minimalNumberOfPackages(16, 2, 10));
 
 	}
 
