@@ -8,23 +8,34 @@ package uk.ac.qub.shapes;
  *
  */
 public class Circle implements IMyShape {
+	
+	private double radius;
+	private String shapeName;
+	
+	/**
+	 * default constructor
+	 */
+	public Circle() {
+	}
+	
+	public Circle(double radius) {
+		this.radius = radius;
+		this.shapeName = "Circle";
+	}
 
-	@Override
+
 	public double calculatePerimeter() {
-		// TODO Auto-generated method stub
-		return 0;
+		double perimeter = 2 * 3.141 * radius;
+		return perimeter;
 	}
 
-	@Override
 	public double calculateArea() {
-		// TODO Auto-generated method stub
-		return 0;
+		double area = 3.141 * radius * radius;
+		return area;
 	}
 
-	@Override
 	public String getShapeName() {
-		// TODO Auto-generated method stub
-		return null;
+		return shapeName;
 	}
 
 }

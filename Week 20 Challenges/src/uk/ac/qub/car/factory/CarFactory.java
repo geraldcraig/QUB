@@ -21,9 +21,9 @@ public class CarFactory {
 		fs1.setMetallicPaint(true);
 		
 		
-		F1 f1 = new F1("Ferrari", "Maranello", 2320, 1.12);
+		F1 f1 = new F1("Ferrari", "Maranello", 320, 1.12);
 		
-		F1 f2 = new F1("McLaren", "MCL2016", 2320, 1.12);
+		F1 f2 = new F1("McLaren", "MCL2016", 320, 1.12);
 		
 		RallyCar r1 = new RallyCar("Subaru", "Impreza", 143, 1.98);
 		
@@ -36,7 +36,10 @@ public class CarFactory {
 		showAllCarDetails(cars);
 		
 		outputLeastHP(cars);
+		
+		outputAverage(cars);
 	}
+	
 	
 	public static void showAllCarDetails(Car[] cars) {
 		for(Car c : cars) {
@@ -57,7 +60,15 @@ public class CarFactory {
 			}	
 		}
 		
-		System.out.println("Min HP: " + leastHPModel);
+		System.out.println("\nMin HP: " + leastHPModel);
+	}
+	
+	public static void outputAverage(Car[] cars) {
+		double total = 0;
+		for (Car c : cars) {
+			total += c.getHorsepower();
+		}
+		System.out.printf("\nAverage HP : %.2f", total / cars.length);
 	}
 
 }

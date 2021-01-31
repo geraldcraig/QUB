@@ -11,19 +11,11 @@ import java.util.Random;
  */
 public class MyController {
 
+	private static final int NUMBER_OF_SHAPES = 10;
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
-		Rectangle r1 = new Rectangle();
-		r1.setLength(5);
-		r1.setWidth(3);
-		r1.setShapeName("Rectangle");
-		
-		System.out.println(r1.calculateArea());
-		System.out.println(r1.calculatePerimeter());
-		System.out.println(r1.getShapeName());
 		
 		// array to hold shapes of all three types
 		IMyShape myShape[] = new IMyShape[NUMBER_OF_SHAPES];
@@ -37,17 +29,20 @@ public class MyController {
 		for (int i = 0; i < NUMBER_OF_SHAPES; i++) {
 			temp = generator.nextInt(3);
 			switch (temp) {
-			case 0 : myShape[i] = new MyCircle(generator.nextDouble() * generator.nextInt(10));
+			case 0 : myShape[i] = new Circle(generator.nextDouble() * generator.nextInt(10));
 					break;
-			case 1 : myShape[i] = new MySquare(generator.nextDouble() * generator.nextInt(10));
+			case 1 : myShape[i] = new Square(generator.nextDouble() * generator.nextInt(10));
 					break;
-			case 2 : myShape[i] = new MyRectangle(generator.nextDouble() * generator.nextInt(10), 
+			case 2 : myShape[i] = new Rectangle(generator.nextDouble() * generator.nextInt(10), 
 					generator.nextDouble() * generator.nextInt(10));
 			}	
 		}
-		
+		System.out.println();
 		for (IMyShape shape : myShape) {
-			System.out.println(shape.getShapeName());
+			System.out.print(shape.getShapeName());
+			System.out.printf(" Area : %.2f", shape.calculateArea());
+			System.out.printf(" Perimeter : %.2f", shape.calculatePerimeter());
+			System.out.println();
 		}
 	}
 

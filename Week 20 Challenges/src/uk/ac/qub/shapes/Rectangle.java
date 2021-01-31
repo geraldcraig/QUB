@@ -24,63 +24,24 @@ public class Rectangle implements IMyShape {
 	 * @param length
 	 * @param width
 	 */
-	public Rectangle(double length, double width, String shapeName) {
+	public Rectangle(double length, double width) {
 		this.length = length;
 		this.width = width;
 		this.shapeName = "Rectangle";
 	}
 
-	/**
-	 * @return the length
-	 */
-	public double getLength() {
-		return length;
-	}
-
-	/**
-	 * @param length the length to set
-	 */
-	public void setLength(double length) {
-		this.length = length;
-	}
-
-	/**
-	 * @return the width
-	 */
-	public double getWidth() {
-		return width;
-	}
-
-	/**
-	 * @param width the width to set
-	 */
-	public void setWidth(double width) {
-		this.width = width;
-	}
-
-	@Override
 	public double calculatePerimeter() {
-		
-		return (length + width) * 2;
+		double perimeter = length + width + length + width;
+		return perimeter;
 	}
 
-	@Override
 	public double calculateArea() {
-		
-		return length * width;
+		double area = length * width;
+		return area;
 	}
 
-	@Override
 	public String getShapeName() {
-		// TODO Auto-generated method stub
 		return shapeName;
-	}
-
-	/**
-	 * @param shapeName the shapeName to set
-	 */
-	public void setShapeName(String shapeName) {
-		this.shapeName = shapeName;
 	}
 
 }

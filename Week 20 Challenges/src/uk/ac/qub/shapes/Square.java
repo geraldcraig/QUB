@@ -8,23 +8,30 @@ package uk.ac.qub.shapes;
  *
  */
 public class Square implements IMyShape {
+	
+	private double length;
+	private String shapeName;
+	
+	public Square() {
+	}
+	
+	public Square(double length) {
+		this.length = length;
+		this.shapeName = "Square";
+	}
 
-	@Override
 	public double calculatePerimeter() {
-		// TODO Auto-generated method stub
-		return 0;
+		double perimeter = length * 4;
+		return perimeter;
 	}
 
-	@Override
 	public double calculateArea() {
-		// TODO Auto-generated method stub
-		return 0;
+		double area = length * length;
+		return area;
 	}
 
-	@Override
 	public String getShapeName() {
-		// TODO Auto-generated method stub
-		return null;
+		return shapeName;
 	}
 
 }

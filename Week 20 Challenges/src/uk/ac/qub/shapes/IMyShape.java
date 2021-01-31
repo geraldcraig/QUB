@@ -9,10 +9,10 @@ package uk.ac.qub.shapes;
  */
 public interface IMyShape {
 	
-	public double calculatePerimeter();
+	double calculatePerimeter();
 	
-	public double calculateArea();
+	double calculateArea();
 	
-	public String getShapeName();
+	String getShapeName();
 
 }
