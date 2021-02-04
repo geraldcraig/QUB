@@ -35,7 +35,8 @@ public class FileReading {
 			// output to screen
 			while (line != null) {
 				System.out.println(line);
-				line = br.readLine();			}
+				line = br.readLine();			
+				}
 			
 
 			// end of file

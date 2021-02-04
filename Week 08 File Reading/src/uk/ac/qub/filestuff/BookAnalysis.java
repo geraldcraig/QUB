@@ -3,6 +3,12 @@
  */
 package uk.ac.qub.filestuff;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 /**
  * @author Gerald
  *
@@ -24,6 +30,34 @@ public class BookAnalysis {
 		// (output the redacted text to an new file Catch22Redacted.txt.
 		// 8. Check if the redaction has been successful... check that Yossarian no longer appears in the new text.  
 
+		String line;
+		int lines = 0;
+		
+		try {
+			
+		File file = new File("Catch 1.txt");
+		FileReader fr = new FileReader(file);
+		BufferedReader br = new BufferedReader(fr);
+		
+		line = br.readLine();
+		
+		while (line != null) {
+			System.out.println(line);
+			lines ++;
+			line = br.readLine();
+			
+		}
+			System.out.println(lines);
+			br.close();
+			fr.close();
+		
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
 	}
 
 }

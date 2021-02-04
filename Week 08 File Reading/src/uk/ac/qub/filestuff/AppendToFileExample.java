@@ -19,7 +19,7 @@ public class AppendToFileExample {
 	 */
 	public static void main(String[] args) {
 		try {
-			String data = "\nLeeds";
+			String data = "\nSpurs";
 			// create a file object
 			File file = new File("Teams.txt");
 
