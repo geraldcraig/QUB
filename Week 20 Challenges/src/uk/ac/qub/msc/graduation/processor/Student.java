@@ -1,7 +1,7 @@
 /**
  * 
  */
-package uk.ac.gub.msc.graduation.processor;
+package uk.ac.qub.msc.graduation.processor;
 
 /**
  * @author geraldcraig
