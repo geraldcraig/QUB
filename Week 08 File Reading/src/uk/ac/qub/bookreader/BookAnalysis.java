@@ -1,20 +1,15 @@
-/**
- * 
- */
-package uk.ac.qub.filestuff;
+package uk.ac.qub.bookreader;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * @author Gerald
- *
+ * @param args
  */
 public class BookAnalysis {
-
+	
 	/**
 	 * @param args
 	 */
@@ -59,5 +54,6 @@ public class BookAnalysis {
 		
 		
 	}
+
 
 }
