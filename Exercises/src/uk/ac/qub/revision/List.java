@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class List {
 	
 	public static void main(String[] args) {
-	ArrayList<String> records = new ArrayList<String>();
+	ArrayList<Student> records = new ArrayList<Student>();
 	
 	String line;
 	
