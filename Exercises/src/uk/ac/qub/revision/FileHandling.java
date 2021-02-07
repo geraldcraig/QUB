@@ -13,18 +13,30 @@ public class FileHandling {
 		
 		String line;
 		
-		File file = new File("examSubmissionsSample2 .csv");
+		File file = new File("songlist.csv");
 		try {
 			FileReader fr = new FileReader(file);
 			BufferedReader br = new BufferedReader(fr);
 			
 			line = br.readLine();
 			line = br.readLine();
+			
 			while (line != null) {
+				
 				String[] values = line.split(",");
-				System.out.println("ID: " + values[0] + " Name : " + values[1]);
+				Stats song = new Stats();
+				ArrayList<String> songs = new ArrayList<String>();
+				song.setTitle(values[0]);
+				song.setArtist(values[1]);
+				song.setPosition(Integer.parseInt(values[2]));
+				
+				System.out.println(songs);
 				line = br.readLine();
-			}
+				
+				
+				
+				}
+		
 			
 			br.close();
 			fr.close();
