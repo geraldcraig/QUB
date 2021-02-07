@@ -20,12 +20,21 @@ public class ExamResultProcessor {
 	 */
 	public static void main(String[] args) {
 		
+		MScStudent m1 = new MScStudent(2, 03, 04, 05, 07);
+		m1.setfName("John");
+		m1.setlName("Doe");
+		m1.setStuNum(010101);
+		
+		System.out.println(m1.getfName());
+		System.out.println(m1.getlName());
+		System.out.println(m1.getcFound());
+		
 		String line;
 		
 		try {
 			
 		File file = new File("ModuleScoresMSc.csv");
-		FileReader fr = new FileReader(file);
+		FileReader fr = new FileReader(file); 
 		BufferedReader br = new BufferedReader(fr);
 		
 		line = br.readLine();

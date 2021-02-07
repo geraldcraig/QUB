@@ -14,6 +14,22 @@ public class MScStudent extends Student {
 	private int dBs;
 	private int web;
 	private int sEngin;
+	
+	/**
+	 * @param program
+	 * @param cFound
+	 * @param dBs
+	 * @param web
+	 * @param sEngin
+	 */
+	public MScStudent(int program, int cFound, int dBs, int web, int sEngin) {
+		super();
+		this.program = program;
+		this.cFound = cFound;
+		this.dBs = dBs;
+		this.web = web;
+		this.sEngin = sEngin;
+	}
 	/**
 	 * @return the program
 	 */

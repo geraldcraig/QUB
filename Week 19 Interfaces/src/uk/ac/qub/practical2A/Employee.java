@@ -8,17 +8,32 @@ package uk.ac.qub.practical2A;
  *
  */
 public abstract class Employee {
+	
 	private String firstName;
 	private String lastName;
-	double baseRate;
+	private double baseRate;
 	
+	public Employee() {
+		
+	}
 	
-	public double calculateWeeklySalary(double hours) {
-		return hours;
+	/**
+	 * @param firstName
+	 * @param lastName
+	 * @param baseRate
+	 */
+	public Employee(String firstName, String lastName, double baseRate) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.baseRate = baseRate;
+	}
+
+	public void calculateWeeklySalary(double hours) {
+		System.out.printf("[%-10s] %-20s %020s £%.2f", "Employee", this.firstName, this.lastName, this.baseRate);
 	}
 	
 	public void printAll() {
-		
+		System.out.printf("[%-10s] %-20s %020s £%.2f", "Employee", this.firstName, this.lastName, this.baseRate);
 	}
 
 	/**
@@ -63,6 +78,4 @@ public abstract class Employee {
 		this.baseRate = baseRate;
 	}
 	
-	
-
 }

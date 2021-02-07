@@ -3,6 +3,8 @@
  */
 package uk.ac.qub.car.factory;
 
+import java.util.ArrayList;
+
 /**
  * @author Gerald
  *
@@ -37,6 +39,8 @@ public class CarFactory {
 		
 		outputLeastHP(cars);
 		
+		carDetails(cars);
+		
 		outputAverage(cars);
 	}
 	
@@ -61,6 +65,11 @@ public class CarFactory {
 		}
 		
 		System.out.println("\nMin HP: " + leastHPModel);
+	}
+	
+	public static void carDetails(Car[] cars) {
+				
+		
 	}
 	
 	public static void outputAverage(Car[] cars) {

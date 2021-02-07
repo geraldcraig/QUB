@@ -12,6 +12,25 @@ public class Student {
 	private int stuNum;
 	private String fName;
 	private String lName;
+	
+	public Student() {
+		
+	}
+	
+	
+	/**
+	 * @param stuNum
+	 * @param fName
+	 * @param lName
+	 */
+	public Student(int stuNum, String fName, String lName) {
+		super();
+		this.stuNum = stuNum;
+		this.fName = fName;
+		this.lName = lName;
+	}
+
+
 	/**
 	 * @return the stuNum
 	 */

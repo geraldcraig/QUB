@@ -4,6 +4,22 @@ public class Pharmacist extends Employee implements AdminsterDrugs {
 	
 	public int grade;
 	public double bonus;
+	
+	public Pharmacist() {
+		
+	}
+	
+	/**
+	 * @param firstName
+	 * @param lastName
+	 * @param baseRate
+	 */
+	public Pharmacist(String firstName, String lastName, double baseRate, int grade, double bonus) {
+		super(firstName, lastName, baseRate);
+		this.grade = grade;
+		this.bonus = bonus;
+	}
+
 	/**
 	 * @return the grade
 	 */
@@ -29,13 +45,16 @@ public class Pharmacist extends Employee implements AdminsterDrugs {
 		this.bonus = bonus;
 	}
 	@Override
-	public double calculateWeeklySalary(double hours) {
-		return super.calculateWeeklySalary(hours);
+	public void calculateWeeklySalary(double hours) {
+		System.out.printf("%-10s %-10s [%-20s] : %.2fhrs * £%.2f + £%.2f + £%.2f", "Surgeon",
+				this.getFirstName(), this.getLastName(), "Pharmacist", this.getBaseRate(), this.bonus);
 	}
 	@Override
 	public void printAll() {
-		super.printAll();
+		System.out.printf("%-10s %-10s [%-20s] : %.2fhrs * £%.2f + £%.2f + £%.2f", "Surgeon",
+				this.getFirstName(), this.getLastName(), "Pharmacist", this.getBaseRate(), this.grade, this.bonus);
 	}
+	
 	@Override
 	public boolean adminControlledDrug() {
 		return true;

@@ -7,37 +7,35 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class FileHandling {
+public class SongStats {
 
 	public static void main(String[] args) {
-		
-		String line;
-		
+
+		ArrayList<Song> songs = new ArrayList<Song>();
+
+		String songInfo;
+
 		File file = new File("songlist.csv");
 		try {
 			FileReader fr = new FileReader(file);
 			BufferedReader br = new BufferedReader(fr);
-			
-			line = br.readLine();
-			line = br.readLine();
-			
-			while (line != null) {
-				
-				String[] values = line.split(",");
-				Stats song = new Stats();
-				ArrayList<String> songs = new ArrayList<String>();
-				song.setTitle(values[0]);
-				song.setArtist(values[1]);
-				song.setPosition(Integer.parseInt(values[2]));
-				
-				System.out.println(songs);
-				line = br.readLine();
-				
-				
-				
-				}
-		
-			
+
+			br.readLine();
+			songInfo = br.readLine();
+
+			do {
+				Song song = new Song();
+				String[] stats = songInfo.split(",");
+
+				song.setTitle(stats[0]);
+				song.setArtist(stats[1]);
+				song.setHiPos(Integer.parseInt(stats[2]));
+
+				songs.add(song);
+
+				songInfo = br.readLine();
+
+			} while (songInfo != null);
 			br.close();
 			fr.close();
 		} catch (FileNotFoundException e) {
@@ -46,6 +44,10 @@ public class FileHandling {
 			System.out.println("problem reading file");
 		} catch (Exception e) {
 			System.out.println("something else happened");
-		}		
+		}
+		
+		for (Song s : songs) {
+			System.out.println(s.toString());
+		}
 	}
 }
