@@ -62,4 +62,10 @@ public class MScStudent extends Student {
 		this.softEng = softEng;
 	}
 	
+	public void displayAll() {
+		System.out.println();
+		System.out.println("Stu no. : " + this.getsNum());
+		System.out.println("First name : " + this.getFname());
+	}
+	
 }

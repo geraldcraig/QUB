@@ -28,12 +28,9 @@ public class Examresults {
 		
 		ArrayList<MScStudent> students = new ArrayList<MScStudent>();
 		
-		MScStudent student = new MScStudent();
+		
 		
 		String line;
-		
-		
-		
 		
 		File file = new File("ModuleScoresMSc.csv");
 		
@@ -47,7 +44,7 @@ public class Examresults {
 			
 			
 			while(line != null) {
-				//System.out.println(line);
+				MScStudent student = new MScStudent();
 				String[] values = line.split(",");
 				student.setsNum(Integer.parseInt(values[0]));
 				student.setFname(values[1]);
@@ -58,11 +55,10 @@ public class Examresults {
 				student.setWeb(Integer.parseInt(values[6]));
 				student.setSoftEng(Integer.parseInt(values[7]));
 				
-				line = br.readLine();
-
+				students.add(student);
 				
+				line = br.readLine();	
 			}
-			
 			
 			br.close();
 			fr.close();
@@ -75,8 +71,10 @@ public class Examresults {
 		}
 		
 		for (MScStudent student : students) {
-			System.out.println(student);
+			student.displayAll();
 		}
+		
+		
 	}	
 	
 	
