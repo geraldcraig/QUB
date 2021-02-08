@@ -1,73 +1,43 @@
 package uk.ac.qub.revision;
 
-public class Student {
-	private int stuNum;
-	private String name;
-	private String lab;
+public abstract class Student {
+	
+	private int sNum;
+	private String fname;
+	private String lname;
 	
 	public Student() {
 		
 	}
 
-	/**
-	 * @param stuNum
-	 * @param name
-	 * @param lab
-	 */
-	public Student(int stuNum, String name, String lab) {
-		this.stuNum = stuNum;
-		this.name = name;
-		this.lab = lab;
+	public Student(int sNum, String fname, String lname) {
+		this.sNum = sNum;
+		this.fname = fname;
+		this.lname = lname;
 	}
 
-	@Override
-	public String toString() {
-		return "Student [stuNum=" + stuNum + ", name=" + name + ", lab=" + lab + "]";
+	public int getsNum() {
+		return sNum;
 	}
 
-	/**
-	 * @return the stuNum
-	 */
-	public int getStuNum() {
-		return stuNum;
+	public void setsNum(int sNum) {
+		this.sNum = sNum;
 	}
 
-	/**
-	 * @param stuNum the stuNum to set
-	 */
-	public void setStuNum(int stuNum) {
-		this.stuNum = stuNum;
+	public String getFname() {
+		return fname;
 	}
 
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
+	public void setFname(String fname) {
+		this.fname = fname;
 	}
 
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
+	public String getLname() {
+		return lname;
 	}
 
-	/**
-	 * @return the lab
-	 */
-	public String getLab() {
-		return lab;
+	public void setLname(String lname) {
+		this.lname = lname;
 	}
-
-	/**
-	 * @param lab the lab to set
-	 */
-	public void setLab(String lab) {
-		this.lab = lab;
-	}
-
-	
-
 	
 }
