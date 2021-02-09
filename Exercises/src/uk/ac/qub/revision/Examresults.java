@@ -28,37 +28,43 @@ public class Examresults {
 		
 		ArrayList<MScStudent> students = new ArrayList<MScStudent>();
 		
+		getAll(students);
+		
+		showAll(students);
 		
 		
-		String line;
+		
+		
+	}	
+	
+	public static void getAll(ArrayList<MScStudent> students) {
 		
 		File file = new File("ModuleScoresMSc.csv");
-		
 		try {
 			FileReader fr = new FileReader(file);
 			BufferedReader br = new BufferedReader(fr);
 			
-			line = br.readLine();
+			String line = br.readLine();
 			
 			line = br.readLine();
 			
-			
-			while(line != null) {
+			while (line != null) {
 				MScStudent student = new MScStudent();
+				
 				String[] values = line.split(",");
 				student.setsNum(Integer.parseInt(values[0]));
-				student.setFname(values[1]);
-				student.setLname(values[2]);
-				student.setProgram(Integer.parseInt(values[3]));
-				student.setCf(Integer.parseInt(values[4]));
-				student.setDbs(Integer.parseInt(values[5]));
-				student.setWeb(Integer.parseInt(values[6]));
-				student.setSoftEng(Integer.parseInt(values[7]));
+				
 				
 				students.add(student);
 				
-				line = br.readLine();	
+				line = br.readLine();
+				
+				
+				
 			}
+			
+			
+			
 			
 			br.close();
 			fr.close();
@@ -70,12 +76,16 @@ public class Examresults {
 			e.printStackTrace();
 		}
 		
-		for (MScStudent student : students) {
-			student.displayAll();
+			
+		
+	}
+	
+	public static void showAll(ArrayList<MScStudent> students) {
+		for (MScStudent s : students) {
+			System.out.println(students.size());
 		}
-		
-		
-	}	
+			
+	}
 	
 	
 }
