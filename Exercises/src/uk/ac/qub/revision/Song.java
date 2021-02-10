@@ -69,6 +69,11 @@ public class Song {
 		return "Song [title=" + title + ", artist=" + artist + ", hiPos=" + hiPos + "]";
 	}
 	
-	
+	public void displayAll() {
+		System.out.println("Title : " + title);
+		System.out.println("Artist : " + artist);
+		System.out.println("Highest Position : " + hiPos);
+		System.out.println();
+	}
 
 }
