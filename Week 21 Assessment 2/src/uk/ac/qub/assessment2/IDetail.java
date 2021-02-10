@@ -1,5 +1,13 @@
 package uk.ac.qub.assessment2;
 
-public class IDetail {
+/**
+ * interface class 
+ * @author geraldcraig
+ *
+ */
+public interface IDetail {
+	
+	// print details method
+	public void printDetails();
 
 }
