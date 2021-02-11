@@ -1,4 +1,4 @@
-package uk.ac.qub.assessment2;
+ package uk.ac.qub.assessment2;
 
 /**
  * interface class 
