@@ -1,0 +1,71 @@
+package uk.ac.qub.assesment2;
+
+public class MenuItem implements IDetail {
+	
+	private String name;
+	private double price;
+	
+	/**
+	 * default constructor
+	 */
+	public MenuItem() {
+		
+	}
+	
+	
+	/**
+	 * Constructor with args
+	 * @param name
+	 * @param price
+	 */
+	public MenuItem(String name, double price) {
+		setName(name);
+		setPrice(price);
+	}
+
+	
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		if (name.isEmpty() || name.startsWith(" ")) {
+			System.out.println("invalid name entered");
+			this.name = "INVALID NAME";
+		} else {
+			
+		}
+		this.name = name;
+	}
+
+
+
+	public double getPrice() {
+		return price;
+	}
+
+
+
+	public void setPrice(double price) {
+		if (price < 0) {
+			System.out.println("negative price entered");
+			this.price = 0;
+		
+		} else {
+			
+		}
+		this.price = price;
+	}
+
+
+
+	@Override
+	public void printDetails() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,11 @@
+package uk.ac.qub.assesment2;
+
+public class MenuItem implements IDetail {
+
+	@Override
+	public void printDetails() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

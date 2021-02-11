@@ -1,0 +1,56 @@
+package uk.ac.qub.assesment2;
+
+import java.util.ArrayList;
+
+public class Pizza extends MenuItem {
+	
+	private int size;
+	private ArrayList<Topping> ExtraToppings;
+	
+	
+
+	public Pizza() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Pizza(int size) {
+		this.size = size;
+	}
+
+	public Pizza(String name, double price, int size, ArrayList<Topping> ExtraToppings) {
+		super(name, price);
+		this.size = size;
+		this.ExtraToppings = ExtraToppings;
+	}
+	
+	public void addTopping(Topping) {
+		
+	}
+	
+	private void pizzaDetail() {
+		
+	}
+	
+	public void printDetails() {
+		
+	}
+
+	public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
+	}
+
+	public ArrayList<Topping> getExtraToppings() {
+		return ExtraToppings;
+	}
+
+	public void setExtraToppings(ArrayList<Topping> extraToppings) {
+		ExtraToppings = extraToppings;
+	}
+	
+	
+
+}
