@@ -49,14 +49,15 @@ public class Pizza extends MenuItem {
 	/**
 	 * add topping method
 	 */
-	// public void addTopping(Topping) {
+	 public void addTopping(Topping topping) {
 
-	// }
+	}
 
 	/**
 	 * pizza details method
 	 */
 	private void pizzaDetail() {
+		System.out.println("Size : " + getSize() + " Name : " + getName());
 
 	}
 
@@ -64,6 +65,7 @@ public class Pizza extends MenuItem {
 	 * print details method
 	 */
 	public void printDetails() {
+		pizzaDetail();
 
 	}
 
@@ -84,9 +86,9 @@ public class Pizza extends MenuItem {
 	public void setSize(int size) {
 
 		if (size < 8) {
-			this.size = 8;
+			size = 8;
 		} else if (size > 16) {
-			this.size = 16;
+			size = 16;
 		} else {
 			this.size = size;
 		}

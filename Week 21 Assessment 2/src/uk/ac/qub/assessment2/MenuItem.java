@@ -48,7 +48,7 @@ public class MenuItem implements IDetail{
 		// validation rule if invalid name entered
 		if (name.isEmpty() || name.startsWith(" ")) {
 			// prints error message
-			System.out.println("invalid name entered");
+			System.err.println("invalid name entered");
 			// sets name to Invalid Name
 			this.name = "INVALID NAME";
 		} else {
@@ -75,7 +75,7 @@ public class MenuItem implements IDetail{
 		// validation rule if negative price entered
 		if (price < 0) {
 			// prints error message
-			System.out.println("negative price entered");
+			System.err.println("negative price entered");
 			// sets invalid price to zero
 			this.price = 0;
 		} else {
@@ -87,7 +87,9 @@ public class MenuItem implements IDetail{
 	// overriden printDetails method from Interface
 	@Override
 	public void printDetails() {
-		// TODO Auto-generated method stub
+		System.out.println(this.getName() + this.getPrice());
+		System.out.println("Name : " + this.name);
+		System.out.println("Price : "  + this.price);
 
 	}
 

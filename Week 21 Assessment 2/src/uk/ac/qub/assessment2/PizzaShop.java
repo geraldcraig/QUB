@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * test class for pizzashop
@@ -20,13 +21,17 @@ public class PizzaShop {
 	 */
 	public static void main(String[] args) {
 		
-		Pizza p1 = new Pizza();
-		p1.getSize();
-		p1.setSize(0);
-		p1.setPrice(-1);
-		p1.setName("");
-		System.out.println(p1.getName());
-		System.out.println(p1.getPrice());
+		
+		
+		MenuItem m1 = new MenuItem("Burger", 5.50);
+		MenuItem m2 = new MenuItem(" ", -55);
+		m1.printDetails();
+		m2.printDetails();
+		
+		Pizza p1 = new Pizza(6);
+		p1.printDetails();
+		
+
 
 		// menu items arraylist
 		ArrayList<MenuItem> menuitems = new ArrayList<MenuItem>();
@@ -110,9 +115,9 @@ public class PizzaShop {
 
 			}
 			
-			for(int i = 0; i < menuitems.size(); i++) {
-				System.out.println(menuitems);
-			}
+			//for(int i = 0; i < menuitems.size(); i++) {
+			//	System.out.println(menuitems.get(i).toString());
+			//}
 			// close buferedwriter and filereader
 			br.close();
 			fr.close();
