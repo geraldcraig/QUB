@@ -19,6 +19,14 @@ public class PizzaShop {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		
+		Pizza p1 = new Pizza();
+		p1.getSize();
+		p1.setSize(0);
+		p1.setPrice(-1);
+		p1.setName("");
+		System.out.println(p1.getName());
+		System.out.println(p1.getPrice());
 
 		// menu items arraylist
 		ArrayList<MenuItem> menuitems = new ArrayList<MenuItem>();
