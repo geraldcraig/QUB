@@ -22,14 +22,6 @@ public class Book {
 	 */
 	private String title;
 
-	
-	
-	
-
-	
-
-	
-
 	/**
 	 * Gets the ISBN number
 	 * 
