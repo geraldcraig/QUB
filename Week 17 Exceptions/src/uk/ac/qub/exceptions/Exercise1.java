@@ -4,7 +4,7 @@
 package uk.ac.qub.exceptions;
 
 /**
- * @author Gerald
+ * @author geraldcraig
  *
  */
 public class Exercise1 {
