@@ -13,14 +13,38 @@ public class Book {
 	private String ISBN;
 
 	/**
-	 * The autor of the book
+	 * The author of the book
 	 */
 	private String author;
+
+	/**
+	 * @return the rating
+	 */
+	public int getRating() {
+		return rating;
+	}
+
+	/**
+	 * @param rating the rating to set
+	 */
+	public void setRating(int rating) {
+		if (rating < 1 && rating > 5) {
+			System.err.println("invalid rating");
+		} else {
+			this.rating = rating;
+		}
+	}
+
 
 	/**
 	 * The title of the book
 	 */
 	private String title;
+	
+	/**
+	 * The rating of the book
+	 */
+	private int rating;
 
 	/**
 	 * Gets the ISBN number

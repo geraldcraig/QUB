@@ -3,7 +3,7 @@ package uk.ac.qub.librarysearch;
 import java.util.ArrayList;
 
 /**
- * Class enables various utility searches in libary books
+ * Class enables various utility searches in library books
  * @author aidan
  *
  */
