@@ -18,10 +18,9 @@ public class Practical1 {
 		oddEven(0);
 		oddEven(2);
 		oddEven(-2);
-
 	}
 	
-	public static void oddEven(int num) {
+		public static void oddEven(int num) {
 		if (num % 2 == 0) {
 			System.out.println("number is even");
 		} else {
