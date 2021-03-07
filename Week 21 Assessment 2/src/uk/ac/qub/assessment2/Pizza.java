@@ -50,7 +50,7 @@ public class Pizza extends MenuItem {
 	 * add topping method
 	 */
 	 public void addTopping(Topping topping) {
-
+		 
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class Pizza extends MenuItem {
 	}
 
 	/**
-	 * extratoppings seter
+	 * extratoppings setter
 	 * 
 	 * @param extraToppings
 	 */

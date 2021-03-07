@@ -21,8 +21,6 @@ public class PizzaShop {
 	 */
 	public static void main(String[] args) {
 		
-		
-		
 		MenuItem m1 = new MenuItem("Burger", 5.50);
 		MenuItem m2 = new MenuItem(" ", -55);
 		m1.printDetails();
@@ -31,8 +29,7 @@ public class PizzaShop {
 		Pizza p1 = new Pizza(6);
 		p1.printDetails();
 		
-
-
+		
 		// menu items arraylist
 		ArrayList<MenuItem> menuitems = new ArrayList<MenuItem>();
 
@@ -40,7 +37,7 @@ public class PizzaShop {
 		printReceipt(menuitems);
 
 		// isVegetarian method call
-		//isVegetarian(menuitems);
+		isVegetarian(menuitems);
 
 		// findVeggies method call
 		findVeggies(menuitems);
@@ -79,7 +76,7 @@ public class PizzaShop {
 	}
 
 	/**
-	 * method to poulate menuitems arraylist from csv file
+	 * method to populate menuitems arraylist from csv file
 	 * 
 	 * @param menuitems
 	 * @return
