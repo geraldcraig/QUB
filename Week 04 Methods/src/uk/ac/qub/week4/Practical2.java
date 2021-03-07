@@ -22,7 +22,7 @@ public class Practical2 {
 	
 	public static void convertFromUpperToLower(char letter) {
 		if (Character.isLowerCase(letter)) {
-			System.out.println(letter);
+			System.out.println(letter + " is already lower case");
 		} else {
 			System.out.println(Character.toLowerCase(letter));
 		}
