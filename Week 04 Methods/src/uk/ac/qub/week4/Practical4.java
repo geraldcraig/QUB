@@ -21,8 +21,9 @@ public class Practical4 {
 	
 	Random rand = new Random();
 	
+	
 	static void generate() {
-		
+	
 	}
 	
 }
