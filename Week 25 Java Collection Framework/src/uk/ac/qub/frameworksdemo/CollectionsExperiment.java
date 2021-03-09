@@ -24,8 +24,6 @@ public class CollectionsExperiment {
 		showAll(arrList);
 		showAll(linkList);
 		
-
-
 	}
 	
 	public static void showAll(List<String> myArrList) {
