@@ -8,18 +8,17 @@ public class ListExercise {
 
 	public static void main(String[] args) {
 		ArrayList<Integer> arrList = new ArrayList<Integer>();
-		arrList.add(5);
-		arrList.add(99);
-		arrList.add(67);
-		arrList.add(90);
-		arrList.add(90);
-		
-		
-		LinkedList<Integer> linkList = new LinkedList<Integer>();
-		linkList.add(97);
-		linkList.add(80);
-		linkList.add(90);
-		linkList.add(90);
+        arrList.add(5);
+        arrList.add(52);
+        arrList.add(65);
+        arrList.add(21);
+        arrList.add(99);
+        
+        LinkedList<Integer> linkList = new LinkedList<Integer>();
+        linkList.add(21);
+        linkList.add(99);
+        linkList.add(5);
+        linkList.add(80);
 		
 		System.out.println("orig list: " + arrList.toString());
 		System.out.println("remove list: " + linkList.toString());
