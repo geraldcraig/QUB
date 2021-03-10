@@ -16,11 +16,14 @@ public class ListExercise {
 		
 		
 		LinkedList<Integer> linkList = new LinkedList<Integer>();
+		linkList.add(97);
+		linkList.add(80);
+		linkList.add(90);
 		linkList.add(90);
 		
 		System.out.println("orig list: " + arrList.toString());
 		System.out.println("remove list: " + linkList.toString());
-		removeDup(arrList, linkList);
+		removeDuplicates(arrList, linkList);
 		System.out.println("list after: " + arrList.toString());
 		
 		System.out.println("end");
@@ -42,7 +45,7 @@ public class ListExercise {
 
 	}
 	
-	public static void removeDup(List<Integer> origList, List<Integer> toRemove) {
+	public static void removeDuplicates(List<Integer> origList, List<Integer> toRemove) {
 		for(Integer value: toRemove) {
 			origList.remove(value);
 		}
