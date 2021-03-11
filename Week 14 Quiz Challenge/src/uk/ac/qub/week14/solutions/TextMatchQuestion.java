@@ -1,4 +1,4 @@
-package challengepackage;
+package uk.ac.qub.week14.solutions;
 
 public class TextMatchQuestion extends Question {
 

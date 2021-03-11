@@ -1,7 +1,7 @@
 /**
  * 
  */
-package simgameannoying;
+package uk.ac.qub.week19.solutions;
 
 /**
  * @author 3048013

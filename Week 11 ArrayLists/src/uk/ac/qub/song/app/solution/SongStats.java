@@ -7,8 +7,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * 
+ * @author 3048360
+ *
+ */
 public class SongStats {
-	
+
 	/**
 	 * Stores all songs
 	 */

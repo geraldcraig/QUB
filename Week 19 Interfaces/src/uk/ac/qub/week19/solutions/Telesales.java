@@ -1,4 +1,4 @@
-package simgameannoying;
+package uk.ac.qub.week19.solutions;
 
 public class Telesales extends Person implements IPest{
 

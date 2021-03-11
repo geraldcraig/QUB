@@ -1,7 +1,7 @@
 /**
  * 
  */
-package cityinfo;
+package uk.ac.qub.week12.solutions;
 
 /**
  * @author amcgowan

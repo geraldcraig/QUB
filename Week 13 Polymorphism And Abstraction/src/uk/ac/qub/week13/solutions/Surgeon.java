@@ -1,7 +1,8 @@
+
 /**
  * 
  */
-package uk.ac.qub.hositalpayroll;
+package uk.ac.qub.week13.solutions;
 
 /**
  * Represents a surgeon

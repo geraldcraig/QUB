@@ -1,4 +1,4 @@
-package solutions;
+package uk.ac.qub.week10.solutions;
 
 import java.util.Random;
 

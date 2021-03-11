@@ -1,4 +1,4 @@
-package whalesinfo;
+package uk.ac.qub.week12.solutions;
 
 
 /**

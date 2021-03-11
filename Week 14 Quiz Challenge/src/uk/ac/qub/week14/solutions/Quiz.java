@@ -1,4 +1,4 @@
-package challengepackage;
+package uk.ac.qub.week14.solutions;
 
 import java.io.BufferedReader;
 import java.io.File;

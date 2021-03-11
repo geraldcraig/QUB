@@ -1,7 +1,7 @@
 /**
  * 
  */
-package FlightControl;
+package uk.ac.qub.week12.solutions;
 
 /**
  * @author amcgowan
