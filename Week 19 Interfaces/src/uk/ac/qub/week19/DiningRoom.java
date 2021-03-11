@@ -1,4 +1,4 @@
-package uk.ac.qub.sims.game;
+package uk.ac.qub.week19;
 
 public class DiningRoom {
 	
