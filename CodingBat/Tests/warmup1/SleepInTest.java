@@ -13,7 +13,7 @@ class SleepInTest {
 
 	@Test
 	void test() {
-		assertEquals(null, null);
+		
 	}
 
 }
