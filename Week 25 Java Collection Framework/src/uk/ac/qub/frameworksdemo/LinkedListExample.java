@@ -13,11 +13,22 @@ public class LinkedListExample {
 		linkList.add("have");
 		linkList.add("a");
 		
-		System.out.println(linkList.toString());
+		System.out.println("Pre swap: " + linkList.toString());
+		
+		swap(linkList, 1, 3);
+		
+		System.out.println("After swap: " + linkList.toString());
+		
+		swap(linkList, 1, 2);
+		
+		System.out.println("After 2nd swap: " + linkList.toString());
 
 	}
 	
-	void swap(List<String> list, int pos1, int pos2) {
+	public static void swap(List<String> list, int pos1, int pos2) {
+		String temp = list.get(pos1);
+		list.set(pos1, list.get(pos2));
+		list.set(pos2, temp);
 		
 	}
 
