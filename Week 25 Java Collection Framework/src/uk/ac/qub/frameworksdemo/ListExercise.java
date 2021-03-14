@@ -1,6 +1,7 @@
 package uk.ac.qub.frameworksdemo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -48,6 +49,10 @@ public class ListExercise {
 
 		System.out.println(census.toString());
 		System.out.println(census.size());
+		
+		System.out.println("unsorted: " + census.toString());
+		Collections.sort(census);
+		System.out.println("sorted: " + census.toString());
 
 		//Person toRemove = new Person("Gerald", "Craig");
 		

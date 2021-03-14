@@ -31,14 +31,28 @@ public class LinkedListExample {
 		
 		System.out.println("After 2nd swap: " + linkList.toString());
 		
+		Collections.reverse(linkList);
+		System.out.println("reverse: " + linkList.toString());
+		
 		ArrayList<Person> people = new ArrayList<Person>();
 		Collections.addAll(people, new Person("Bob", "Jones"), new Person("John", "Smith"));
 		System.out.println("orig" +people.toString());
 		Collections.reverse(people);
 		System.out.println("reverse" + people.toString());
 		
+		String name = "Gerald";
+		String[] letters = name.split("");
+		System.out.println(Arrays.toString(letters));
 		
+		int freq = Collections.frequency(linkList, "words");
+		System.out.println(freq);
 		
+		List<String> secondList = Arrays.asList(more);
+		System.out.println("secondList 1: " + secondList.toString());
+		ArrayList<String> secondArrList = new ArrayList<String>(secondList);
+		System.out.println("secondList 2: " + secondArrList.toString());
+		ArrayList<String> thirdArrList = new ArrayList<String>(Arrays.asList(more));
+		System.out.println("thirdArrList: " + thirdArrList);
 		Integer[] nums = {12, 123, 123123, 456, 456456};
 		ArrayList<Integer> numList = new ArrayList<Integer>();
 		Collections.addAll(numList, nums);

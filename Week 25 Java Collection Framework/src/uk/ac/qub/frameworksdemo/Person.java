@@ -1,6 +1,6 @@
 package uk.ac.qub.frameworksdemo;
 
-public class Person {
+public class Person implements Comparable<Person> {
 	private String fname;
 	private String surname;
 	
@@ -77,5 +77,21 @@ public class Person {
 	 */
 	public void setSurname(String surname) {
 		this.surname = surname;
-	}	
+	}
+
+
+
+
+	@Override
+	public int compareTo(Person o) {
+		
+		return this.getFname().compareTo(o.getFname());
+		
+		
+	}
+
+
+
+
+	
 }
