@@ -7,7 +7,7 @@ import java.util.List;
 public class ListExercise2 {
 
 	public static void main(String[] args) {
-		ArrayList<Integer> arrList = new ArrayList<Integer>();
+		List<Integer> arrList = new ArrayList<Integer>();
 		arrList.add(5);
 		arrList.add(52);
 		arrList.add(65);
@@ -17,7 +17,7 @@ public class ListExercise2 {
 		arrList.add(5);
 		arrList.add(99);
 
-		LinkedList<Integer> linkList = new LinkedList<Integer>();
+		List<Integer> linkList = new LinkedList<Integer>();
 		linkList.add(5);
 		linkList.add(21);
 		linkList.add(99);
@@ -28,7 +28,7 @@ public class ListExercise2 {
 		//System.out.println("remove list: " + linkList.toString());
 		//removeDuplicates(arrList, linkList);
 		
-		actuallyRemoveDuplicates(arrList);
+		arrList = actuallyRemoveDuplicates(arrList);
 		// removeDupes2(arrList);
 		
 		System.out.println("list after: " + arrList.toString());
@@ -40,7 +40,7 @@ public class ListExercise2 {
 	 * only contain those.
 	 * @param inputList
 	 */
-	public static void actuallyRemoveDuplicates(List<Integer> inputList) {
+	public static List<Integer> actuallyRemoveDuplicates(List<Integer> inputList) {
 		List<Integer> unique = new ArrayList<Integer>();
 		for (Integer val: inputList) {
 			if (!unique.contains(val)) {
@@ -48,9 +48,10 @@ public class ListExercise2 {
 			}
 		}
 		
-		inputList.clear();
-		inputList.addAll(unique);
+		//inputList.clear();
+		//inputList.addAll(unique);
 		//System.out.println("Unique name in method: " + unique.toString());
+		return unique;
 	}
 
 	public static void removeDuplicates(List<Integer> origList, List<Integer> toRemove) {
