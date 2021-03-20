@@ -9,5 +9,4 @@ public class CompareEmpNameReverse implements Comparator<Employee> {
 		
 		return o2.getName().compareToIgnoreCase(o1.getName());
 	}
-
 }

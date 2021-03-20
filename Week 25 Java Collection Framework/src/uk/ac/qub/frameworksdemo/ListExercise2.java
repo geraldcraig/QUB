@@ -32,9 +32,8 @@ public class ListExercise2 {
 		// removeDupes2(arrList);
 		
 		System.out.println("list after: " + arrList.toString());
-
-
 	}
+	
 	/**
 	 * finds unique values in a given list and updates the list to
 	 * only contain those.
@@ -62,5 +61,4 @@ public class ListExercise2 {
 		origList.removeAll(toRemove);
 		// System.out.println("List changed? " + check);
 	}
-
 }

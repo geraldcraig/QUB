@@ -22,18 +22,20 @@ public class EmployeeComparisionsDriver {
 		
 		//System.out.println(empList);
 		viewAll(empList);
-		
-		
+			
 		Collections.sort(empList, new CompareEmployeeByName());
 		
 		viewAll(empList);
 		//Comparator<Employee> c_age = new CompareEmployeeByAge();
 		//System.out.println(c_age.compare(e3, e4));
 		
+		Collections.sort(empList, new CompareEmployeeByName());
+		Collections.sort(empList, new CompareEmpStatus());
+		viewAll(empList);
+		
 		Collections.sort(empList, new CompareEmpNameReverse());
 		
 		viewAll(empList);
-
 	}
 
 	public static void viewAll(List<Employee> inputList) {
@@ -44,5 +46,4 @@ public class EmployeeComparisionsDriver {
 		
 		System.out.println();
 	}
-
 }

@@ -3,8 +3,7 @@ package uk.ac.qub.frameworksdemo;
 public class Person implements Comparable<Person> {
 	private String fname;
 	private String surname;
-	
-	
+		
 	/**
 	 * @param fname
 	 * @param surname
@@ -13,9 +12,6 @@ public class Person implements Comparable<Person> {
 		setFname(fname);
 		setSurname(surname);
 	}
-	
-	
-	
 	
 	@Override
 	public int hashCode() {
@@ -53,7 +49,6 @@ public class Person implements Comparable<Person> {
 		return "Person [fname=" + fname + ", surname=" + surname + "]";
 	}
 
-
 	/**
 	 * @return the fname
 	 */
@@ -79,19 +74,9 @@ public class Person implements Comparable<Person> {
 		this.surname = surname;
 	}
 
-
-
-
 	@Override
 	public int compareTo(Person o) {
 		
-		return this.getFname().compareTo(o.getFname());
-		
-		
-	}
-
-
-
-
-	
+		return this.getFname().compareTo(o.getFname());	
+	}	
 }
