@@ -42,7 +42,7 @@ public class QueueExampleDemo {
 		
 		while (!queue.isEmpty()) {
 			System.out.println(queue.remove());
-			System.out.println("Queue items: " + queue.toString());
+			System.out.println("Queue items: " + queue.toString()); 
 			Thread.sleep(2000);
 		}
 		
