@@ -31,5 +31,15 @@ class EmployeeTest {
 		
 		assertEquals("Name too short", illegalArgumentException.getMessage());
 	}
+	
+	@Test
+	void testSetGetAge() throws Exception {
+		Employee emp = new Employee();
+		Exception excep = assertThrows(Exception.class, () -> {
+			emp.setAge(31);
+		});
+		assertEquals("Invalid age entered", excep.getMessage());
+		System.out.println(excep.getMessage());
+	}
 
 }

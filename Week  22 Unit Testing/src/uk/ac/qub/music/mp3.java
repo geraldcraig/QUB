@@ -1,5 +1,7 @@
 package uk.ac.qub.music;
 
+import java.util.InputMismatchException;
+
 public class mp3 {
 
 	public final static int LOWER_RATING = 0;
@@ -21,7 +23,7 @@ public class mp3 {
 	 */
 	public void setRef(int ref) throws IllegalArgumentException {
 
-		if (ref <= 0) {
+		if (ref < 0) {
 			this.ref = ref;
 		}
 		throw new IllegalArgumentException("Ref less than 0");
@@ -51,7 +53,6 @@ public class mp3 {
 		if ((rating > 1) && (rating < 5)) {
 			this.rating = rating;
 		}
-
 	}
 	
 	/**
@@ -64,9 +65,9 @@ public class mp3 {
 	/**
 	 * @param songLength the songLength to set
 	 */
-	public void setSongLength(int songLength) {
+	public void setSongLength(int songLength) throws InputMismatchException {
 		if (songLength < 1 || songLength > 2500) {
-			System.err.println("Invalid song length");
+			throw new InputMismatchException("Invalid song length");
 		} else {
 		this.songLength = songLength;
 		}
@@ -78,5 +79,6 @@ public class mp3 {
 		this.songName = songName;
 		this.rating = rating;
 	}
+	
 
 }
