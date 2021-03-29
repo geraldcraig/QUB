@@ -5,12 +5,16 @@ import java.util.InputMismatchException;
 public class mp3 {
 
 	public final static int LOWER_RATING = 0;
-	
+
 	private int ref;
 	private String artist;
 	private String songName;
 	private int rating;
 	private int songLength;
+	
+	public mp3() {
+		
+	}
 
 	public int getRef() {
 		return ref;
@@ -54,7 +58,7 @@ public class mp3 {
 			this.rating = rating;
 		}
 	}
-	
+
 	/**
 	 * @return the songLength
 	 */
@@ -66,10 +70,10 @@ public class mp3 {
 	 * @param songLength the songLength to set
 	 */
 	public void setSongLength(int songLength) throws InputMismatchException {
-		if (songLength < 1 || songLength > 2500) {
-			throw new InputMismatchException("Invalid song length");
+		if (songLength >= 1 && songLength <= 2500) {
+			this.songLength = songLength;
 		} else {
-		this.songLength = songLength;
+			throw new InputMismatchException("Invalid song length");
 		}
 	}
 
@@ -79,6 +83,5 @@ public class mp3 {
 		this.songName = songName;
 		this.rating = rating;
 	}
-	
 
 }

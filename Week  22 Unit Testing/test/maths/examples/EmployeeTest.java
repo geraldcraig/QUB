@@ -6,23 +6,22 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class EmployeeTest {
+	
+	Employee employee;
 
 	@BeforeEach
 	void setUp() throws Exception {
+		employee = new Employee();
 	}
 
 	@Test
 	void testGetName() {
-		
-		Employee employee = new Employee();
 		employee.setName("Gerald");
-		
 		assertEquals("Gerald", employee.getName());
 	}
 
 	@Test
 	void testSetNameInvalid() {
-		Employee employee = new Employee();
 		IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> {
 			employee.setName("");
 		});
@@ -34,12 +33,18 @@ class EmployeeTest {
 	
 	@Test
 	void testSetGetAge() throws Exception {
-		Employee emp = new Employee();
-		Exception excep = assertThrows(Exception.class, () -> {
-			emp.setAge(31);
+		Exception exception = assertThrows(Exception.class, () -> {
+			employee.setAge(18);
 		});
-		assertEquals("Invalid age entered", excep.getMessage());
-		System.out.println(excep.getMessage());
+		assertEquals("Invalid age entered", exception.getMessage());
+		System.out.println(exception.getMessage());
+	}
+	
+	@Test
+	void testEmployee() throws Exception {
+		Employee e2 = new Employee("Aidan", 11);
+		assertEquals("Aidan",e2.getName());
+		assertEquals(11, e2.getAge());
 	}
 
 }

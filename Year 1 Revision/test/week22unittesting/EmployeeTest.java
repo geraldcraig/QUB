@@ -25,12 +25,12 @@ class EmployeeTest {
 			employee.setName("");
 		});
 		// can also print message to console
-		IllegalArgumentException illArg = assertThrows(IllegalArgumentException.class, () -> {
+		IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> {
 			employee.setName("");
 		});
-		System.out.println(illArg.getMessage());
+		System.out.println(illegalArgumentException.getMessage());
 		// could also do
-		assertEquals("Name too short", illArg.getMessage());
+		assertEquals("Name too short", illegalArgumentException.getMessage());
 		
 	}
 	
