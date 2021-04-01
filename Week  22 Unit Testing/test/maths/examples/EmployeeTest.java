@@ -34,17 +34,26 @@ class EmployeeTest {
 	@Test
 	void testSetGetAge() throws Exception {
 		Exception exception = assertThrows(Exception.class, () -> {
-			employee.setAge(18);
+			employee.setAge(17);
 		});
 		assertEquals("Invalid age entered", exception.getMessage());
 		System.out.println(exception.getMessage());
 	}
 	
 	@Test
-	void testEmployee() throws Exception {
-		Employee e2 = new Employee("Aidan", 11);
-		assertEquals("Aidan",e2.getName());
-		assertEquals(11, e2.getAge());
+	void testValidConstructor() throws Exception {
+		Employee e2 = new Employee("Aidan", 18);
+		assertEquals("Aidan", e2.getName());
+		assertEquals(18, e2.getAge());
 	}
+	
+	@Test
+	void testInvalidConstrutor() throws Exception {
+		assertThrows(Exception.class, () -> {
+			Employee e2 = new Employee("Aidan", 17);
+		});
+		
+	}
+	
 
 }

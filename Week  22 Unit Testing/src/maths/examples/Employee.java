@@ -60,7 +60,7 @@ public class Employee {
 	 * @throws Exception
 	 */
 	public void setAge(int age) throws Exception {
-		if (age > 18 && age < 30) {
+		if (age >= 18 && age <= 30) {
 			this.age = age;
 		} else {
 			throw new Exception("Invalid age entered");
