@@ -6,21 +6,21 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class EmployeeTest {
+	Employee employee;
 
 	@BeforeEach
 	void setUp() throws Exception {
+		employee = new Employee();
 	}
 
 	@Test
 	void testGetSetName() {
-		Employee employee = new Employee();
 		employee.setName("Aidan");
 		assertEquals("Aidan", employee.getName());
 	}
 	
 	@Test
 	void testSetNameInvalid() {
-		Employee employee = new Employee();
 		assertThrows(IllegalArgumentException.class, () -> {
 			employee.setName("");
 		});

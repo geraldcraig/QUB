@@ -106,7 +106,9 @@ class NumberCruncherTest {
 			nc.divNumbers(3, 0);
 		});
 		
-		assertEquals("Exception : attempt to div by zero", exception.getMessage());
+		System.out.println("Test divide by zero: " + exception.getMessage());
+		String expectedMessage = "Exception : attempt to div by zero";
 		
+		assertEquals(expectedMessage, exception.getMessage());	
 	}
 }
