@@ -1,4 +1,4 @@
-package maths.examples;
+ package maths.examples;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -6,18 +6,64 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class EmployeeTest {
-	
+	// test data
+	String validName, inValidName;
 	Employee employee;
-
+	
+	int ageValidLower, ageValidMid, ageValidUpper;
+	int ageInValidLower, ageInValidUpper;
+	
 	@BeforeEach
 	void setUp() throws Exception {
+		validName = "Michael";
 		employee = new Employee();
+		
+		ageValidLower = 18;
+		ageValidMid =24;
+		ageValidUpper = 30;
+		
+		ageInValidLower = 17;
+		ageInValidUpper = 31;
 	}
 
 	@Test
-	void testGetName() {
-		employee.setName("Gerald");
-		assertEquals("Gerald", employee.getName());
+	void testGetSetName() {
+		employee.setName(validName);
+		assertEquals(validName, employee.getName());
+	}
+	
+	@Test
+	void testGetSetAge() {
+		employee.setAge(ageValidMid);
+		assertEquals(ageValidMid, employee.getAge());
+	}
+	
+	@Test
+	void testSettingValidAges() {
+		employee.setAge(ageValidLower);
+		assertEquals(ageValidLower, employee.getAge());
+		
+		employee.setAge(ageValidMid);
+		assertEquals(ageValidMid, employee.getAge());
+		
+		employee.setAge(ageValidUpper);
+		assertEquals(ageValidUpper, employee.getAge());
+		
+	}
+	
+	@Test
+	void testsetInvalidAge() {
+		String expectedMessage = "Invalid age entered";
+		Exception exp = assertThrows(IllegalArgumentException.class, () -> {
+			employee.setAge(ageInValidLower);
+		});
+		assertEquals(expectedMessage, exp.getMessage());
+		
+		exp = assertThrows(IllegalArgumentException.class, () -> {
+			employee.setAge(ageInValidUpper);
+		});
+		assertEquals(expectedMessage, exp.getMessage());
+
 	}
 
 	@Test
@@ -28,7 +74,7 @@ class EmployeeTest {
 		
 		System.out.println(illegalArgumentException.getMessage());
 		
-		assertEquals("Name too short", illegalArgumentException.getMessage());
+		assertEquals("Invalid name", illegalArgumentException.getMessage());
 	}
 	
 	@Test
@@ -42,15 +88,19 @@ class EmployeeTest {
 	
 	@Test
 	void testValidConstructor() throws Exception {
-		Employee e2 = new Employee("Aidan", 18);
-		assertEquals("Aidan", e2.getName());
-		assertEquals(18, e2.getAge());
+		Employee e2 = new Employee(validName, ageValidMid);
+		assertEquals(validName, e2.getName());
+		assertEquals(ageValidMid, e2.getAge());
 	}
 	
 	@Test
 	void testInvalidConstrutor() throws Exception {
-		assertThrows(Exception.class, () -> {
-			Employee e2 = new Employee("Aidan", 17);
+		Exception exp = assertThrows(Exception.class, () -> {
+			new Employee(validName, ageInValidLower);
+		});
+		
+		exp = assertThrows(Exception.class, () -> {
+			new Employee(inValidName, ageValidLower);
 		});
 		
 	}

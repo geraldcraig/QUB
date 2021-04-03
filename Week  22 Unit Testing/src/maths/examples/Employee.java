@@ -8,11 +8,14 @@ package maths.examples;
  *
  */
 public class Employee {
-
+	
+	// constants for business rules
+	private static final int AGE_VALID_LOWER = 18;
+	private static final int AGE_VALID_UPPER = 30;
+	
+	// instance vars
 	private String name;
-	private int age;
-	
-	
+	private int age;	
 
 	/**
 	 * 
@@ -33,18 +36,18 @@ public class Employee {
 	 * @throws Exception 
 	 */
 	public Employee(String name, int age) throws Exception {
-		this.name = name;
-		this.setAge(age);
+		setName(name);
+		setAge(age);
 	}
 
 	/**
 	 * @param name the name to set
 	 */
 	public void setName(String name) throws IllegalArgumentException {
-		if (name.length() > 0) {
+		if (name.length() > 0 && name != null) {
 			this.name = name;
 		} else {
-			throw new IllegalArgumentException("Name too short");
+			throw new IllegalArgumentException("Invalid name");
 		}
 	}
 
@@ -56,14 +59,15 @@ public class Employee {
 	}
 
 	/**
-	 * @param age the age to set
-	 * @throws Exception
+	 * setter for age and apply business rules
+	 * @param age
+	 * @throws IllegalArgumentException
 	 */
-	public void setAge(int age) throws Exception {
-		if (age >= 18 && age <= 30) {
-			this.age = age;
+	public void setAge(int age) throws IllegalArgumentException {
+		if (age < AGE_VALID_LOWER || age > AGE_VALID_UPPER) {
+			throw new IllegalArgumentException("Invalid age entered");
 		} else {
-			throw new Exception("Invalid age entered");
+			this.age = age;
 		}
 	}
 
