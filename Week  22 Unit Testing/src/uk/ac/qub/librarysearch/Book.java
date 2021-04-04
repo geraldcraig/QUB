@@ -1,5 +1,7 @@
 package uk.ac.qub.librarysearch;
 
+import static org.junit.Assert.assertThrows;
+
 /**
  * Book class - represents a book in the system
  * 
@@ -18,33 +20,25 @@ public class Book {
 	private String author;
 
 	/**
-	 * @return the rating
-	 */
-	public int getRating() {
-		return rating;
-	}
-
-	/**
-	 * @param rating the rating to set
-	 */
-	public void setRating(int rating) {
-		if (rating < 1 && rating > 5) {
-			System.err.println("invalid rating");
-		} else {
-			this.rating = rating;
-		}
-	}
-
-
-	/**
 	 * The title of the book
 	 */
 	private String title;
 	
-	/**
-	 * The rating of the book
-	 */
 	private int rating;
+	
+	/**
+	 * Default constructor
+	 */
+	public Book() {
+
+	}
+	
+	public Book(String iSBN, String author, String title, int rating) {
+		setISBN(iSBN);
+		setAuthor(author);
+		setTitle(title);
+		setRating(rating);
+	}
 
 	/**
 	 * Gets the ISBN number
@@ -62,10 +56,12 @@ public class Book {
 	 *            10 or 13 chars
 	 * @throws Exception 
 	 */
-	public void setISBN(String iSBN)  {
-		
+	public void setISBN(String iSBN) throws IllegalArgumentException {
+		if (iSBN.length() == 10 || iSBN.length() == 13) {
 			this.ISBN = iSBN;
-		
+		} else {
+			throw new IllegalArgumentException();
+		}	
 	}
 
 	/**
@@ -82,11 +78,12 @@ public class Book {
 	 * 
 	 * @param author
 	 */
-	public void setAuthor(String author)  {
-
-		
+	public void setAuthor(String author) throws IllegalArgumentException {
+		if (author.length() < 1) {
+			throw new IllegalArgumentException("Invalid author length");
+		} else {
 			this.author = author;
-		
+		}			
 	}
 
 	/**
@@ -104,18 +101,36 @@ public class Book {
 	 * @param title
 	 */
 	public void setTitle(String title) throws IllegalArgumentException {
-		
+		if (title.length() < 1) {
+			throw new IllegalArgumentException("Invalid title length");
+		} else {
 			this.title = title;
-		
+		}	
 	}
-	
-	
+
 	/**
-	 * Default constructor
+	 * @return the rating
 	 */
-	public Book() {
-
+	public int getRating() {
+		return rating;
 	}
 
+	/**
+	 * @param rating the rating to set
+	 */
+	public void setRating(int rating) throws IllegalArgumentException {
+		if (rating < 1 || rating > 5) {
+			throw new IllegalArgumentException("Invalid rating");
+		} else {
+			this.rating = rating;
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "Book [ISBN=" + ISBN + ", author=" + author + ", title=" + title + ", rating=" + rating + "]";
+	}
+	
+	
 	
 }
