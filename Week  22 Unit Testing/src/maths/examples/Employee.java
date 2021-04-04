@@ -44,7 +44,7 @@ public class Employee {
 	 * @param name the name to set
 	 */
 	public void setName(String name) throws IllegalArgumentException {
-		if (name.length() > 0 && name != null) {
+		if (name != null && name.length() > 0) {
 			this.name = name;
 		} else {
 			throw new IllegalArgumentException("Invalid name");

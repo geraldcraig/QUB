@@ -48,8 +48,7 @@ class EmployeeTest {
 		assertEquals(ageValidMid, employee.getAge());
 		
 		employee.setAge(ageValidUpper);
-		assertEquals(ageValidUpper, employee.getAge());
-		
+		assertEquals(ageValidUpper, employee.getAge());	
 	}
 	
 	@Test
@@ -87,20 +86,25 @@ class EmployeeTest {
 	}
 	
 	@Test
-	void testInvalidConstrutor() throws Exception {
-		Exception exp = assertThrows(Exception.class, () -> {
+	void testInvalidConstrutor() throws IllegalArgumentException {
+		// call constructor with invalid values, test for exception
+		Exception exp = assertThrows(IllegalArgumentException.class, () -> {
 			new Employee(validName, ageInValidLower);
 		});
 		
 		System.out.println("Invalid age Exception: " + exp.getMessage());
 		
-		exp = assertThrows(Exception.class, () -> {
+		exp = assertThrows(IllegalArgumentException.class, () -> {
 			new Employee(invalidName, ageValidLower);
 		});	
 		
 		assertEquals("Invalid name", exp.getMessage());
 		
 		System.out.println("Invalid name Exception: " + exp.getMessage());
+		
+		exp = assertThrows(IllegalArgumentException.class, () -> {
+			new Employee(null, ageValidLower);
+		});	
 	}
 	
 }
