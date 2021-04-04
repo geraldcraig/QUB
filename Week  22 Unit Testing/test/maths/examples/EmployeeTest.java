@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 class EmployeeTest {
 	// test data
-	String validName, inValidName;
+	String validName, invalidName;
 	Employee employee;
 	
 	int ageValidLower, ageValidMid, ageValidUpper;
@@ -16,6 +16,7 @@ class EmployeeTest {
 	@BeforeEach
 	void setUp() throws Exception {
 		validName = "Michael";
+		invalidName = "";
 		employee = new Employee();
 		
 		ageValidLower = 18;
@@ -52,7 +53,7 @@ class EmployeeTest {
 	}
 	
 	@Test
-	void testsetInvalidAge() {
+	void testSetInvalidAge() {
 		String expectedMessage = "Invalid age entered";
 		Exception exp = assertThrows(IllegalArgumentException.class, () -> {
 			employee.setAge(ageInValidLower);
@@ -63,7 +64,6 @@ class EmployeeTest {
 			employee.setAge(ageInValidUpper);
 		});
 		assertEquals(expectedMessage, exp.getMessage());
-
 	}
 
 	@Test
@@ -78,19 +78,12 @@ class EmployeeTest {
 	}
 	
 	@Test
-	void testSetGetAge() throws Exception {
-		Exception exception = assertThrows(Exception.class, () -> {
-			employee.setAge(17);
-		});
-		assertEquals("Invalid age entered", exception.getMessage());
-		System.out.println(exception.getMessage());
-	}
-	
-	@Test
 	void testValidConstructor() throws Exception {
 		Employee e2 = new Employee(validName, ageValidMid);
 		assertEquals(validName, e2.getName());
 		assertEquals(ageValidMid, e2.getAge());
+		
+		System.out.println("Valid name: " + e2.getName());
 	}
 	
 	@Test
@@ -99,11 +92,15 @@ class EmployeeTest {
 			new Employee(validName, ageInValidLower);
 		});
 		
-		exp = assertThrows(Exception.class, () -> {
-			new Employee(inValidName, ageValidLower);
-		});
+		System.out.println("Invalid age Exception: " + exp.getMessage());
 		
+		exp = assertThrows(Exception.class, () -> {
+			new Employee(invalidName, ageValidLower);
+		});	
+		
+		assertEquals("Invalid name", exp.getMessage());
+		
+		System.out.println("Invalid name Exception: " + exp.getMessage());
 	}
 	
-
 }
