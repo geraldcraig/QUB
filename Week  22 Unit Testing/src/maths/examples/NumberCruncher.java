@@ -38,4 +38,24 @@ public class NumberCruncher {
 		}
 	}
 
+	/**
+	 * Method takes a seed value and creates an int array sized by the number passed
+	 * (with each previous number * seed) eg given 2 and 4 would return an array of
+	 * [2, 4, 8, 16]
+	 * 
+	 * @param seed
+	 * @param number
+	 * @return
+	 */
+	public int[] doubleUp(int seed, int number) {
+
+		int[] nums = new int[number];
+		nums[0] = seed;
+
+		for (int i = 1; i < number; i++) {
+			nums[i] = nums[i - 1] * seed;
+		}
+		return nums;
+	}
+
 }

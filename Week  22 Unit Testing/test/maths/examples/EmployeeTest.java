@@ -77,7 +77,7 @@ class EmployeeTest {
 	}
 	
 	@Test
-	void testValidConstructor() throws Exception {
+	void testValidConstructor() {
 		Employee e2 = new Employee(validName, ageValidMid);
 		assertEquals(validName, e2.getName());
 		assertEquals(ageValidMid, e2.getAge());

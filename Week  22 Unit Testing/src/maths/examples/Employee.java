@@ -3,6 +3,8 @@
  */
 package maths.examples;
 
+import java.util.ArrayList;
+
 /**
  * @author Gerald
  *
@@ -21,6 +23,7 @@ public class Employee {
 	 * 
 	 */
 	public Employee() {
+		
 	}
 
 	/**
@@ -35,7 +38,7 @@ public class Employee {
 	 * @param age
 	 * @throws Exception 
 	 */
-	public Employee(String name, int age) throws Exception {
+	public Employee(String name, int age) throws IllegalArgumentException {
 		setName(name);
 		setAge(age);
 	}
@@ -69,6 +72,20 @@ public class Employee {
 		} else {
 			this.age = age;
 		}
+	}
+	
+	public static ArrayList<Employee> getAllEmployeesByAge(ArrayList<Employee> employees, int age) {
+		ArrayList<Employee> employeesWithAge = new ArrayList<Employee>();
+		
+		for (Employee employee : employees) {
+			if (employee.getAge() <= age) {
+				// found an employee - adding to list
+				employeesWithAge.add(employee);
+			}
+		}
+		
+		// return the list
+		return employeesWithAge;
 	}
 
 }
