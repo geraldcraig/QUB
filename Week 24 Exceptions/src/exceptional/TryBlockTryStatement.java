@@ -29,7 +29,7 @@ public class TryBlockTryStatement {
 	public static void main(String[] args) {
 		// normal case
 		System.out.println("Answer : "+divUp(4, 2));
-
+  
 		// division by zero
 		System.out.println("Answer : "+divUp(4, 0));
 		
