@@ -33,6 +33,7 @@ public class Exercise1 {
 				scan.next();
 			}
 		} while (!OK);
+		scan.close();
 	}
 
 }

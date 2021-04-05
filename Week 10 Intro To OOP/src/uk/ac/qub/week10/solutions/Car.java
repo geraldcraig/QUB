@@ -163,5 +163,14 @@ public class Car {
 		return "Car [make=" + make + ", model=" + model + ", colour=" + colour + ", numberOfDoors=" + numberOfDoors
 				+ ", engineSize=" + engineSize + ", maxSpeed=" + maxSpeed + ", started=" + started + "]";
 	}
+	
+	public void displayAll() {
+		setMake(make);
+		setModel(model);
+		setColour(colour);
+		setNumberOfDoors(numberOfDoors);
+		setEngineSize(engineSize);
+		setMaxSpeed(maxSpeed);	
+	}
 
 }

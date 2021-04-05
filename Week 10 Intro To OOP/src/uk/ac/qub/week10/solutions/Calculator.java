@@ -10,7 +10,6 @@ public class Calculator {
 
 	private int memory;
 
-	
 
 	/**
          * Gets the memory
@@ -78,9 +77,5 @@ public class Calculator {
 	public void squareRoot(int num1){
 		System.out.println(Math.sqrt(num1));
 	}
-	
-		
-	
-	
 		
 }
