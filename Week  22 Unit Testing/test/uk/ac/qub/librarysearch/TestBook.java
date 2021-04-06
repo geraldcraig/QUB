@@ -22,16 +22,6 @@ class TestBook {
 	}
 
 	@Test
-	void testBook() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testBookStringStringStringInt() {
-		fail("Not yet implemented");
-	}
-
-	@Test
 	void testGetSetISBN() {
 		book.setISBN(validISBN10);
 		assertEquals(validISBN10, book.getISBN());
@@ -40,36 +30,6 @@ class TestBook {
 		book.setISBN(validISBN13);
 		assertEquals(validISBN13, book.getISBN());
 		System.out.println("ISBN valid 13: " + book.getISBN());
-	}
-
-	@Test
-	void testGetAuthor() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testSetAuthor() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetTitle() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testSetTitle() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetRating() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testSetRating() {
-		fail("Not yet implemented");
 	}
 
 }

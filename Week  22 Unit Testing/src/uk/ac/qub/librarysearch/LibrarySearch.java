@@ -9,7 +9,6 @@ import java.util.ArrayList;
  */
 public class LibrarySearch {
 
-	
 	/**
 	 * Search by title
 	 * @param title - String
@@ -43,8 +42,26 @@ public class LibrarySearch {
 		return results;
 	}
 	
+	public static ArrayList<Book> searchByRating(ArrayList<Book> allBooks, int rating) {
+		ArrayList<Book> results = new ArrayList<Book>();
+		
+		for (int i = 0; i < allBooks.size(); i++) {
+			if (allBooks.get(i).getRating() == rating) {
+				results.add(allBooks.get(i));	
+			}
+		}
+		return results;	
+	}
 	
-	
-	
+	public static ArrayList<Book> searchByRating(ArrayList<Book> allBooks, String ISBN) {
+		ArrayList<Book> results = new ArrayList<Book>();
+		
+		for (int i = 0; i < allBooks.size(); i++) {
+			if (allBooks.get(i).getISBN().equals(ISBN)) {
+				results.add(allBooks.get(i));	
+			}
+		}
+		return results;	
+	}
 	
 }

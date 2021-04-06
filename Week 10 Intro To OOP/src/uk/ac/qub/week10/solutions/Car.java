@@ -127,7 +127,6 @@ public class Car {
 		this.started = started;
 	}
 	
-	
 	/**
 	 * Starts the car
 	 */
@@ -140,7 +139,6 @@ public class Car {
 			System.out.println("Car started");
 		}
 	}
-	
 	
 	/**
 	 * Stops the car
