@@ -45,7 +45,6 @@ public class CalendarStuff {
 		default:
 			throw new NumberFormatException("Invalid month number");
 		}
-
 		return monthStr;
 	}
 }

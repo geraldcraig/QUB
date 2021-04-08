@@ -11,10 +11,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-/**
- * @author Gerald
- *
- */
 class NumberCruncherTest {
 
 	// test data
@@ -23,16 +19,10 @@ class NumberCruncherTest {
 	int num3;
 	NumberCruncher nc;
 
-	/**
-	 * @throws java.lang.Exception
-	 */
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 	}
 
-	/**
-	 * @throws java.lang.Exception
-	 */
 	@BeforeEach
 	void setUp() throws Exception {
 		num1 = 2;
@@ -41,9 +31,6 @@ class NumberCruncherTest {
 		nc = new NumberCruncher();
 	}
 
-	/**
-	 * Test method for {@link maths.examples.NumberCruncher#addNumbers(int, int)}.
-	 */
 	@Test
 	void testAddNumbersIntInt() {
 		System.out.println("About to test addNumbers(int, int) ");
@@ -52,13 +39,8 @@ class NumberCruncherTest {
 		int actual = nc.addNumbers(num1, num2);
 		assertEquals(expected, actual);
 		System.out.println("Test AddNumbersIntInt finished");
-
 	}
 
-	/**
-	 * Test method for
-	 * {@link maths.examples.NumberCruncher#addNumbers(int, int, int)}.
-	 */
 	@Test
 	void testAddNumbersIntIntInt() {
 		System.out.println("About to test addNumbers(int, int, int) ");
@@ -69,9 +51,6 @@ class NumberCruncherTest {
 		System.out.println("Test AddNumbersIntIntInt finished");
 	}
 
-	/**
-	 * 
-	 */
 	@Test
 	void testMultiplyNumbersIntInt() {
 		System.out.println("About to test multiplyNumbers(int, int) ");
@@ -81,9 +60,6 @@ class NumberCruncherTest {
 		System.out.println("Test MultiplyNumbersIntInt finished");
 	}
 
-	/**
-	 * 
-	 */
 	@Test
 	void testMultiplyNumbersIntIntInt() {
 		System.out.println("About to test multiplyNumbers(int, int, int) ");
@@ -108,7 +84,6 @@ class NumberCruncherTest {
 		Exception exception = assertThrows(Exception.class, () -> {
 			nc.divNumbers(3, 0);
 		});
-
 		System.out.println("Test divide by zero: " + exception.getMessage());
 		String expectedMessage = "Exception : attempt to div by zero";
 
@@ -139,4 +114,5 @@ class NumberCruncherTest {
 		// overall result
 		assertTrue(match);
 	}
+
 }

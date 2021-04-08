@@ -54,7 +54,6 @@ class EmployeeAdminTest {
 		} else {
 			assertTrue(false);
 		}
-
 		// or
 		assertTrue(returnedSearchByAge.size() == 2 && returnedSearchByAge.contains(employee1)
 				&& returnedSearchByAge.contains(employee2));

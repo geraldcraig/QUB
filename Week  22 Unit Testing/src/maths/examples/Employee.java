@@ -19,33 +19,19 @@ public class Employee {
 	private String name;
 	private int age;	
 
-	/**
-	 * 
-	 */
 	public Employee() {
 		
 	}
 
-	/**
-	 * @return the name
-	 */
 	public String getName() {
 		return name;
 	}
 	
-	/**
-	 * @param name
-	 * @param age
-	 * @throws Exception 
-	 */
 	public Employee(String name, int age) throws IllegalArgumentException {
 		setName(name);
 		setAge(age);
 	}
 
-	/**
-	 * @param name the name to set
-	 */
 	public void setName(String name) throws IllegalArgumentException {
 		if (name != null && name.length() > 0) {
 			this.name = name;
@@ -54,9 +40,6 @@ public class Employee {
 		}
 	}
 
-	/**
-	 * @return the age
-	 */
 	public int getAge() {
 		return age;
 	}
@@ -72,20 +55,6 @@ public class Employee {
 		} else {
 			this.age = age;
 		}
-	}
-	
-	public static ArrayList<Employee> getAllEmployeesByAge(ArrayList<Employee> employees, int age) {
-		ArrayList<Employee> employeesWithAge = new ArrayList<Employee>();
-		
-		for (Employee employee : employees) {
-			if (employee.getAge() <= age) {
-				// found an employee - adding to list
-				employeesWithAge.add(employee);
-			}
-		}
-		
-		// return the list
-		return employeesWithAge;
 	}
 
 }
