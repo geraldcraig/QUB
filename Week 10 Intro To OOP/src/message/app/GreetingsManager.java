@@ -18,7 +18,8 @@ public class GreetingsManager {
 		
 		// create an object of MessageCentre
 		MessageCentre messageCentre = new MessageCentre();
-		messageCentre.displayWelcomeMessage();
+		// invoking method of MessageCentre
+		messageCentre.displayWelcomeMessage("pm");
 		
 		System.out.println("Greetings app ending");
 

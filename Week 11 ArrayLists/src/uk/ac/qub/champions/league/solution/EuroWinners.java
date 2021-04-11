@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class EuroWinners {
 
 	/**
-	 * main method that coordinates the redaing of a file of winner by year of the
+	 * main method that coordinates the reading of a file of winner by year of the
 	 * European Cup. Outputs that by year to screen then output the teams that have won (ie no duplicates) 
 	 *
 	 **/
