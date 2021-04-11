@@ -27,8 +27,8 @@ public class CarFactory {
 		car2.setMaxSpeed(130);
 
 		// show all cars
-		System.out.println(car1.displayAll());
-		System.out.println(car2.displayAll());
+		//System.out.println(car1.displayAll());
+		//System.out.println(car2.displayAll());
 			
 		// take car 1 for a spin
 		car1.startCar();

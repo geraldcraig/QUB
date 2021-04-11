@@ -15,9 +15,11 @@ public class QUB {
 	public static void main(String[] args) {
 
 		String name;
-		name = "QUB Computer Science"; // assume name will only ever contain Letters/Spaces (no punctuation etc)
-										// You can also assume it will start and end with letters (no trailing
-										// whitespace etc)
+		name = "QUB Computer Science"; // assume name will only ever contain 
+		                               // Letters/Spaces (no punctuation etc)
+									   // You can also assume it will start and 
+		                               // end with letters (no trailing
+									   // whitespace etc)
 		// TODO : change name to upper case and output to screen.
 		name = name.toUpperCase();
 		System.out.println(name);

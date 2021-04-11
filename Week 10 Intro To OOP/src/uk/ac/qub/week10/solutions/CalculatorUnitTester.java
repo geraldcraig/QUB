@@ -15,9 +15,9 @@ public class CalculatorUnitTester {
 		cal.multiplyNumbers(num1, num2);
 		cal.divideNumbers(num1, num2);
 		cal.squareRoot(num1);
-		cal.randonNumber();
-		cal.addToMemory(num1);
-		cal.recallFromMemory();
+		//cal.randonNumber();
+		//cal.addToMemory(num1);
+		//cal.recallFromMemory();
 		cal.clearMemory();
 		
 		// fun calculator test - ie the updates

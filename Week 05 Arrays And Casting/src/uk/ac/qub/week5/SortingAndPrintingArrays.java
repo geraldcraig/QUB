@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @author geraldcraig
  *
  */
-public class SortingAndOrintingArrays {
+public class SortingAndPrintingArrays {
 
 	/**
 	 * @param args
