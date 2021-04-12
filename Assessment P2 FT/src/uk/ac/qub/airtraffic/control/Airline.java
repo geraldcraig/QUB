@@ -1,22 +1,15 @@
+/**
+ * 
+ */
 package uk.ac.qub.airtraffic.control;
 
+/**
+ * @author Gerald
+ *
+ */
 public class Airline extends Aircraft {
 	
-	private String engineType;
-
-	/**
-	 * @return the engineType
-	 */
-	public String getEngineType() {
-		return engineType;
-	}
-
-	/**
-	 * @param engineType the engineType to set
-	 */
-	public void setEngineType(String engineType) {
-		this.engineType = engineType;
-	}
+	
 
 	@Override
 	public int getCurrentSpeed() {
@@ -53,8 +46,11 @@ public class Airline extends Aircraft {
 		// TODO Auto-generated method stub
 		super.setAircraftCode(aircraftCode);
 	}
-	
-	
-	
+
+	@Override
+	public double timeToAirield() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }

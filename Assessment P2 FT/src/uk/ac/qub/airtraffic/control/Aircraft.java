@@ -12,6 +12,7 @@ public abstract class Aircraft {
 	private int currentSpeed;
 	private int distanceToAirfield;
 	private String aircraftCode;
+	
 	/**
 	 * @return the currentSpeed
 	 */
@@ -48,5 +49,6 @@ public abstract class Aircraft {
 	public void setAircraftCode(String aircraftCode) {
 		this.aircraftCode = aircraftCode;
 	}
-
+	
+	public abstract double timeToAirield();
 }

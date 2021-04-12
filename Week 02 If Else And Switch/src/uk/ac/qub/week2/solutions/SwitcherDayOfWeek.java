@@ -14,7 +14,7 @@ public class SwitcherDayOfWeek {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// decalre vars
+		// declare vars
 		int dayNumber;
 		String day;
 
