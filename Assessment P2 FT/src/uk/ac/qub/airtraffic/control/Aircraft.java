@@ -3,6 +3,8 @@
  */
 package uk.ac.qub.airtraffic.control;
 
+import java.util.InputMismatchException;
+
 /**
  * @author Gerald
  *
@@ -23,8 +25,13 @@ public abstract class Aircraft {
 	/**
 	 * @param currentSpeed the currentSpeed to set
 	 */
-	public void setCurrentSpeed(int currentSpeed) {
-		this.currentSpeed = currentSpeed;
+	public void setCurrentSpeed(int currentSpeed) throws InputMismatchException {
+		if (currentSpeed > 0 && currentSpeed <= 800) {
+			this.currentSpeed = currentSpeed;
+		} else {
+			System.out.println("Invalid speed");
+			throw new InputMismatchException("INVALID SPEED");
+		}
 	}
 
 	/**
@@ -55,8 +62,7 @@ public abstract class Aircraft {
 		this.aircraftCode = aircraftCode;
 	}
 
-	public double timeToAirfield() {
-		return currentSpeed;
-		
+	public void timeToAirfield(int distanceToAirfield, int currentSpeed) {
+		System.out.println(distanceToAirfield / currentSpeed * 60);
 	}
 }

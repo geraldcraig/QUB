@@ -19,10 +19,9 @@ public class Airline extends Aircraft {
 	}
 
 	@Override
-	public double timeToAirfield() {
-		// TODO Auto-generated method stub
-		return super.timeToAirfield();
-	}
-	
+	public void timeToAirfield(int distanceToAirfield, int currentSpeed) {
+		super.timeToAirfield(distanceToAirfield, currentSpeed);
+		
+	}	
 	
 }
