@@ -15,7 +15,6 @@ public class KoboBook extends eBook {
 	public void readBook() {
 		
 		System.out.println("Reading book...");
-
 	}
 
 }

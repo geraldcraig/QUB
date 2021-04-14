@@ -14,8 +14,7 @@ public class Builder extends Employee {
 
 	@Override
 	public void calculateSalary(int rate, int hours) {
-		System.out.println(rate * hours * 2.2);
-		
+		System.out.println(rate * hours * 2.2);		
 	}
 
 }

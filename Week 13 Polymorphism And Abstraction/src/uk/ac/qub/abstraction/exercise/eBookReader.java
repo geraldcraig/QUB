@@ -18,7 +18,6 @@ public class eBookReader {
 		
 		KoboBook kobo = new KoboBook();
 		kobo.readBook();
-
 	}
 
 }

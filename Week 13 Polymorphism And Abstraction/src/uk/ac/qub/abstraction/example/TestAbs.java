@@ -18,10 +18,7 @@ public class TestAbs {
 		b.setFirstName("Alan");
 		b.calculateSalary(2, 6);
 		
-		System.out.println(b.getFirstName());
-		
-		
-		
+		System.out.println(b.getFirstName());	
 	}
 
 }

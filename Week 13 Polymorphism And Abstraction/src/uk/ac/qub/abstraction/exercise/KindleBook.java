@@ -21,7 +21,6 @@ public class KindleBook extends eBook {
 		} else {
 			System.out.println("Not downloaded from Amazon. Cannot read");
 		}
-
 	}
 
 	/**

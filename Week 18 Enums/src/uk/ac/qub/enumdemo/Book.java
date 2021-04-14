@@ -8,18 +8,15 @@ package uk.ac.qub.enumdemo;
  *
  */
 public class Book {
-	
+
 	private String title;
 	private double price;
 	private Genre genre;
-	
-	
-	
+
 	public Book() {
-		
+
 	}
-	
-	
+
 	/**
 	 * @param title
 	 * @param price
@@ -31,32 +28,35 @@ public class Book {
 		this.genre = genre;
 	}
 
-
 	public String bookDetails() {
-		return getTitle() + " " +  " Price: £" + getPrice();
+		return getTitle() + " " + " Price: £" + getPrice();
 	}
+
 	/**
 	 * @return the title
 	 */
 	public String getTitle() {
 		return title;
 	}
+
 	/**
 	 * @param title the title to set
 	 */
 	public void setTitle(String title) {
-		if (title.length()< 1) {
+		if (title.length() < 1) {
 			this.title = "INVALID TITLE";
 		} else {
-		this.title = title;
+			this.title = title;
 		}
 	}
+
 	/**
 	 * @return the price
 	 */
 	public double getPrice() {
 		return price;
 	}
+
 	/**
 	 * @param price the price to set
 	 */
@@ -65,10 +65,9 @@ public class Book {
 			System.err.println("Can't have negative price, setting to default value");
 			this.price = 0;
 		} else {
-		this.price = price;
+			this.price = price;
 		}
 	}
-
 
 	/**
 	 * @return the genre
@@ -76,7 +75,6 @@ public class Book {
 	public Genre getGenre() {
 		return genre;
 	}
-
 
 	/**
 	 * @param genre the genre to set
