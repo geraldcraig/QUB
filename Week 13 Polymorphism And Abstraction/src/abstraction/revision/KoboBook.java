@@ -1,4 +1,4 @@
-package abstraction.slides;
+package abstraction.revision;
 
 public class KoboBook extends eBook {
 
