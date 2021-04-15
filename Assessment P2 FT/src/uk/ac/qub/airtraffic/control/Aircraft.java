@@ -62,7 +62,7 @@ public abstract class Aircraft {
 		this.aircraftCode = aircraftCode;
 	}
 
-	public void timeToAirfield(int distanceToAirfield, int currentSpeed) {
-		System.out.println(distanceToAirfield / currentSpeed * 60);
+	public void timeToAirfield() {
+		System.out.println("time to airfield");
 	}
 }

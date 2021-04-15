@@ -6,12 +6,13 @@ public class AirtrafficControl {
 
 	public static void main(String[] args) {
 		Airline air1 = new Airline();
-		air1.setCurrentSpeed(800);
-		air1.setDistanceToAirfield(1000);
+		air1.setCurrentSpeed(600);
+		air1.setDistanceToAirfield(100);
 		air1.setEngineType(EngineType.JET);
+		air1.timeToAirfield();
 		
-		System.out.println(air1.getCurrentSpeed());
-		System.out.println(air1.getEngineType());
+		System.out.println("Current speed : " + air1.getCurrentSpeed() + " mph");
+		System.out.println("Engine type : " + air1.getEngineType()+ " Engine");
 
 	}
 	

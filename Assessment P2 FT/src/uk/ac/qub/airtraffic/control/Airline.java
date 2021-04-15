@@ -19,9 +19,13 @@ public class Airline extends Aircraft {
 	}
 
 	@Override
-	public void timeToAirfield(int distanceToAirfield, int currentSpeed) {
-		super.timeToAirfield(distanceToAirfield, currentSpeed);
+	public void timeToAirfield() {
+		double distance = this.getDistanceToAirfield();
+		double speed = this.getCurrentSpeed();
+		System.out.println("Minutes to airfield : " + distance / speed * 60);
 		
-	}	
+	}
+
+	
 	
 }
