@@ -14,9 +14,7 @@ public class Fizz {
 			} else {
 				System.out.println(i);
 			}
-
 		}
-
 	}
 
 }
