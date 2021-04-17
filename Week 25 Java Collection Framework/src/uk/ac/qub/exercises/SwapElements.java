@@ -16,8 +16,6 @@ public class SwapElements {
 		
 		System.out.println(linkList.toString());
 		
-		
-		
 		swap(linkList, 1, 2);
 		swap(linkList, 2, 3);
 	}
