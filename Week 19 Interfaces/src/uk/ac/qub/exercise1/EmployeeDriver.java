@@ -18,8 +18,6 @@ public class EmployeeDriver {
 		e1.setName("John");
 		double wages = e1.calculateWages(23.9, 4.7);
 		
-		
-		
 		System.out.println(e1.getName() + " earned " + wages);
 
 	}
