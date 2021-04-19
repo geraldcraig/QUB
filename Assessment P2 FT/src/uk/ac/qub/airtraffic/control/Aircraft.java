@@ -10,11 +10,17 @@ import java.util.InputMismatchException;
  *
  */
 public abstract class Aircraft {
-	
+
 	private int currentSpeed;
 	private int distanceToAirfield;
 	private String aircraftCode;
-	
+
+	public Aircraft(int currentSpeed, int distanceToAirfield, String aircraftCode) {
+		this.setCurrentSpeed(currentSpeed);
+		this.setDistanceToAirfield(distanceToAirfield);
+		this.setAircraftCode(aircraftCode);
+	}
+
 	/**
 	 * @return the currentSpeed
 	 */
@@ -44,8 +50,12 @@ public abstract class Aircraft {
 	/**
 	 * @param distanceToAirfield the distanceToAirfield to set
 	 */
-	public void setDistanceToAirfield(int distanceToAirfield) {
-		this.distanceToAirfield = distanceToAirfield;
+	public void setDistanceToAirfield(int distanceToAirfield) throws InputMismatchException {
+		if (distanceToAirfield < 1 || distanceToAirfield > 20000) {
+			throw new InputMismatchException("INVALID DISTANCE");
+		} else {
+			this.distanceToAirfield = distanceToAirfield;
+		}
 	}
 
 	/**
@@ -59,10 +69,14 @@ public abstract class Aircraft {
 	 * @param aircraftCode the aircraftCode to set
 	 */
 	public void setAircraftCode(String aircraftCode) {
-		this.aircraftCode = aircraftCode;
+		if ((aircraftCode.length() == 6) && (aircraftCode.charAt(0) == 'A')) {
+			this.aircraftCode = aircraftCode;
+		} else {
+			throw new InputMismatchException("INVALID CODE");
+		}
 	}
 
 	public void timeToAirfield() {
-		System.out.println("time to airfield");
+	
 	}
 }

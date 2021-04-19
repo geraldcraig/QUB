@@ -5,19 +5,32 @@ import java.util.ArrayList;
 public class AirtrafficControl {
 
 	public static void main(String[] args) {
-		Airline air1 = new Airline();
-		air1.setCurrentSpeed(600);
-		air1.setDistanceToAirfield(100);
-		air1.setEngineType(EngineType.JET);
-		air1.timeToAirfield();
+		Airline air1 = new Airline(600, 100, "A12345", EngineType.JET);
+		Airline air2 = new Airline(300, 300, "A54321", EngineType.PROPELLER);
+		
+		ArrayList<Airline> air = new ArrayList<Airline>();
+		air.add(air1);
+		air.add(air2);
+		
+		searchBySpeed(air);
+		
+		
 		
 		System.out.println("Current speed : " + air1.getCurrentSpeed() + " mph");
 		System.out.println("Engine type : " + air1.getEngineType()+ " Engine");
+		System.out.println("Aircraft code : " + air1.getAircraftCode());
+		System.out.println("Distance to airfield : " + air1.getDistanceToAirfield());
+		System.out.println();
+		air1.timeToAirfield();
 
 	}
 	
-	public static ArrayList<Integer> searchBySpeed() {
-		return null;	
+	public static void searchBySpeed(ArrayList<Airline> speed) {
+		for (int i = 0; i < speed.size(); i++) {
+			System.out.println(speed.toString());
+		}
+		
+		
 	}
 	
 	public static ArrayList<Integer> searchForAllByEngineType() {
