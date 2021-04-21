@@ -1,4 +1,4 @@
-package uk.ac.qub.revision;
+package uk.ac.qub.revision.p3.solution;
 
 import java.io.File;
 import java.util.Scanner;
