@@ -7,6 +7,10 @@ public class ConstructTest {
 		Construct c2 = new Construct("Alison", "Craig", 53);
 		System.out.println(c1);
 		System.out.println(c2);
+		
+		Construct c3 = new Construct();
+		c3.setFirstName("John");
+		System.out.println(c3);
 
 	}
 
