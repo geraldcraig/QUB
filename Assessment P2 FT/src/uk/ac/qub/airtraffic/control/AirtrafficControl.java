@@ -27,17 +27,16 @@ public class AirtrafficControl {
 	
 	public static void searchBySpeed(ArrayList<Airline> speed) {
 		for (int i = 0; i < speed.size(); i++) {
-			System.out.println(speed.toString());
+			System.out.println("Search by speed : " + speed.get(i).getCurrentSpeed());
 		}
-		
-		
+			
 	}
 	
-	public static ArrayList<Integer> searchForAllByEngineType() {
+	public static ArrayList<Airline> searchForAllByEngineType() {
 		return null;	
 	}
 	
-	public static ArrayList<Integer> searchForLandingList() {
+	public static ArrayList<Airline> searchForLandingList() {
 		return null;	
 	}
 
