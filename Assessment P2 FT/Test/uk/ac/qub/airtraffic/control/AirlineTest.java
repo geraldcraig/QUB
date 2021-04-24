@@ -6,13 +6,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class AirlineTest {
-	
+
 	int validLow, speedValidMid, speedValidHigh;
 	int invalidLow, speedInvalidHigh;
 	String valid, invalid;
 	Airline air;
 	EngineType engine;
-	
 
 	@BeforeEach
 	void setUp() throws Exception {
@@ -30,14 +29,14 @@ class AirlineTest {
 	void testGetSetValidCurrentSpeed() {
 		air.setCurrentSpeed(validLow);
 		assertEquals(validLow, air.getCurrentSpeed());
-		
+
 		air.setCurrentSpeed(speedValidMid);
 		assertEquals(speedValidMid, air.getCurrentSpeed());
-		
+
 		air.setCurrentSpeed(speedValidHigh);
 		assertEquals(speedValidHigh, air.getCurrentSpeed());
 	}
-	
+
 	@Test
 	void testGetSetInvalidCurrentSpeed() {
 		String expectedMessage = "INVALID SPEED";
@@ -45,7 +44,7 @@ class AirlineTest {
 			air.setCurrentSpeed(invalidLow);
 		});
 		assertEquals(expectedMessage, exp.getMessage());
-		
+
 		exp = assertThrows(IllegalArgumentException.class, () -> {
 			air.setCurrentSpeed(speedInvalidHigh);
 		});
@@ -59,18 +58,24 @@ class AirlineTest {
 		assertEquals(valid, air2.getAircraftCode());
 		assertEquals(engine, air2.getEngineType());
 	}
-	
+
 	@Test
 	void testInvalidConstructor() {
-		//Airline air2 = new Airline(invalidLow, invalidLow, valid, engine);
 		Exception exp = assertThrows(IllegalArgumentException.class, () -> {
+			new Airline(0, validLow, valid, engine);
+		});
+		assertEquals("INVALID SPEED", exp.getMessage());
+
+		exp = assertThrows(IllegalArgumentException.class, () -> {
 			new Airline(1, invalidLow, valid, engine);
 		});
-		//assertEquals("INVALID SPEED", exp.getMessage());
-		//assertEquals("INVALID DISTANCE", exp.getMessage());
-		
-	}
+		assertEquals("INVALID DISTANCE", exp.getMessage());
 
-	
+		exp = assertThrows(IllegalArgumentException.class, () -> {
+			new Airline(1, validLow, "123456", engine);
+		});
+		assertEquals("INVALID CODE", exp.getMessage());
+
+	}
 
 }

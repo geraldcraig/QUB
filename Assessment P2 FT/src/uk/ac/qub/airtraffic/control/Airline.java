@@ -12,7 +12,8 @@ public class Airline extends Aircraft {
 
 	public Airline(int currentSpeed, int distanceToAirfield, String aircraftCode, EngineType engineType) {
 		super(currentSpeed, distanceToAirfield, aircraftCode);
-		this.setEngineType(engineType);
+		setEngineType(engineType);
+		timeToAirfield();
 	}
 
 	public EngineType getEngineType() {
@@ -59,11 +60,12 @@ public class Airline extends Aircraft {
 	}
 
 	@Override
-	public void setAircraftCode(String aircraftCode) {
+	public void setAircraftCode(String aircraftCode) throws IllegalArgumentException {
 		if ((aircraftCode.length() == 6) && (aircraftCode.charAt(0) == 'A')) {
 			super.setAircraftCode(aircraftCode);
 		} else {
-			throw new InputMismatchException("INVALID CODE");
+			System.out.println("Invalid code");
+			throw new IllegalArgumentException("INVALID CODE");
 		}
 	}
 
