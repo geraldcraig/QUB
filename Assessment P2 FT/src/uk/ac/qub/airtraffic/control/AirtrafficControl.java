@@ -6,7 +6,7 @@ public class AirtrafficControl {
 
 	public static void main(String[] args) {
 
-		Airline air1 = new Airline(150, 300, "A12345", EngineType.JET);
+		Airline air1 = new Airline(800, 300, "A12345", EngineType.JET);
 		Airline air2 = new Airline(300, 300, "A54321", EngineType.PROPELLER);
 		Airline air3 = new Airline(600, 60, "A43544", EngineType.JET);
 		
