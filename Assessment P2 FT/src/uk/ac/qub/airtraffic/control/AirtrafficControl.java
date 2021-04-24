@@ -5,59 +5,79 @@ import java.util.ArrayList;
 public class AirtrafficControl {
 
 	public static void main(String[] args) {
-		Airline air1 = new Airline(600, 100, "A12345", EngineType.JET);
+
+		Airline air1 = new Airline(150, 300, "A12345", EngineType.JET);
 		Airline air2 = new Airline(300, 300, "A54321", EngineType.PROPELLER);
-		Airline air3 = new Airline(800, 50, "A43544", EngineType.JET);
+		Airline air3 = new Airline(600, 60, "A43544", EngineType.JET);
 		
+
 		ArrayList<Airline> air = new ArrayList<Airline>();
 		air.add(air1);
 		air.add(air2);
 		air.add(air3);
 		
+
+		ArrayList<Airline> speed = new ArrayList<Airline>();
+		speed.addAll(searchBySpeed(air, 100, 600));
+		for (Airline i : speed) {
+			System.out.println("Search by speed : " + i);
+		}
 		
-		searchBySpeed(air);
+
+		System.out.println("\n-------------\n");
+		
+
 		ArrayList<Airline> engine = new ArrayList<Airline>();
-		//engine.add(tem))
-		System.out.println("Search by engine type : " + searchForAllByEngineType(air));
-		searchForLandingList(air);
+		engine.addAll(searchForAllByEngineType(air));
+		for (Airline i : engine) {
+			System.out.println("Search by engine type : " + i);
+		}
 		
+
+		System.out.println("\n-------------\n");
 		
-		
-		System.out.println("Current speed : " + air1.getCurrentSpeed() + " mph");
-		System.out.println("Engine type : " + air1.getEngineType()+ " Engine");
-		System.out.println("Aircraft code : " + air1.getAircraftCode());
-		System.out.println("Distance to airfield : " + air1.getDistanceToAirfield());
-		System.out.println();
-		air1.timeToAirfield();
+
+		ArrayList<Airline> landingList = new ArrayList<Airline>();
+		landingList.addAll(searchForLandingList(air, 6, 300, EngineType.JET));
+		for (Airline i : landingList) {
+			System.out.println("Search by landing : " + i);
+		}
 
 	}
 	
-	public static void searchBySpeed(ArrayList<Airline> temp) {
-		for (int i = 0; i < temp.size(); i++) {
-			System.out.println("Search by speed : " + temp.get(i).getCurrentSpeed());
-		}
-			
-	}
-	
-	public static ArrayList<Airline> searchForAllByEngineType(ArrayList<Airline> engine) {
-		ArrayList<Airline> engineType = new ArrayList<Airline>();
-		for (int i = 0; i < engine.size(); i++) {
-			if (engine.get(i).getEngineType().equals(EngineType.JET)) {
-				engineType.add(engine.get(i));
-			}		
-		}
-		
-		return engineType;	
-	}
-	
-	public static void searchForLandingList(ArrayList<Airline> list) {
-		for (int i = 0; i < list.size(); i++)
-		{
-			if (list.get(i).getDistanceToAirfield() < 200) {
-		System.out.println("distance : " + list.get(i).getDistanceToAirfield());
+
+	public static ArrayList<Airline> searchBySpeed(ArrayList<Airline> list, int min, int max) {
+		ArrayList<Airline> speed = new ArrayList<Airline>();
+		for (int i = 0; i < list.size(); i++) {
+			if ((list.get(i).getCurrentSpeed() >= min) && (list.get(i).getCurrentSpeed() <= max)) {
+				speed.add(list.get(i));
 			}
 		}
-		 
+		return speed;
+	}
+	
+
+	public static ArrayList<Airline> searchForAllByEngineType(ArrayList<Airline> list) {
+		ArrayList<Airline> eng = new ArrayList<Airline>();
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getEngineType().equals(EngineType.JET)) {
+				eng.add(list.get(i));
+			}
+		}
+		return eng;
+	}
+	
+
+	public static ArrayList<Airline> searchForLandingList(ArrayList<Airline> list, int timeMin, int timeMax,
+			EngineType eng) {
+		ArrayList<Airline> landing = new ArrayList<Airline>();
+		for (int i = 0; i < list.size(); i++) {
+			if ((list.get(i).timeToAirfield() >= timeMin) && (list.get(i).timeToAirfield() <= timeMax)
+					&& (list.get(i).getEngineType().equals(eng))) {
+				landing.add(list.get(i));
+			}
+		}
+		return landing;
 	}
 
 }

@@ -76,7 +76,7 @@ public abstract class Aircraft {
 		}
 	}
 
-	public void timeToAirfield() {
-	
+	public double timeToAirfield() {
+		return (double) this.getDistanceToAirfield() / this.getCurrentSpeed() * 60;
 	}
 }
