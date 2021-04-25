@@ -69,6 +69,8 @@ public class Airline extends Aircraft {
 		}
 	}
 
+	
+
 	@Override
 	public double timeToAirfield() {
 		return super.timeToAirfield();
