@@ -1,4 +1,4 @@
- package maths.examples;
+  package maths.examples;
 
 import static org.junit.jupiter.api.Assertions.*;
 
