@@ -2,15 +2,25 @@ package uk.ac.qub.airtraffic.control;
 
 public abstract class Aircraft {
 	
+	// instance vars
 	private int currentSpeed;
 	private int distanceToAirfield;
 	private String aircraftCode;
 	
+	/**
+	 * default constructor
+	 */
 	public Aircraft() {
 		
 	}
 
 
+	/**
+	 * 
+	 * @param currentSpeed
+	 * @param distanceToAirfield
+	 * @param aircraftCode
+	 */
 	public Aircraft(int currentSpeed, int distanceToAirfield, String aircraftCode) {
 		this.setCurrentSpeed(currentSpeed);
 		this.setDistanceToAirfield(distanceToAirfield);
@@ -42,6 +52,11 @@ public abstract class Aircraft {
 		this.aircraftCode = aircraftCode;
 	}
 
+	/**
+	 * method to calculate time to airfield
+	 * public as not every sub class needs it
+	 * @return
+	 */
 	public double timeToAirfield() {
 		return (double) this.getDistanceToAirfield() / this.getCurrentSpeed() * 60;
 	}

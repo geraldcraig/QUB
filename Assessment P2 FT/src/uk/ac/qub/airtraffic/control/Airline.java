@@ -4,12 +4,23 @@ import java.util.InputMismatchException;
 
 public class Airline extends Aircraft {
 
+	// instance var
 	private EngineType engineType;
 	
+	/**
+	 * default constructor
+	 */
 	public Airline() {
 		
 	}
 
+	/**
+	 * constructor with args
+	 * @param currentSpeed
+	 * @param distanceToAirfield
+	 * @param aircraftCode
+	 * @param engineType
+	 */
 	public Airline(int currentSpeed, int distanceToAirfield, String aircraftCode, EngineType engineType) {
 		super(currentSpeed, distanceToAirfield, aircraftCode);
 		setEngineType(engineType);
@@ -68,8 +79,6 @@ public class Airline extends Aircraft {
 			throw new IllegalArgumentException("INVALID CODE");
 		}
 	}
-
-	
 
 	@Override
 	public double timeToAirfield() {

@@ -1,6 +1,10 @@
 package assessment3;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -67,9 +71,36 @@ public class StartApp {
 	 * Reads in the data from the csv and maps to the Player class 
 	 */
 	public static void readData() {
-
+		String line;
+		
 		File file = new File("playerstats.csv");
-
+		
+		try {
+			FileReader fr = new FileReader(file);
+			BufferedReader br = new BufferedReader(fr);
+			
+			// skip header
+			line = br.readLine();
+			
+			line = br.readLine();
+			
+			while (line != null) {
+				String[] parts = line.split(",");
+				String country = parts[0];
+				String position = parts[1];
+				line = br.readLine();
+			}
+			
+			fr.close();
+			br.close();
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

@@ -33,7 +33,7 @@ public class Queues {
 		q.add(3.3);
 		q.add(5.2);
 		System.out.println("Queue order : " + q.toString());
-		int loop = 1;
+		int loop = 0;
 		while (loop < q.size()) {
 			// view and then remove each element (by order)
 			System.out.println("Peek " + q.peek());

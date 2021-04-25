@@ -20,7 +20,7 @@ public class Sets {
 		printNonDuplicates(list);
 
 		// create the sorted set implementation
-		SortedSet<String> set2 = new TreeSet<String>();
+		Set<String> set2 = new TreeSet<String>();
 		set2.add("Zidane");
 		set2.add("Messi");
 		set2.add("Pele");
