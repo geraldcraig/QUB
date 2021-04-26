@@ -9,15 +9,18 @@ import org.junit.jupiter.api.Test;
 
 class TestAirtrafficControl {
 	
+	// arraylist to test methods
 	ArrayList<Airline> air = new ArrayList<Airline>();
 	
+	// test data
 	int speed1, speed2, speed3;
 	int distance1, distance2, distance3;
 	String code1, code2,code3;
 	EngineType engine1, engine2, engine3;
 	double time1,time2,time3;
 	Airline air1, air2, air3;
-
+	
+	// set values
 	@BeforeEach
 	void setUp() throws Exception {
 		speed1 = 800;

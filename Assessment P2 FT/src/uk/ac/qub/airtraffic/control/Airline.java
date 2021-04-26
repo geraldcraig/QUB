@@ -1,14 +1,13 @@
 package uk.ac.qub.airtraffic.control;
 
-import java.util.InputMismatchException;
-
 public class Airline extends Aircraft {
 
 	// instance var
 	private EngineType engineType;
 	
+	
 	/**
-	 * default constructor
+	 * default constructor for testing purposes
 	 */
 	public Airline() {
 		
@@ -72,7 +71,8 @@ public class Airline extends Aircraft {
 
 	@Override
 	public void setAircraftCode(String aircraftCode) throws IllegalArgumentException {
-		if ((aircraftCode.length() == 6) && (aircraftCode.charAt(0) == 'A')) {
+		if ((aircraftCode.length() == 6) && (aircraftCode.charAt(0) == 'A') && (aircraftCode.charAt(5) != ' ') 
+				&& (aircraftCode != "")) {
 			super.setAircraftCode(aircraftCode);
 		} else {
 			System.out.println("Invalid code");

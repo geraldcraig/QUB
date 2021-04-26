@@ -6,15 +6,17 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class AirlineTest {
-
+	
+	// test date
 	int speedValidLow, speedValidMid, speedValidHigh;
 	int speedInvalidLow, speedInvalidHigh;
 	int distanceValidLow, distanceValidMid, distanceValidHigh;
 	int distanceInvalidLow, distanceInvalidHigh;
-	String codeValid, codeInvalid;
+	String codeValid, codeInvalidStart, codeInvalidLength, codeInvalidEmpty, codeInvalidSpace;
 	EngineType engine;
 	Airline air;
-
+	
+	// set values
 	@BeforeEach
 	void setUp() throws Exception {
 		speedValidLow = 1;
@@ -28,11 +30,15 @@ class AirlineTest {
 		distanceInvalidLow = 0;
 		distanceInvalidHigh = 20001;
 		codeValid = "A12345";
-		codeInvalid = "A1234";
+		codeInvalidStart = "B12345";
+		codeInvalidLength = "A1234";
+		codeInvalidEmpty = "";
+		codeInvalidSpace = "A1234 ";
 		engine = engine.JET;
 		air = new Airline();
 	}
-
+	
+	// test happy path
 	@Test
 	void testGetSetValidCurrentSpeed() {
 		air.setCurrentSpeed(speedValidLow);
@@ -44,7 +50,8 @@ class AirlineTest {
 		air.setCurrentSpeed(speedValidHigh);
 		assertEquals(speedValidHigh, air.getCurrentSpeed());
 	}
-
+	
+	// test unhappy path
 	@Test
 	void testGetSetInvalidCurrentSpeed() {
 		String expectedMessage = "INVALID SPEED";
@@ -59,6 +66,7 @@ class AirlineTest {
 		assertEquals(expectedMessage, exp.getMessage());
 	}
 	
+	// test engine type is set - enum so no unhappy path to check
 	@Test
 	void testGetSetEngineType() {
 		air.setEngineType(engine);
@@ -92,7 +100,7 @@ class AirlineTest {
 		assertEquals("INVALID DISTANCE", exp.getMessage());
 
 		exp = assertThrows(IllegalArgumentException.class, () -> {
-			new Airline(speedValidLow, distanceValidLow, codeInvalid, engine);
+			new Airline(speedValidLow, distanceValidLow,codeInvalidSpace, engine);
 		});
 		assertEquals("INVALID CODE", exp.getMessage());
 

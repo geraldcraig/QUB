@@ -8,15 +8,13 @@ public abstract class Aircraft {
 	private String aircraftCode;
 	
 	/**
-	 * default constructor
+	 * default constructor for testing purposes
 	 */
 	public Aircraft() {
 		
 	}
-
-
 	/**
-	 * 
+	 * constructor with args
 	 * @param currentSpeed
 	 * @param distanceToAirfield
 	 * @param aircraftCode
@@ -27,7 +25,7 @@ public abstract class Aircraft {
 		this.setAircraftCode(aircraftCode);
 	}
 	
-	
+	// getters and setters
 	public int getCurrentSpeed() {
 		return currentSpeed;
 	}
@@ -53,9 +51,10 @@ public abstract class Aircraft {
 	}
 
 	/**
-	 * method to calculate time to airfield
-	 * public as not every sub class needs it
-	 * @return
+	 * non abstract method to calculate time to airfield.
+	 * public, as not every sub class needs to implement it
+	 * takes two ints and returns a double
+	 * @return time
 	 */
 	public double timeToAirfield() {
 		return (double) this.getDistanceToAirfield() / this.getCurrentSpeed() * 60;
