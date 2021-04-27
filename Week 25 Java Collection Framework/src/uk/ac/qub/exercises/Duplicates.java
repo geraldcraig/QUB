@@ -7,24 +7,27 @@ import java.util.List;
 public class Duplicates {
 
 	public static void main(String[] args ) {
-		Integer[] num1 = {2,3,4,5,6};
-		Integer[] num2 = {4,5,6,7,8};
-		List<Integer> nums = Arrays.asList(num1);
-		actuallyRemoveDuplicates(nums);
+		Integer[] num1 = {5, 52, 65, 5, 21, 99, 5, 99};
+		
+		List<Integer> nums1 = Arrays.asList(num1);
+		
+		System.out.println("Original list : " + nums1.toString());
+		
+		nums1 = actuallyRemoveDuplicates(nums1);
+		
+		System.out.println("Original list : " + nums1.toString());
 	
 	}
 
-	public static void actuallyRemoveDuplicates(List<Integer> list) {
+	public static List<Integer> actuallyRemoveDuplicates(List<Integer> list) {
 		List<Integer> unique = new ArrayList<Integer>();
 		for (Integer val : list) {
 			if (!unique.contains(val)) {
 				unique.add(val);
 			}
 		}
-
-		list.clear();
-		list.addAll(unique);
-		System.out.println("Unique list in method " + list.toString());
+		
+		return unique;
 	}
 
 }
