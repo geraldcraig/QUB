@@ -1,7 +1,0 @@
-package uk.ac.qub.assesment2;
-
-public interface IDetail {
-	
-	public void printDetails();
-
-}

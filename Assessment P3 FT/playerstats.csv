@@ -13,7 +13,7 @@ Country code,Name,Forward Or Back,Total Matches,Points scored,Games Won,Six Nati
 1,Jonathan Joseph,Back,19,50,14,5,0,1.83,Bath,77
 1,Jonny May,Back,20,50,14,5,1,1.86,Leicester,83
 3,Jacob Stockdale,Back,10,45,8,2,0,1.91,Ulster,65
-4,Carlo Canna,Back,11,41,0,11,0,1.9,Zebre,81
+4,Carlo Canna,Back,11,41,0,11,0,1.90,Zebre,81
 1,Anthony Watson,Back,17,40,12,5,0,1.88,Bath,72
 6,Liam Williams,Back,27,35,18,8,1,1.88,Saracens,59
 1,Elliot Daly,Back,14,31,9,4,1,1.84,Saracens,81
@@ -37,12 +37,12 @@ Country code,Name,Forward Or Back,Total Matches,Points scored,Games Won,Six Nati
 6,Josh Adams,Back,7,15,6,1,0,1.88,Cardiff Blues,76
 2,Teddy Thomas,Back,5,15,2,3,0,1.85,Racing 92,83
 3,Robbie Henshaw,Back,18,15,11,6,1,1.93,Leinster,84
-2,Baptiste Serin,Back,10,12,5,5,0,1.8,Bordeaux,64
+2,Baptiste Serin,Back,10,12,5,5,0,1.80,Bordeaux,64
 3,Bundee Aki,Back,10,10,8,2,0,1.78,Connacht,48
 4,Guglielmo Palazzani,Back,13,10,0,13,0,1.77,Zebre,53
 4,Tommaso Benvenuti,Back,24,10,4,20,0,1.85,Benetton,54
 6,Ross Moriarty,Forward,14,10,9,5,0,1.88,Gwent Dragons,64
-5,Sam Johnson,Back,4,10,1,2,1,1.8,Glasgow,66
+5,Sam Johnson,Back,4,10,1,2,1,1.80,Glasgow,66
 6,Hadleigh Parkes,Back,9,10,7,2,0,1.88,Scarlets,69
 4,Mattia Bellini,Back,10,10,0,10,0,1.93,Zebre,71
 6,Cory Hill,Forward,9,10,6,3,0,1.96,Gwent Dragons,73
@@ -68,7 +68,7 @@ Country code,Name,Forward Or Back,Total Matches,Points scored,Games Won,Six Nati
 5,Stuart McInally,Forward,15,5,6,8,1,1.91,Edinburgh,77
 3,Jordan Larmour,Back,7,5,5,2,0,1.78,Leinster,79
 3,John Cooney,Back,4,5,3,1,0,1.78,Ulster,83
-1,Jamie George,Forward,18,5,12,5,1,1.8,Saracens,84
+1,Jamie George,Forward,18,5,12,5,1,1.80,Saracens,84
 6,Alun Wyn Jones,Forward,53,5,34,18,1,1.98,Ospreys,85
 2,Thomas Ramos,Back,4,5,2,2,0,1.78,Toulouse,86
 5,Magnus Bradbury,Forward,3,5,0,2,1,1.93,Edinburgh,88
@@ -89,7 +89,7 @@ Country code,Name,Forward Or Back,Total Matches,Points scored,Games Won,Six Nati
 5,Henry Pyrgos,Back,6,0,3,3,0,1.78,Edinburgh,57
 4,Marcello Violi,Back,6,0,0,6,0,1.78,Zebre,58
 2,Demba Bamba,Forward,5,0,2,3,0,1.85,Brive,58
-2,Julien Marchand,Forward,1,0,0,1,0,1.8,Toulouse,59
+2,Julien Marchand,Forward,1,0,0,1,0,1.80,Toulouse,59
 2,Cyril Baille,Forward,5,0,3,2,0,1.83,Toulouse,60
 4,Dean Budd,Forward,9,0,0,9,0,1.98,Benetton,61
 6,Jonah Holmes,Back,1,0,1,0,0,1.83,Leicester,61
@@ -104,25 +104,25 @@ Country code,Name,Forward Or Back,Total Matches,Points scored,Games Won,Six Nati
 6,Wyn Jones,Forward,5,0,3,2,0,1.83,Scarlets,70
 3,Dave Kilcoyne,Forward,9,0,4,5,0,1.83,Munster,71
 4,Pietro Ceccarelli,Forward,3,0,0,3,0,1.84,Edinburgh ,71
-2,Jefferson Poirot,Forward,14,0,5,9,0,1.8,Bordeaux,72
+2,Jefferson Poirot,Forward,14,0,5,9,0,1.80,Bordeaux,72
 5,Cornell du Preez,Forward,3,0,1,2,0,1.93,Worcester,72
-3,Andrew Conway,Back,3,0,3,0,0,1.8,Munster,72
+3,Andrew Conway,Back,3,0,3,0,0,1.80,Munster,72
 5,Zander Fagerson,Forward,8,0,4,4,0,1.88,Glasgow,73
 4,Andrea Lovotti,Forward,19,0,0,19,0,1.83,Zebre,73
 5,Jamie Ritchie,Forward,4,0,1,3,0,1.93,Edinburgh,73
 3,Chris Farrell,Back,3,0,3,0,0,1.91,Munster,74
 6,Dillon Lewis,Forward,4,0,4,0,0,1.83,Cardiff Blues,75
 6,Ken Owens,Forward,34,0,24,9,1,1.85,Scarlets,76
-4,Giulio Bisegni,Back,6,0,1,5,0,1.8,Zebre,76
-3,Josh vanderFlier,Forward,9,0,6,3,0,1.8,Leinster,76
+4,Giulio Bisegni,Back,6,0,1,5,0,1.80,Zebre,76
+3,Josh vanderFlier,Forward,9,0,6,3,0,1.80,Leinster,76
 4,Jake Polledri,Forward,3,0,0,3,0,1.88,Gloucester,76
 3,Luke McGrath,Back,1,0,1,0,0,1.75,Leinster,77
 6,Josh Navidi,Forward,9,0,7,2,0,1.85,Cardiff Blues,79
 6,Rob Evans,Forward,21,0,14,6,1,1.88,Scarlets,80
 4,Jayden Hayward,Back,10,0,0,10,0,1.84,Benetton,80
-3,Dave Kearney,Back,7,0,4,2,1,1.8,Leinster,81
-4,Oliviero Fabiani,Forward,4,0,0,4,0,1.8,Zebre,81
-4,Luca Bigi,Forward,7,0,0,7,0,1.8,Zebre,81
+3,Dave Kearney,Back,7,0,4,2,1,1.80,Leinster,81
+4,Oliviero Fabiani,Forward,4,0,0,4,0,1.80,Zebre,81
+4,Luca Bigi,Forward,7,0,0,7,0,1.80,Zebre,81
 4,David Sisi,Forward,5,0,0,5,0,1.96,Zebre,81
 1,Joe Marler,Forward,27,0,20,7,0,1.83,Harlequins,82
 4,Federico Ruzza,Forward,9,0,0,9,0,1.98,Benetton,82
@@ -143,6 +143,5 @@ Country code,Name,Forward Or Back,Total Matches,Points scored,Games Won,Six Nati
 3,Andrew Porter,Forward,7,0,5,2,0,1.83,Leinster,90
 4,Giovanni Licata,Forward,2,0,0,2,0,1.95,Zebre,91
 1,Ellis Genge,Forward,4,0,2,1,1,1.85,Leicester,91
-5,Willem Nel,Forward,11,0,5,5,1,1.8,Edinburgh,66
-2,Dorian Aldegheri,Forward,4,0,2,2,0,1.8,Toulouse,66
-2,Dorian Aldegheri,Forward,4,0,2,2,0,1.8,Toulouse,66
+5,Willem Nel,Forward,11,0,5,5,1,1.80,Edinburgh,66
+2,Dorian Aldegheri,Forward,4,0,2,2,0,1.80,Toulouse,66

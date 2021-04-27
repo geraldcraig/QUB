@@ -1,9 +1,0 @@
-package uk.ac.qub.assesment2;
-
-import MenuItems;
-
-public class Pizza extends MenuItems {
-	
-	
-
-}
