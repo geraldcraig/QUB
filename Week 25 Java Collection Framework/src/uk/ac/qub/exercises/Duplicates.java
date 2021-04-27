@@ -26,7 +26,6 @@ public class Duplicates {
 				unique.add(val);
 			}
 		}
-		
 		return unique;
 	}
 
