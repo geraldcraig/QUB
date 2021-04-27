@@ -1,4 +1,4 @@
-package uk.ac.qub.airtraffic.control;
+package airtraffic.control;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -6,6 +6,10 @@ import java.util.ArrayList;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import airtraffic.control.Airline;
+import airtraffic.control.AirtrafficControl;
+import airtraffic.control.EngineType;
 
 class TestAirtrafficControl {
 	

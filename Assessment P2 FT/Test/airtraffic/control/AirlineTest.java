@@ -1,9 +1,12 @@
-package uk.ac.qub.airtraffic.control;
+package airtraffic.control;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import airtraffic.control.Airline;
+import airtraffic.control.EngineType;
 
 class AirlineTest {
 	

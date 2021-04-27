@@ -1,4 +1,4 @@
-package uk.ac.qub.airtraffic.control;
+package airtraffic.control;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package uk.ac.qub.airtraffic.control;
+package airtraffic.control;
 
 public enum EngineType {
 	JET,
