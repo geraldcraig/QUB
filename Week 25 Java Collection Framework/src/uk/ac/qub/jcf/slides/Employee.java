@@ -1,5 +1,7 @@
 package uk.ac.qub.jcf.slides;
 
+import java.util.Comparator;
+
 public class Employee {
 	
 	private int age;

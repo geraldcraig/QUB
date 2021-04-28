@@ -67,7 +67,7 @@ public class Player {
 		if (validateStringInput(firstName)) {
 			this.firstName = firstName;
 		} else {
-			throw new IllegalArgumentException("Must be between 1 and 20");
+			throw new IllegalArgumentException("Must be between 1 and 20");	
 		}
 	}
 
@@ -337,6 +337,37 @@ public class Player {
 			return false;
 		return true;
 	}
+
+	
+
+	
+	public void showAllDetails() {
+		String output = String.format(
+				"country=%s%n "
+				+ "firstName=%s%n "
+				+ "surname=%s%n "
+				+ "position=%s%n "
+				+ "totalMatches=%s%n "
+				+ "points=%s%n"
+				+ " won=%s%n"
+				+ " lost=%s%n "
+				+ "drew=%s%n"
+				+ "height=%s%n "
+				+ "club=%s%n"
+				+ " influence=%s%n"
+				+ " percentWon=%s",
+				country, firstName, surname, position, totalMatches, points, won, lost, drew, height, club, influence,
+				percentWon);
+		
+		System.out.println(output);
+	}
+
+	
+	
+	
+	
+	
+	
 	
 	
 	

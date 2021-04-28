@@ -24,6 +24,7 @@ public class EmployeeTest {
 		list.add(e2);
 		list.add(e3);
 		
+		System.out.println("Unsorted list");
 		viewAll(list);
 		
 		System.out.println();
