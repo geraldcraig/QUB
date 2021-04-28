@@ -18,8 +18,7 @@ public class AirtrafficControl {
 		air.add(air3);
 		
 		// calling searchBySpeed method and printing results
-		ArrayList<Airline> speed = new ArrayList<Airline>();
-		speed.addAll(searchBySpeed(air, 100, 600));
+		ArrayList<Airline> speed = searchBySpeed(air, 100, 600);
 		for (Airline i : speed) {
 			System.out.println("Search by speed : " + i);
 		}
@@ -27,8 +26,7 @@ public class AirtrafficControl {
 		System.out.println("\n-------------\n");
 		
 		// calling searchByEngineType method and printing results
-		ArrayList<Airline> engine = new ArrayList<Airline>();
-		engine.addAll(searchForAllByEngineType(air));
+		ArrayList<Airline> engine = searchForAllByEngineType(air);
 		for (Airline i : engine) {
 			System.out.println("Search by engine type : " + i);
 		}
@@ -36,8 +34,7 @@ public class AirtrafficControl {
 		System.out.println("\n-------------\n");
 		
 		// calling searchByLandingList method and printing results
-		ArrayList<Airline> landingList = new ArrayList<Airline>();
-		landingList.addAll(searchForLandingList(air, 6, 300, EngineType.JET));
+		ArrayList<Airline> landingList = searchForLandingList(air, 6, 300, EngineType.JET);
 		for (Airline i : landingList) {
 			System.out.println("Search by landing : " + i);
 		}

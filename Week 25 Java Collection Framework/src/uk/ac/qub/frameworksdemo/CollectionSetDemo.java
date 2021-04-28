@@ -30,8 +30,6 @@ public class CollectionSetDemo {
 		//List<String> unique = removeDupes(list);
 		// System.out.println(unique);
 		
-		
-
 	}
 
 	public static List<String> removeDupes(List<String> list) {
@@ -46,8 +44,7 @@ public class CollectionSetDemo {
 		
 		for (String val: theset) {
 			System.out.println(val);
-		}
-		
+		}	
 	}
 
 }
