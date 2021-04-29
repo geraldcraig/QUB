@@ -44,7 +44,7 @@ public class Airline extends Aircraft {
 		if (currentSpeed > 0 && currentSpeed <= 800) {
 			super.setCurrentSpeed(currentSpeed);
 		} else {
-			System.out.println("Invalid speed");
+			//System.out.println("Invalid speed");
 			throw new IllegalArgumentException("INVALID SPEED");
 		}
 	}
@@ -57,7 +57,7 @@ public class Airline extends Aircraft {
 	@Override
 	public void setDistanceToAirfield(int distanceToAirfield) throws IllegalArgumentException {
 		if (distanceToAirfield < 1 || distanceToAirfield > 20000) {
-			System.out.println("Invalid distance");
+			//System.out.println("Invalid distance");
 			throw new IllegalArgumentException("INVALID DISTANCE");
 		} else {
 			super.setDistanceToAirfield(distanceToAirfield);
@@ -75,7 +75,7 @@ public class Airline extends Aircraft {
 				&& (aircraftCode != "")) {
 			super.setAircraftCode(aircraftCode);
 		} else {
-			System.out.println("Invalid code");
+			//System.out.println("Invalid code");
 			throw new IllegalArgumentException("INVALID CODE");
 		}
 	}
