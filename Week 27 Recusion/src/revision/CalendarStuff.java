@@ -1,8 +1,8 @@
-package maths.examples;
+package revision;
 
-public class CalendarStuff {
+public class CalendarStuff  {
 
-	public static String monthToString(int month) {
+	public static String monthToString(int month) throws NumberFormatException {
 		String monthStr;
 
 		switch (month) {

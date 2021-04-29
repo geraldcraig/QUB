@@ -10,16 +10,16 @@ public class PriorityQComparatorDemo {
 	public static void main(String[] args) {
 		
 		Employee e1 = new Employee("Matthew", 35, "FT");
-		Employee e2 = new Employee("Alice", 25, "PT");
-		Employee e3 = new Employee("Bob", 42, "FT");
-		Employee e4 = new Employee("Zach", 18, "PT");
+		Employee e2 = new Employee("Alice", 54, "PT");
+		Employee e3 = new Employee("Bob", 45, "FT");
+		Employee e4 = new Employee("Zach", 28, "PT");
 		
 		List<Employee> empList = new ArrayList<Employee>();
 		
 		
 		//Queue<Employee> staff = new PriorityQueue<Employee>(new CompareEmployeeByAge());
-		//Queue<Employee> staff = new PriorityQueue<Employee>(new CompareEmployeeByName());
-		Queue<Employee> staff = new PriorityQueue<Employee>(new CompareEmpStatus());
+		 Queue<Employee> staff = new PriorityQueue<Employee>(new CompareEmployeeByName());
+		//Queue<Employee> staff = new PriorityQueue<Employee>(new CompareEmpStatus());
 		
 		
 		staff.add(e1);

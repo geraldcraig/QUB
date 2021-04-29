@@ -1,4 +1,4 @@
-package maths.examples;
+package revision;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -42,13 +42,13 @@ class CalendarStuffTest {
 	}
 	
 	@Test
-	void testInvalidMonth() {
-		NumberFormatException numberFormatException = assertThrows(NumberFormatException.class, () -> {
-			CalendarStuff.monthToString(13);
-		});
-		
-		assertEquals("Invalid month number", numberFormatException.getMessage());
-		System.out.println(numberFormatException.getMessage());
-	}
+		void testInvalidMonth() {
+			NumberFormatException numberFormatException = assertThrows(NumberFormatException.class, () -> {
+				CalendarStuff.monthToString(13);
+			});
+			
+			assertEquals("Invalid month number", numberFormatException.getMessage());
+			System.out.println(numberFormatException.getMessage());
+		}
 
 }

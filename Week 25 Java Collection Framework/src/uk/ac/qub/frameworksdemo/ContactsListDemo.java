@@ -2,12 +2,17 @@ package uk.ac.qub.frameworksdemo;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class ContactsListDemo {
 
 	public static void main(String[] args) {
 		
-		Map<String, String> phoneBook = new HashMap<String, String>();
+		// unsorted map
+		 Map<String, String> phoneBook = new HashMap<String, String>();
+		
+		// sorted map
+		//Map<String, String> phoneBook = new TreeMap<String, String>();
 		
 		phoneBook.put("Aidan", "07773939393");
 		phoneBook.put("Una", "07778888888");
