@@ -61,7 +61,7 @@ public class TopTrumpCard {
 		if (statChoice == 0) {
 
 		}
-		return 0;
+		return 1;
 	}
 	
 	
