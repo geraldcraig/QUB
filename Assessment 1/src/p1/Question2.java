@@ -4,7 +4,8 @@
 package p1;
 
 /**
- * @author geraldcraig
+ * 
+ * @author Gerald Craig
  *
  */
 public class Question2 {
