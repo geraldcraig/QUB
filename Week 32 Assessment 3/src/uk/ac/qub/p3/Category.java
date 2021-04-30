@@ -10,6 +10,6 @@ package uk.ac.qub.p3;
  */
 public enum Category {
 	HERO,
-	VILLIAN
+	VILLAIN
 
 }

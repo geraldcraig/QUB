@@ -50,17 +50,15 @@ public class TopTrumpCard {
 		this.setBio(bio);
 	}
 	
-	public static int getMaxStatID() {
-		return 0;
-		
+	
+	public int getMaxStatID() {
+		// TODO Auto-generated method stub
+		return 1;
 	}
 	
 	
-	
-	public static int getStatScore(int statChoice) {
-		if (statChoice == 0) {
-
-		}
+	public int getStatScore(int statChoice) {
+		// TODO Auto-generated method stub
 		return 1;
 	}
 	
@@ -136,7 +134,7 @@ public class TopTrumpCard {
 	 * @param speed the speed to set
 	 */
 	public void setSpeed(int speed) throws IllegalArgumentException {
-		if (speed >= LOW_MID_VALUE && speed <= HIGH_VALUE) {
+		if (speed >= LOW_VALUE && speed <= HIGH_VALUE) {
 			this.speed = speed;
 		} else {
 			throw new IllegalArgumentException("Invalid speed");
@@ -153,7 +151,7 @@ public class TopTrumpCard {
 	 * @param strength the strength to set
 	 */
 	public void setStrength(int strength) throws IllegalArgumentException {
-		if (strength >= LOW_MID_VALUE && strength <= HIGH_VALUE) {
+		if (strength >= LOW_VALUE && strength <= HIGH_VALUE) {
 			this.strength = strength;
 		} else {
 			throw new IllegalArgumentException("Invalid strength");
@@ -169,7 +167,7 @@ public class TopTrumpCard {
 	 * @param agility the agility to set
 	 */
 	public void setAgility(int agility) throws IllegalArgumentException {
-		if (agility >= LOW_MID_VALUE && agility <= HIGH_VALUE) {
+		if (agility >= LOW_VALUE && agility <= HIGH_VALUE) {
 			this.agility = agility;
 		} else {
 			throw new IllegalArgumentException("Invalid agility");
@@ -185,7 +183,7 @@ public class TopTrumpCard {
 	 * @param intelligence the intelligence to set
 	 */
 	public void setIntelligence(int intelligence) throws IllegalArgumentException {
-		if (intelligence >= LOW_MID_VALUE && intelligence <= HIGH_VALUE) {
+		if (intelligence >= LOW_VALUE && intelligence <= HIGH_VALUE) {
 			this.intelligence = intelligence;
 		} else {
 			throw new IllegalArgumentException("Invalid intelligence");
@@ -208,6 +206,6 @@ public class TopTrumpCard {
 		}
 		
 	}
-	
+
 
 }

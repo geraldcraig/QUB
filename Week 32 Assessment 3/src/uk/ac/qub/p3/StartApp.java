@@ -69,7 +69,7 @@ public class StartApp {
 				 * (requires TopTrumpCard class to match expectations of Game Method to compile successfully)
 				 * deliberately commented out initially to allow attempting other tasks
 				 */
-				//CardGame.playDemo(mainDeck);
+				CardGame.playDemo(mainDeck);
 				break;
 			case 3:
 				System.out.println("Not yet implemented...");
@@ -134,8 +134,19 @@ public class StartApp {
 
 				// TODO Code to process current line
 				String[] parts = line.split(",");
+				String name = parts[0];
+				String realName = parts[1];
+				String imageFileName = parts[2];
+				Category category = Category.valueOf(parts[3].toUpperCase());
+				int speed = Integer.parseInt(parts[4]);
+				int strength = Integer.parseInt(parts[5]);
+				int agility = Integer.parseInt(parts[6]);
+				int intelligence = Integer.parseInt(parts[7]);
+				String bio = parts[8];
+				
+				
 				// TODO instantiate TopTrumpCard object
-				TopTrumpCard card = new TopTrumpCard(line, line, line, null, 0, 0, 0, 0, line);
+				TopTrumpCard card = new TopTrumpCard(name, realName, imageFileName, category, speed, strength, agility, intelligence, bio);
 				// TODO and add to list
 				listFromFile.add(card);
 

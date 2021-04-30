@@ -28,10 +28,12 @@ class TestTopTrumpCard {
 			nameInvalidLow = "";
 			nameInvalidHigh = "1234567891234567891234567891301";
 			category1 = Category.HERO;
-			category2 = Category.VILLIAN;
+			category2 = Category.VILLAIN;
 			intValidLow = 0;
 			intValidMid = 50;
 			intValidHigh = 100;
+			intInvalidLow = -1;
+			intInvalidHigh = 101;
 			
 			card = new TopTrumpCard(nameValidLow, nameValidLow, nameValidMid, category1, intValidLow, intValidLow, intValidLow, intValidLow, nameValidLow);
 			
@@ -48,7 +50,7 @@ class TestTopTrumpCard {
 			assertEquals(nameValidLow, card2.getRealName());
 			assertEquals(nameValidMid, card2.getImageFileName());
 			assertEquals(category1, card2.getCategory());
-			assertEquals(intInvalidLow, card2.getSpeed());
+			assertEquals(intValidLow, card2.getSpeed());
 			assertEquals(intValidLow, card2.getStrength());
 			assertEquals(intValidLow, card2.getAgility());
 			assertEquals(intValidLow, card2.getIntelligence());
@@ -221,8 +223,22 @@ class TestTopTrumpCard {
 		 * Test method for {@link p3.TopTrumpCard#getBio()}.
 		 */
 		@Test
-		void testGetBio() {
-			fail("Not yet implemented");
+		void testGetSetBio() {
+			card.setBio(nameValidLow);
+			assertEquals(nameValidLow, card.getBio());
+			
+			card.setBio(nameValidHigh);
+			assertEquals(nameValidHigh, card.getBio());
+			
+		}
+		
+		@Test
+		void testGetSetInvalidBio() {
+			String expectedMessage = "Invalid bio length";
+			Exception exp = assertThrows(IllegalArgumentException.class, () -> {
+				card.setBio("");
+			});
+			assertEquals(expectedMessage, exp.getMessage());
 		}
 
 
