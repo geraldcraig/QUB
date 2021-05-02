@@ -10,6 +10,10 @@ public class PersonDriver {
 		Person p1 = new Person("Gerald", 56);
 		Person p2 = new Person("Alison",53);
 		Person p3 = new Person("Gerald", 56);
+		Person p4 = new Person();
+		p4.setAge(66);
+		
+		System.out.println(p4);
 		
 		comparePerson(p1,p2);
 		

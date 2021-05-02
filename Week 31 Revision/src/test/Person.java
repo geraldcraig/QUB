@@ -5,6 +5,10 @@ public class Person {
 	private String name;
 	private int age;
 	
+	public Person() {
+		
+	}
+	
 	
 	public Person(String name, int age) {
 		this.setName(name);;
@@ -16,7 +20,11 @@ public class Person {
 		return name;
 	}
 	public void setName(String name) {
-		this.name = name;
+		if (name.equals("")) {
+			throw new NullPointerException("empty string");
+		} else {
+			this.name = name;
+		}
 	}
 	public int getAge() {
 		return age;
