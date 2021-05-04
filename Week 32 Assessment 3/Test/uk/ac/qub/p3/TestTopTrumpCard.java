@@ -25,7 +25,7 @@ class TestTopTrumpCard {
 			nameValidLow = "1";
 			nameValidMid = "12345";
 			nameValidHigh = "123456789123456789123456789130";
-			nameInvalidLow = "";
+			nameInvalidLow = null;
 			nameInvalidHigh = "1234567891234567891234567891301";
 			category1 = Category.HERO;
 			category2 = Category.VILLAIN;
@@ -236,7 +236,7 @@ class TestTopTrumpCard {
 		void testGetSetInvalidBio() {
 			String expectedMessage = "Invalid bio length";
 			Exception exp = assertThrows(IllegalArgumentException.class, () -> {
-				card.setBio("");
+				card.setBio(null);
 			});
 			assertEquals(expectedMessage, exp.getMessage());
 		}

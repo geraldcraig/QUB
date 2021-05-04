@@ -139,10 +139,5 @@ public class CardGame {
 		Collections.shuffle(deck);
 	}
 	
-	private static void removeDuplicatCards(List<TopTrumpCard> deck) {
-		Set<TopTrumpCard> set = new HashSet<TopTrumpCard>(deck);
-
-		
-	}
 
 }

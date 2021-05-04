@@ -18,6 +18,7 @@ public class TopTrumpCard {
 	private int intelligence;
 	private String bio;
 	
+	
 	// static variables for variables length
 	private static final int LOW_VALUE = 0;
 	private static final int LOW_MID_VALUE = 5;
@@ -51,16 +52,7 @@ public class TopTrumpCard {
 	}
 	
 	
-	public int getMaxStatID() {
-		// TODO Auto-generated method stub
-		return 1;
-	}
 	
-	
-	public int getStatScore(int statChoice) {
-		// TODO Auto-generated method stub
-		return 1;
-	}
 	
 	
 	/**
@@ -199,13 +191,89 @@ public class TopTrumpCard {
 	 * @param bio the bio to set
 	 */
 	public void setBio(String bio) throws IllegalArgumentException {
-		if (bio.isEmpty()) {
-			throw new IllegalArgumentException("Invalid bio length");
-		} else {
+		if (bio.length() > 0) {
 			this.bio = bio;
+		} else {
+			throw new IllegalArgumentException("Invalid bio length");
 		}
 		
 	}
 
+	public int getMaxStatID() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int getStatScore(int statChoice) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + agility;
+		result = prime * result + ((bio == null) ? 0 : bio.hashCode());
+		result = prime * result + ((category == null) ? 0 : category.hashCode());
+		result = prime * result + ((imageFileName == null) ? 0 : imageFileName.hashCode());
+		result = prime * result + intelligence;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((realName == null) ? 0 : realName.hashCode());
+		result = prime * result + speed;
+		result = prime * result + strength;
+		return result;
+	}
+
+
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		TopTrumpCard other = (TopTrumpCard) obj;
+		if (agility != other.agility)
+			return false;
+		if (bio == null) {
+			if (other.bio != null)
+				return false;
+		} else if (!bio.equals(other.bio))
+			return false;
+		if (category != other.category)
+			return false;
+		if (imageFileName == null) {
+			if (other.imageFileName != null)
+				return false;
+		} else if (!imageFileName.equals(other.imageFileName))
+			return false;
+		if (intelligence != other.intelligence)
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (realName == null) {
+			if (other.realName != null)
+				return false;
+		} else if (!realName.equals(other.realName))
+			return false;
+		if (speed != other.speed)
+			return false;
+		if (strength != other.strength)
+			return false;
+		return true;
+	}
+	
 
 }
