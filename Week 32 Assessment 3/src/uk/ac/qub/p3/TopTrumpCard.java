@@ -200,8 +200,9 @@ public class TopTrumpCard {
 	}
 
 	public int getMaxStatID() {
-		// TODO Auto-generated method stub
-		return 0;
+		int result = 0;
+		
+		return result;
 	}
 
 	public int getStatScore(int statChoice) {

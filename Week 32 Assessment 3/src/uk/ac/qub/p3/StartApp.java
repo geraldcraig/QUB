@@ -6,8 +6,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 
 /**
  * Gerald Craig 40278046
@@ -74,6 +76,7 @@ public class StartApp {
 			case 3:
 				System.out.println("Not yet implemented...");
 				// TODO add required method call(s)
+				numberOfCards(mainDeck);
 				break;
 			case 4:
 				System.out.println("Not yet implemented...");
@@ -98,6 +101,7 @@ public class StartApp {
 			case 9:
 				System.out.println("Not yet implemented...");
 				// TODO add required method call(s)
+				removeDuplicates(mainDeck);
 				break;
 			case 10:
 				System.out.println("Not yet implemented...");
@@ -112,6 +116,8 @@ public class StartApp {
 		} while (option != 11);
 		scanner.close();
 	}
+
+	
 
 	/**
 	 * Reads in the data from the provided csv and returns a list of TopTrumpCard
@@ -165,6 +171,15 @@ public class StartApp {
 		return listFromFile;
 	}
 
+	public static void numberOfCards(List<TopTrumpCard> deck) {
+		System.out.println("Number of cards in current deck : " + deck.size());
+		
+	}
 	
+	public static void removeDuplicates(List<TopTrumpCard> deck) {
+		Set<TopTrumpCard> set = new HashSet<TopTrumpCard>(deck);
+		System.out.println(set.size());
+		
+	}
 
 }

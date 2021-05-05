@@ -50,14 +50,4 @@ public abstract class Aircraft {
 		this.aircraftCode = aircraftCode;
 	}
 
-	/**
-	 * non abstract method to calculate time to airfield.
-	 * public, as not every sub class needs to implement it
-	 * takes two ints and returns a double
-	 * @return time
-	 */
-	public double timeToAirfield() {
-		return (double) this.getDistanceToAirfield() / this.getCurrentSpeed() * 60;
-	}
-
 }

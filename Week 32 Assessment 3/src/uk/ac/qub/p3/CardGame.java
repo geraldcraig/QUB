@@ -138,6 +138,8 @@ public class CardGame {
 	private static void shuffleDeck(List<TopTrumpCard> deck) {
 		Collections.shuffle(deck);
 	}
+
+	
 	
 
 }

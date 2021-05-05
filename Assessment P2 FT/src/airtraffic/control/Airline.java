@@ -23,7 +23,6 @@ public class Airline extends Aircraft {
 	public Airline(int currentSpeed, int distanceToAirfield, String aircraftCode, EngineType engineType) {
 		super(currentSpeed, distanceToAirfield, aircraftCode);
 		setEngineType(engineType);
-		timeToAirfield();
 	}
 
 	public EngineType getEngineType() {
@@ -80,9 +79,8 @@ public class Airline extends Aircraft {
 		}
 	}
 
-	@Override
 	public double timeToAirfield() {
-		return super.timeToAirfield();
+		return (double) this.getDistanceToAirfield() / this.getCurrentSpeed() * 60;
 	}
 
 	@Override
