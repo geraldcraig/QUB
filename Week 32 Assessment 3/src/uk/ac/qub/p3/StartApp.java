@@ -66,7 +66,7 @@ public class StartApp {
 				mainDeck = readData();
 				break;
 			case 2:
-				System.out.println("Option currently disabled...");
+				System.out.println("2. Playing Demo Game...");
 				/* TODO Uncomment method call to enable this option 
 				 * (requires TopTrumpCard class to match expectations of Game Method to compile successfully)
 				 * deliberately commented out initially to allow attempting other tasks
@@ -74,7 +74,7 @@ public class StartApp {
 				CardGame.playDemo(mainDeck);
 				break;
 			case 3:
-				System.out.println("Not yet implemented...");
+				System.out.println("3. Number of Cards in Current Deck...");
 				// TODO add required method call(s)
 				numberOfCards(mainDeck);
 				break;
@@ -99,7 +99,7 @@ public class StartApp {
 				// TODO add required method call(s)
 				break;
 			case 9:
-				System.out.println("Not yet implemented...");
+				System.out.println("9. Removing duplicates from the Deck...");
 				// TODO add required method call(s)
 				removeDuplicates(mainDeck);
 				break;

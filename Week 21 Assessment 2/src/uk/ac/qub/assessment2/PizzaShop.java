@@ -47,6 +47,11 @@ public class PizzaShop {
 
 	}
 
+	public static void isVegetarian(ArrayList<MenuItem> menuitems) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	/**
 	 * printReceipt method
 	 * 
