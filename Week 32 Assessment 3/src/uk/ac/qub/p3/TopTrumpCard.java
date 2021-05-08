@@ -201,6 +201,9 @@ public class TopTrumpCard {
 
 	public int getMaxStatID() {
 		int result = 0;
+		if (getSpeed() > getStrength()) {
+			result = 1;
+		}
 		
 		return result;
 	}
