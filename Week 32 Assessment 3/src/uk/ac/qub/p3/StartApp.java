@@ -84,8 +84,9 @@ public class StartApp {
 				fullDetails(mainDeck);
 				break;
 			case 5:
-				System.out.println("Not yet implemented...");
+				System.out.println("5. Top 5 strongest Heroes...");
 				// TODO add required method call(s)
+				topFive(mainDeck);
 				break;
 			case 6:
 				System.out.println("Not yet implemented...");
@@ -105,8 +106,9 @@ public class StartApp {
 				removeDuplicates(mainDeck);
 				break;
 			case 10:
-				System.out.println("Not yet implemented...");
+				System.out.println("10. Sorted from highest to lowest by average of the 4 main stats...");
 				// TODO add required method call(s)
+				highLow(mainDeck);
 				break;
 			case 11:
 				System.out.println("Quitting");
@@ -117,6 +119,8 @@ public class StartApp {
 		} while (option != 11);
 		scanner.close();
 	}
+
+	
 
 	/**
 	 * Reads in the data from the provided csv and returns a list of TopTrumpCard
@@ -177,7 +181,16 @@ public class StartApp {
 	
 	private static void fullDetails(List<TopTrumpCard> deck) {
 		for (TopTrumpCard card : deck) {
-			System.out.println("name: " + card.getName());
+			System.out.println("name: \t" + card.getName());
+			System.out.println("realname: " + card.getRealName());
+			System.out.println();
+		}
+		
+	}
+	
+	public static void topFive(List<TopTrumpCard> deck) {
+		for (TopTrumpCard card : deck) {
+			System.out.println(card.toString());
 			System.out.println();
 		}
 		
@@ -188,5 +201,14 @@ public class StartApp {
 		System.out.println(set.size());
 		
 	}
+	
+	public static void highLow(List<TopTrumpCard> deck) {
+		for (TopTrumpCard card : deck) {
+			System.out.println(card.toString());
+			System.out.println("Average Stat: ");
+			System.out.println();
+		}
+	}
+	
 
 }

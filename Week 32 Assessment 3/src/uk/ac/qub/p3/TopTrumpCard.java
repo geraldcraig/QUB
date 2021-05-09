@@ -266,6 +266,13 @@ public class TopTrumpCard {
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return name + " / " + realName + " (" + category + ")\n" + "sp: " + speed
+				+ " | st: " + strength + " | ag: " + agility + " | in: " + intelligence;
+	}
 	
 
+	
 }
