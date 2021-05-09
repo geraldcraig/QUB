@@ -186,11 +186,11 @@ public class TopTrumpCard {
 	/**
 	 * @param bio the bio to set
 	 */
-	public void setBio(String bio) throws IllegalArgumentException {
-		if (bio.length() > 0) {
+	public void setBio(String bio) throws NullPointerException {
+		if (bio != null) {
 			this.bio = bio;
 		} else {
-			throw new IllegalArgumentException("Invalid bio length");
+			throw new NullPointerException("Invalid bio length");
 		}
 		
 	}

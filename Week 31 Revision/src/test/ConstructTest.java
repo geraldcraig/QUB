@@ -9,7 +9,7 @@ public class ConstructTest {
 		System.out.println(c2);
 		
 		Construct c3 = new Construct();
-		c3.setFirstName("John");
+		
 		System.out.println(c3);
 
 	}

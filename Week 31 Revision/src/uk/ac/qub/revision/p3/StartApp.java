@@ -1,6 +1,12 @@
 package uk.ac.qub.revision.p3;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -10,8 +16,9 @@ import java.util.Scanner;
  */
 public class StartApp {
 
+	public static List<Player> players = new ArrayList<Player>();
 	
-
+	
 	public static void main(String[] args) {
 		readData(); 
 		showMenu();
@@ -37,7 +44,7 @@ public class StartApp {
 			switch (option) {
 				
 			case 1:
-				
+				displayAll(players);
 				break;
 			case 2:
 				break;
@@ -63,13 +70,53 @@ public class StartApp {
 		scanner.close();
 	}
 
+
 	/**
 	 * Reads in the data from the csv and maps to the Player class 
 	 */
 	public static void readData() {
 
 		File file = new File("playerstats.csv");
+		
+		try (FileReader fr = new FileReader(file); BufferedReader reader = new BufferedReader(fr);) {
+
+			String line = reader.readLine(); // discard header
+			line = reader.readLine(); // read first line
+
+			while (line != null) {
+
+				// TODO Code to process current line
+				String[] parts = line.split(",");
+				CountryCode country = CountryCode.valueOf(parts[0].toUpperCase());
+				String name = parts[1];
+				
+				
+				
+				Player player = new Player(country, name, 0, 0, 0, 0, 0, 0, line, 0);
+				// TODO and add to list
+				players.add(player);
+
+				line = reader.readLine();// attempt to read next line and loop again
+			}
+		} catch (FileNotFoundException e) {
+			System.out.println("File not found error");
+		} catch (IOException e) {
+			System.out.println("IO Exception");
+		} catch (Exception e) {
+			System.out.println("Exception occured");
+			System.out.println(players.size() + " lines read successfully");
+			System.out.println(e.getMessage());
+		}
+		System.out.println(players.size() + " lines read successfully");
 
 	}
+	
+	public static void displayAll(List<Player> players) {
+		for (Player i : players) {
+			System.out.println(i.getFirstName());
+		}
+		
+	}
 
+	
 }

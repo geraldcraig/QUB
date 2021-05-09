@@ -25,8 +25,12 @@ public class Construct {
 		return firstName;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFirstName(String firstName) throws NullPointerException {
+		if (firstName != null) {
+			this.firstName = firstName;
+		} else {
+			throw new NullPointerException();
+		}
 	}
 	
 }

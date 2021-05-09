@@ -10,6 +10,7 @@ class TestTopTrumpCard {
 	// test data
 		String nameValidLow, nameValidMid, nameValidHigh;
 		String nameInvalidLow, nameInvalidHigh;
+		String bioInvalid;
 		Category category1, category2;
 		int intValidLow, intValidMid, intValidHigh;
 		int intInvalidLow, intInvalidHigh;
@@ -25,8 +26,9 @@ class TestTopTrumpCard {
 			nameValidLow = "1";
 			nameValidMid = "12345";
 			nameValidHigh = "123456789123456789123456789130";
-			nameInvalidLow = null;
+			nameInvalidLow = "";
 			nameInvalidHigh = "1234567891234567891234567891301";
+			bioInvalid = null;
 			category1 = Category.HERO;
 			category2 = Category.VILLAIN;
 			intValidLow = 0;
@@ -87,9 +89,9 @@ class TestTopTrumpCard {
 				// invalid intelligence
 				new TopTrumpCard(nameValidLow, nameValidLow, nameValidMid, category1, intValidLow, intValidLow, intValidLow, intInvalidLow, nameValidLow);
 			});
-			exp = assertThrows(IllegalArgumentException.class, ()-> {
+			exp = assertThrows(NullPointerException.class, ()-> {
 				// invalid bio
-				new TopTrumpCard(nameValidLow, nameValidLow, nameValidMid, category1, intValidLow, intValidLow, intValidLow, intValidLow, nameInvalidLow);
+				new TopTrumpCard(nameValidLow, nameValidLow, nameValidMid, category1, intValidLow, intValidLow, intValidLow, intValidLow, bioInvalid);
 			});
 			
 		}
@@ -188,6 +190,9 @@ class TestTopTrumpCard {
 		void testGetSetCategory() {
 			card.setCategory(category1);
 			assertEquals(category1, card.getCategory());
+			
+			card.setCategory(category2);
+			assertEquals(category2, card.getCategory());
 		}
 
 		/**
@@ -235,7 +240,7 @@ class TestTopTrumpCard {
 		@Test
 		void testGetSetInvalidBio() {
 			String expectedMessage = "Invalid bio length";
-			Exception exp = assertThrows(IllegalArgumentException.class, () -> {
+			Exception exp = assertThrows(NullPointerException.class, () -> {
 				card.setBio(null);
 			});
 			assertEquals(expectedMessage, exp.getMessage());
