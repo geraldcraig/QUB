@@ -51,10 +51,6 @@ public class TopTrumpCard {
 		this.setBio(bio);
 	}
 	
-	
-	
-	
-	
 	/**
 	 * @return the name
 	 */
@@ -213,10 +209,6 @@ public class TopTrumpCard {
 		return 0;
 	}
 
-
-
-
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -232,10 +224,6 @@ public class TopTrumpCard {
 		result = prime * result + strength;
 		return result;
 	}
-
-
-
-
 
 	@Override
 	public boolean equals(Object obj) {

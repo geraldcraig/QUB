@@ -79,8 +79,9 @@ public class StartApp {
 				numberOfCards(mainDeck);
 				break;
 			case 4:
-				System.out.println("Not yet implemented...");
+				System.out.println("4. Display full details...");
 				// TODO add required method call(s)
+				fullDetails(mainDeck);
 				break;
 			case 5:
 				System.out.println("Not yet implemented...");
@@ -116,8 +117,6 @@ public class StartApp {
 		} while (option != 11);
 		scanner.close();
 	}
-
-	
 
 	/**
 	 * Reads in the data from the provided csv and returns a list of TopTrumpCard
@@ -173,6 +172,14 @@ public class StartApp {
 
 	public static void numberOfCards(List<TopTrumpCard> deck) {
 		System.out.println("Number of cards in current deck : " + deck.size());
+		
+	}
+	
+	private static void fullDetails(List<TopTrumpCard> deck) {
+		for (TopTrumpCard card : deck) {
+			System.out.println("name: " + card.getName());
+			System.out.println();
+		}
 		
 	}
 	
