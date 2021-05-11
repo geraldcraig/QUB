@@ -49,9 +49,10 @@ public class StartApp {
 				displayAll(players);
 				break;
 			case 2:
+				displayIre(players);
 				break;
 			case 3:
-			
+				highestPoints(players);
 				break;
 			case 4:
 			
@@ -152,8 +153,31 @@ public class StartApp {
 	
 	public static void displayAll(List<Player> players) {
 		for (Player i : players) {
-			System.out.printf("First name : %s \t Surname : %s \n", i.getFirstName(), i.getLastName());
+			System.out.println("Country \t:" + i.getCountry());
+			System.out.println("First name \t:" + i.getFirstName());
+			System.out.println();
 		}
+		
+	}
+	
+	public static void displayIre(List<Player> players) {
+		for (Player i : players) {
+			if (i.getCountry().equals(CountryCode.IRE)) {
+				System.out.println(i.getFirstName() + " " + i.getLastName());
+			}
+		}
+		
+	}
+	
+	public static void highestPoints(List<Player> players) {
+		int highest = 0;
+		for (Player i : players) {
+			if (i.getPointsScored() > highest) {
+				highest = i.getPointsScored();
+			}
+			
+		}
+		System.out.println(highest);
 		
 	}
 
