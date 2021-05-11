@@ -2,9 +2,10 @@ package uk.ac.qub.revision.p3;
 
 public class Player {
 	
-	
+	private CountryCode country;
 	private String firstName;
 	private String lastName;
+	private Position position;
 	private int totalMatches;
 	private int pointsScored;
 	private int gamesWon;
@@ -16,12 +17,14 @@ public class Player {
 	private double percentGamesWon;
 	
 	
-	
-	public Player(CountryCode country, String firstName, int totalMatches, int pointsScored, int gamesWon,
-			int sixNationsLost, int sixNationsDraw, double height, String club, int influence) {
+	public Player(CountryCode country, String firstName, String lastName, Position position, int totalMatches,
+			int pointsScored, int gamesWon, int sixNationsLost, int sixNationsDraw, double height, String club,
+			int influence) {
 		super();
+		this.country = country;
 		this.firstName = firstName;
-		this.lastName = firstName;
+		this.lastName = lastName;
+		this.position = position;
 		this.totalMatches = totalMatches;
 		this.pointsScored = pointsScored;
 		this.gamesWon = gamesWon;
@@ -33,6 +36,12 @@ public class Player {
 	}
 	
 	
+	public CountryCode getCountry() {
+		return country;
+	}
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
 	public String getFirstName() {
 		return firstName;
 	}
@@ -44,6 +53,12 @@ public class Player {
 	}
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+	public Position getPosition() {
+		return position;
+	}
+	public void setPosition(Position position) {
+		this.position = position;
 	}
 	public int getTotalMatches() {
 		return totalMatches;
