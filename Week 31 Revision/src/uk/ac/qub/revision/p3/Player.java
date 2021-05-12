@@ -118,11 +118,14 @@ public class Player {
 
 	@Override
 	public String toString() {
-		return "Player [country=" + country + ", firstName=" + firstName + ", lastName=" + lastName + ", position="
-				+ position + ", totalMatches=" + totalMatches + ", pointsScored=" + pointsScored + ", gamesWon="
-				+ gamesWon + ", sixNationsLost=" + sixNationsLost + ", sixNationsDraw=" + sixNationsDraw + ", height="
-				+ height + ", club=" + club + ", influence=" + influence + "]";
+		return getFirstName();
 	}
+
+
+	
+
+
+	
 	
 	
 	

@@ -1,13 +1,18 @@
 package uk.ac.qub.revision.p3;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 
 import uk.ac.qub.revision.p3.solution.Country;
 
@@ -46,22 +51,28 @@ public class StartApp {
 			switch (option) {
 				
 			case 1:
+				System.out.println("All players");
 				displayAll(players);
 				break;
 			case 2:
+				System.out.println("All players from Ireland");
 				displayIre(players);
 				break;
 			case 3:
+				System.out.println("The highest point scorer");
 				highestPoints(players);
 				break;
 			case 4:
-			
+				System.out.println("All players by height and name");
+				displayByHeight(players);
 				break;
 			case 5:
-				
+				System.out.println("Clubs and total points");
+				displayByClub(players);
 				break;
 			case 6:
-				
+				System.out.println("Exporting to file");
+				exportToFile(players);
 				break;
 			case 7:
 				System.out.println("Quitting");
@@ -72,7 +83,6 @@ public class StartApp {
 		} while (option != 7);
 		scanner.close();
 	}
-
 
 	/**
 	 * Reads in the data from the csv and maps to the Player class 
@@ -179,10 +189,55 @@ public class StartApp {
 			}
 			
 		}
-		System.out.println(highest);
-		System.out.println(player);
-		
+		for (Player i : player) {
+			System.out.println(i.getFirstName() + " " + i.getLastName() + " " + i.getCountry()
+			+ " " + i.getPointsScored());
+		}	
 	}
 
+	public static void displayByHeight(List<Player> players) {
+		Collections.sort(players, new CompareByHeight());
+		for (Player i : players) {
+			System.out.println(i.getHeight() + " " + i.getFirstName());
+		}
+		
+	}
+	
+	public static void displayByClub(List<Player> players) {
+		Collections.sort(players, new CompareByClub());
+		Set<Player> clubs = new HashSet<Player>();
+		for (Player i : players) {
+			clubs.add(i);
+		}
+		for (Player i : clubs) {
+			System.out.println(i.getClub());
+		}	
+		
+	}
+	
+	public static void exportToFile(List<Player> players) {
+		File file = new File("Teams.csv");
+			if (!file.exists()) {
+				try {
+					file.createNewFile();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			
+			try {
+				FileWriter fw = new FileWriter(file, true);
+				BufferedWriter bw = new BufferedWriter(fw);
+				
+				
+				bw.close();
+				fw.close();
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}	
+		}		
 	
 }
