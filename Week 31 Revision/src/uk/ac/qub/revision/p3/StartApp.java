@@ -170,14 +170,17 @@ public class StartApp {
 	}
 	
 	public static void highestPoints(List<Player> players) {
+		List<Player> player = new ArrayList<Player>();
 		int highest = 0;
 		for (Player i : players) {
 			if (i.getPointsScored() > highest) {
 				highest = i.getPointsScored();
+				player.add(i);
 			}
 			
 		}
 		System.out.println(highest);
+		System.out.println(player);
 		
 	}
 

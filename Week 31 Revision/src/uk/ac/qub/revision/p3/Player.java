@@ -114,5 +114,16 @@ public class Player {
 	public void setPercentGamesWon(double percentGamesWon) {
 		this.percentGamesWon = percentGamesWon;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Player [country=" + country + ", firstName=" + firstName + ", lastName=" + lastName + ", position="
+				+ position + ", totalMatches=" + totalMatches + ", pointsScored=" + pointsScored + ", gamesWon="
+				+ gamesWon + ", sixNationsLost=" + sixNationsLost + ", sixNationsDraw=" + sixNationsDraw + ", height="
+				+ height + ", club=" + club + ", influence=" + influence + "]";
+	}
+	
+	
 	
 }
