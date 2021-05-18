@@ -229,8 +229,7 @@ public class StartApp {
 			try {
 				FileWriter fw = new FileWriter(file, true);
 				BufferedWriter bw = new BufferedWriter(fw);
-				
-				
+
 				bw.close();
 				fw.close();
 				
