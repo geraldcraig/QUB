@@ -206,13 +206,16 @@ public class StartApp {
 	}
 	
 	public static void displayByClub(List<Player> players) {
-		Collections.sort(players, new CompareByClub());
+		//Collections.sort(players, new CompareByClub());
 		Map<String, Integer> clubs = new TreeMap<String, Integer>();
 		for (Player i : players) {
-			clubs.put(i.getClub(), i.getPointsScored());
+			if (!clubs.containsKey(i.getClub())) {
+				clubs.put(i.getClub(), i.getPointsScored());
+			}
+			
 		}
 		for (String i : clubs.keySet()) {
-			System.out.println(i + clubs.get(clubs));
+			System.out.println(i);
 		}	
 		
 	}
