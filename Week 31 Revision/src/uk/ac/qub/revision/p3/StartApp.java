@@ -11,8 +11,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.TreeMap;
 
 import uk.ac.qub.revision.p3.solution.Country;
 
@@ -205,12 +207,12 @@ public class StartApp {
 	
 	public static void displayByClub(List<Player> players) {
 		Collections.sort(players, new CompareByClub());
-		Set<Player> clubs = new HashSet<Player>();
+		Map<String, Integer> clubs = new TreeMap<String, Integer>();
 		for (Player i : players) {
-			clubs.add(i);
+			clubs.put(i.getClub(), i.getPointsScored());
 		}
-		for (Player i : clubs) {
-			System.out.println(i.getClub());
+		for (String i : clubs.keySet()) {
+			System.out.println(i + clubs.get(clubs));
 		}	
 		
 	}
@@ -229,6 +231,10 @@ public class StartApp {
 			try {
 				FileWriter fw = new FileWriter(file, true);
 				BufferedWriter bw = new BufferedWriter(fw);
+				bw.write("Last name" + "," + "first name" + "," + "country" + "\n");
+				for (Player p : players) {
+					bw.write(p.getLastName().toUpperCase() + "," + p.getFirstName() + "," + p.getCountry() + "\n");
+				}
 
 				bw.close();
 				fw.close();
