@@ -210,7 +210,9 @@ public class StartApp {
 		Map<String, Integer> clubs = new TreeMap<String, Integer>();
 		
 		for (Player p : players) {
+			
 			if (clubs.containsKey(p.getClub())) {
+				
 				int count = clubs.get(p.getClub() + p.getTotalMatches());
 				clubs.put(p.getClub(), count);
 			} else {
