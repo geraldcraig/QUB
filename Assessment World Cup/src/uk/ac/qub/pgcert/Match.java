@@ -18,6 +18,9 @@ public class Match {
 	private String homeTeamInitials;
 	private String awayTeamInitials;
 	
+	public Match() {
+		
+	}
 	
 	public Match(int year, String host, String stage, String stadium, String city, int attendance, String homeTeamName,
 			int homeTeamGoals, int awayTeamGoals, String awayTeamName, String wincondition,

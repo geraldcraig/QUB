@@ -39,7 +39,7 @@ public class Stats {
 				int year = Integer.parseInt(parts[0]);
 				String host = parts[1];
 				
-				Match match = new Match(year, host, host, host, host, year, host, year, year, host, host, year, year, line, host);
+				Match match = new Match();
 				matches.add(match);
 				System.out.println("hello world");
 				line = br.readLine();
