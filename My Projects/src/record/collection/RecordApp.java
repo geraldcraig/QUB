@@ -80,7 +80,7 @@ public class RecordApp {
 	}
 
 	public static void readData() {
-		File file = new File("Records.csv");
+		File file = new File("test.csv");
 		
 		try  {
 			FileReader fr = new FileReader(file); 
