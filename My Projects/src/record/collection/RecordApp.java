@@ -15,7 +15,7 @@ import uk.ac.qub.revision.p3.Position;
 
 public class RecordApp {
 	
-	public List<Records> record = new ArrayList<Records>();
+	public static List<Records> records = new ArrayList<Records>();
 
 	public static void main(String[] args) {
 		
@@ -44,27 +44,27 @@ public class RecordApp {
 				
 			case 1:
 				System.out.println("All players");
-				displayAll(players);
+				displayAll(records);
 				break;
 			case 2:
 				System.out.println("All players from Ireland");
-				displayIre(players);
+				displayIre(records);
 				break;
 			case 3:
 				System.out.println("The highest point scorer");
-				highestPoints(players);
+				highestPoints(records);
 				break;
 			case 4:
 				System.out.println("All players by height and name");
-				displayByHeight(players);
+				displayByHeight(records);
 				break;
 			case 5:
 				System.out.println("Clubs and total points");
-				displayByClub(players);
+				displayByClub(records);
 				break;
 			case 6:
 				System.out.println("Exporting to file");
-				exportToFile(players);
+				exportToFile(records);
 				break;
 			case 7:
 				System.out.println("Quitting");
@@ -89,49 +89,34 @@ File file = new File("playerstats.csv");
 				// TODO Code to process current line
 				String[] parts = line.split(",");
 				
-				int codeNum = Integer.parseInt(parts[0]);
-				CountryCode country = CountryCode.IRE;
-				switch (codeNum) {
-				case 1:
-					country = CountryCode.ENG;
-					break;
-				case 2:
-					country = CountryCode.FRA;
-					break;
-				case 3:
-					country = CountryCode.IRE;
-					break;
-				case 4:
-					country = CountryCode.ITA;
-					break;
-				case 5:
-					country = CountryCode.SCO;
-					break;
-				case 6:
-					country = CountryCode.WAL;
-					break;
-				default:
-					System.out.println("Error in country enum");
-				}
-				
-				String fullName = parts[1];
+				String fullName = parts[0];
 				String[] names = fullName.split(" ", 2);
 
 				String firstName = names[0];
 				String surname = names[1];
-				Position position = Position.valueOf(parts[2].toUpperCase());
-				int totalMatches = Integer.parseInt(parts[3]);
-				int points = Integer.parseInt(parts[4]);
-				int won = Integer.parseInt(parts[5]);
-				int lost = Integer.parseInt(parts[6]);
-				int draw = Integer.parseInt(parts[7]);
-				double height = Double.parseDouble(parts[8]);
-				String club = parts[9];
-				int influence = Integer.parseInt(parts[10]);
+				String title = parts[2];
+				String format = parts[3];
+				/*Format format = Format.SINGLE;
+				switch (format) {
+				case 1:
+					format = Format.SINGLE;
+					break;
+				case 2:
+					format = Format.ALBUM;
+					break;
+				case 3:
+					format = Format.CD;
+					break;
+				default:
+					System.out.println("Error in country enum");
+				}*/
 				
-				Player player = new Player(country, firstName, surname, position, totalMatches, points, won, lost, draw, height, club, influence);
+				int year = Integer.parseInt(parts[4]);
+				
+				
+				Records record = new Records(firstName, surname, title, format, year);
 				// TODO and add to list
-				players.add(player);
+				records.add(record);
 
 				line = reader.readLine();// attempt to read next line and loop again
 			
@@ -142,10 +127,10 @@ File file = new File("playerstats.csv");
 			System.out.println("IO Exception");
 		} catch (Exception e) {
 			System.out.println("Exception occured");
-			System.out.println(players.size() + " lines read successfully");
+			System.out.println(records.size() + " lines read successfully");
 			System.out.println(e.getMessage());
 		}
-		System.out.println(players.size() + " lines read successfully");	
+		System.out.println(records.size() + " lines read successfully");	
 	}
 
 }
