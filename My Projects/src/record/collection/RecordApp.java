@@ -9,10 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import uk.ac.qub.revision.p3.CountryCode;
-import uk.ac.qub.revision.p3.Player;
-import uk.ac.qub.revision.p3.Position;
-
 public class RecordApp {
 	
 	public static List<Records> records = new ArrayList<Records>();
@@ -48,23 +44,23 @@ public class RecordApp {
 				break;
 			case 2:
 				System.out.println("All players from Ireland");
-				displayIre(records);
+				//displayIre(records);
 				break;
 			case 3:
 				System.out.println("The highest point scorer");
-				highestPoints(records);
+				//highestPoints(records);
 				break;
 			case 4:
 				System.out.println("All players by height and name");
-				displayByHeight(records);
+				//displayByHeight(records);
 				break;
 			case 5:
 				System.out.println("Clubs and total points");
-				displayByClub(records);
+				//displayByClub(records);
 				break;
 			case 6:
 				System.out.println("Exporting to file");
-				exportToFile(records);
+				//exportToFile(records);
 				break;
 			case 7:
 				System.out.println("Quitting");
@@ -76,13 +72,21 @@ public class RecordApp {
 		scanner.close();	
 	}
 	
-	public static void readData() {
-File file = new File("playerstats.csv");
+	public static void displayAll(List<Records> records) {
+		for (Records r : records) {
+			System.out.println(r);
+		}
 		
-		try (FileReader fr = new FileReader(file); BufferedReader reader = new BufferedReader(fr);) {
+	}
 
-			String line = reader.readLine(); // discard header
-			line = reader.readLine(); // read first line
+	public static void readData() {
+		File file = new File("Records.csv");
+		
+		try  {
+			FileReader fr = new FileReader(file); 
+			BufferedReader br = new BufferedReader(fr);
+			String line = br.readLine(); // discard header
+			line = br.readLine(); // read first line
 
 			while (line != null) {
 
@@ -94,10 +98,10 @@ File file = new File("playerstats.csv");
 
 				String firstName = names[0];
 				String surname = names[1];
-				String title = parts[2];
-				String format = parts[3];
+				String title = parts[1];
+				int formatNum = Integer.parseInt(parts[2]);
 				/*Format format = Format.SINGLE;
-				switch (format) {
+				switch (formatNum) {
 				case 1:
 					format = Format.SINGLE;
 					break;
@@ -105,22 +109,26 @@ File file = new File("playerstats.csv");
 					format = Format.ALBUM;
 					break;
 				case 3:
+					format = Format.CDSINGLE;
+					break;
+				case 4:
 					format = Format.CD;
 					break;
 				default:
-					System.out.println("Error in country enum");
+					System.out.println("Error in format enum");
 				}*/
 				
-				int year = Integer.parseInt(parts[4]);
 				
-				
-				Records record = new Records(firstName, surname, title, format, year);
+				Records record = new Records(firstName, surname, title, formatNum, Integer.parseInt(parts[3]));
 				// TODO and add to list
 				records.add(record);
 
-				line = reader.readLine();// attempt to read next line and loop again
+				line = br.readLine();// attempt to read next line and loop again
 			
 			}
+			br.close();
+			fr.close();
+			
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found error");
 		} catch (IOException e) {
