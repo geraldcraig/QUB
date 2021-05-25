@@ -5,10 +5,10 @@ public class Records {
 	private String firstName;
 	private String surname;
 	private String title;
-	private int format;
+	private Format format;
 	private int year;
 	
-	public Records(String firstName, String surname, String title, int format, int year) {
+	public Records(String firstName, String surname, String title, Format format, int year) {
 		this.setFirstName(firstName);
 		this.setSurname(surname);
 		this.setTitle(title);
@@ -40,11 +40,11 @@ public class Records {
 		this.title = title;
 	}
 	
-	public int getFormat() {
+	public Format getFormat() {
 		return format;
 	}
 	
-	public void setFormat(int format) {
+	public void setFormat(Format format) {
 		this.format = format;
 	}
 	

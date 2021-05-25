@@ -26,7 +26,7 @@ public class RecordApp {
 		int option;
 		System.out.println("File reading ");
 		do {
-			System.out.println("1. Display all players");
+			System.out.println("1. Display all records");
 			System.out.println("2. Display all players from Ireland");
 			System.out.println("3. Display the highest point scorer ");
 			System.out.println("4. Display all players by height and name");
@@ -39,7 +39,7 @@ public class RecordApp {
 			switch (option) {
 				
 			case 1:
-				System.out.println("All players");
+				System.out.println("All records");
 				displayAll(records);
 				break;
 			case 2:
@@ -100,7 +100,7 @@ public class RecordApp {
 				String surname = names[1];
 				String title = parts[1];
 				int formatNum = Integer.parseInt(parts[2]);
-				/*Format format = Format.SINGLE;
+				Format format = Format.SINGLE;
 				switch (formatNum) {
 				case 1:
 					format = Format.SINGLE;
@@ -116,10 +116,10 @@ public class RecordApp {
 					break;
 				default:
 					System.out.println("Error in format enum");
-				}*/
+				}
+				int year = Integer.parseInt(parts[3]);
 				
-				
-				Records record = new Records(firstName, surname, title, formatNum, Integer.parseInt(parts[3]));
+				Records record = new Records(firstName, surname, title, format, year);
 				// TODO and add to list
 				records.add(record);
 

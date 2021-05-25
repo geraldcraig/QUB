@@ -34,8 +34,8 @@ public class Driver {
 				int format = Integer.parseInt(parts[2]);
 				int year = Integer.parseInt(parts[3]);
 				
-				Records records = new Records(firstName, surname, title, format, year);
-				record.add(records);
+				//Records records = new Records(firstName, surname, title, format, year);
+				//record.add(records);
 				
 				line = br.readLine();
 			}
