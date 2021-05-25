@@ -27,11 +27,11 @@ public class RecordApp {
 		System.out.println("File reading ");
 		do {
 			System.out.println("1. Display all records");
-			System.out.println("2. Display all players from Ireland");
-			System.out.println("3. Display the highest point scorer ");
-			System.out.println("4. Display all players by height and name");
-			System.out.println("5. Display each club (in alphabetical order with the cumulative number of games played in the six nations (Total Matches) by each player from that club ");			
-			System.out.println("6. Capitalise the Last name and export/write to a new file in a new thread in the format Lastname, first name and country ");
+			System.out.println("2. Display all Bowie records");
+			System.out.println("3. Display the most recent release ");
+			System.out.println("4. Display all records by year and title");
+			System.out.println("5. Display each artist (in alphabetical order with the cumulative number of releases ");			
+			System.out.println("6. Capitalise the Last name and export/write to a new file in the format Lastname, first name, title and country ");
 			System.out.println("7. Quit");
 			System.out.println("Enter option ...");
 			option = scanner.nextInt();
@@ -43,24 +43,24 @@ public class RecordApp {
 				displayAll(records);
 				break;
 			case 2:
-				System.out.println("All players from Ireland");
-				//displayIre(records);
+				System.out.println("All Bowie records");
+				displayArtist(records);
 				break;
 			case 3:
-				System.out.println("The highest point scorer");
-				//highestPoints(records);
+				System.out.println("Most recent release");
+				recentRelease(records);
 				break;
 			case 4:
-				System.out.println("All players by height and name");
-				//displayByHeight(records);
+				System.out.println("All records by year and title");
+				yearTitle(records);
 				break;
 			case 5:
-				System.out.println("Clubs and total points");
-				//displayByClub(records);
+				System.out.println("Artists and number of releases");
+				artistRealeases(records);
 				break;
 			case 6:
 				System.out.println("Exporting to file");
-				//exportToFile(records);
+				exportToFile(records);
 				break;
 			case 7:
 				System.out.println("Quitting");
@@ -72,15 +72,40 @@ public class RecordApp {
 		scanner.close();	
 	}
 	
-	public static void displayAll(List<Records> records) {
-		for (Records r : records) {
+	public static void exportToFile(List<Records> list) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void artistRealeases(List<Records> list) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void yearTitle(List<Records> list) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void recentRelease(List<Records> list) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void displayArtist(List<Records> list) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void displayAll(List<Records> list) {
+		for (Records r : list) {
 			System.out.println(r);
 		}
 		
 	}
 
 	public static void readData() {
-		File file = new File("test.csv");
+		File file = new File("records.csv");
 		
 		try  {
 			FileReader fr = new FileReader(file); 

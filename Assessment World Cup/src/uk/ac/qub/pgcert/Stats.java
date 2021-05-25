@@ -13,7 +13,7 @@ public class Stats {
 
 	public static void main(String[] args) {
 		readData();
-		displayAll(matches);
+		//displayAll(matches);
 		System.out.println("hello");
 
 	}
@@ -40,7 +40,7 @@ public class Stats {
 				String host = parts[1];
 				
 				Match match = new Match();
-				matches.add(match);
+				matches.add(match.);
 				System.out.println("hello world");
 				line = br.readLine();
 				
