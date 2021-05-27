@@ -21,12 +21,11 @@ public class Stats {
 	public static void displayAll(ArrayList<Match> match) {
 		for (Match m : match) {
 			System.out.println(m);
-		}
-		
+		}	
 	}
 
 	public static void readData() {
-		
+		System.out.println("reading file");
 		File file = new File("WorldCupMatches.csv");
 		try {
 			FileReader fr = new FileReader(file);
@@ -38,17 +37,29 @@ public class Stats {
 				String[] parts = line.split(",");
 				int year = Integer.parseInt(parts[0]);
 				String host = parts[1];
+				String stage = parts[2];
+				String stadium = parts[3];
+				String city = parts[4];
+				int attendance = Integer.parseInt(parts[5]);
+				String homeTeam = parts[6];
+				int homeGoals = Integer.parseInt(parts[7]);
+				int awayGoals = Integer.parseInt(parts[8]);
+				String awayTeam = parts[9];
+				String winCondition = parts[10];
+				int htHomeGoals = Integer.parseInt(parts[11]);
+				int htAwayGoals = Integer.parseInt(parts[12]);
+				String homeInitials = parts[13];
+				String awayInitials = parts[14];
 				
-				Match match = new Match(year, host, host, host, host, year, host, year, year, host, host, year, year, line, host);
+				Match match = new Match(year, host, stage, stadium, city, attendance, homeTeam, homeGoals, awayGoals, awayTeam, winCondition,
+						htHomeGoals, htAwayGoals, homeInitials, awayInitials);
 				matches.add(match);
 				System.out.println("hello world");
-				line = br.readLine();
-				
+				line = br.readLine();	
 			}
 			
 			br.close();
-			fr.close();
-			
+			fr.close();	
 					
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -56,9 +67,7 @@ public class Stats {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
-			
+		}		
 	}	
 
 }

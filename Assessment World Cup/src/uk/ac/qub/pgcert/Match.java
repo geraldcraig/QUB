@@ -42,156 +42,125 @@ public class Match {
 		this.awayTeamInitials = awayTeamInitials;
 	}
 
-
 	public int getYear() {
 		return year;
 	}
-
 
 	public void setYear(int year) {
 		this.year = year;
 	}
 
-
 	public String getHost() {
 		return host;
 	}
-
 
 	public void setHost(String host) {
 		this.host = host;
 	}
 
-
 	public String getStage() {
 		return stage;
 	}
-
 
 	public void setStage(String stage) {
 		this.stage = stage;
 	}
 
-
 	public String getStadium() {
 		return stadium;
 	}
-
 
 	public void setStadium(String stadium) {
 		this.stadium = stadium;
 	}
 
-
 	public String getCity() {
 		return city;
 	}
-
 
 	public void setCity(String city) {
 		this.city = city;
 	}
 
-
 	public int getAttendance() {
 		return attendance;
 	}
-
 
 	public void setAttendance(int attendance) {
 		this.attendance = attendance;
 	}
 
-
 	public String getHomeTeamName() {
 		return homeTeamName;
 	}
-
 
 	public void setHomeTeamName(String homeTeamName) {
 		this.homeTeamName = homeTeamName;
 	}
 
-
 	public int getHomeTeamGoals() {
 		return homeTeamGoals;
 	}
-
 
 	public void setHomeTeamGoals(int homeTeamGoals) {
 		this.homeTeamGoals = homeTeamGoals;
 	}
 
-
 	public int getAwayTeamGoals() {
 		return awayTeamGoals;
 	}
-
 
 	public void setAwayTeamGoals(int awayTeamGoals) {
 		this.awayTeamGoals = awayTeamGoals;
 	}
 
-
 	public String getAwayTeamName() {
 		return awayTeamName;
 	}
-
 
 	public void setAwayTeamName(String awayTeamName) {
 		this.awayTeamName = awayTeamName;
 	}
 
-
 	public String getWincondition() {
 		return wincondition;
 	}
-
 
 	public void setWincondition(String wincondition) {
 		this.wincondition = wincondition;
 	}
 
-
 	public int getHalftimeHomeGoals() {
 		return halftimeHomeGoals;
 	}
-
 
 	public void setHalftimeHomeGoals(int halftimeHomeGoals) {
 		this.halftimeHomeGoals = halftimeHomeGoals;
 	}
 
-
 	public int getHalftimeAwayGoals() {
 		return halftimeAwayGoals;
 	}
-
 
 	public void setHalftimeAwayGoals(int halftimeAwayGoals) {
 		this.halftimeAwayGoals = halftimeAwayGoals;
 	}
 
-
 	public String getHomeTeamInitials() {
 		return homeTeamInitials;
 	}
-
 
 	public void setHomeTeamInitials(String homeTeamInitials) {
 		this.homeTeamInitials = homeTeamInitials;
 	}
 
-
 	public String getAwayTeamInitials() {
 		return awayTeamInitials;
 	}
 
-
 	public void setAwayTeamInitials(String awayTeamInitials) {
 		this.awayTeamInitials = awayTeamInitials;
 	}
-
 
 	@Override
 	public String toString() {
@@ -202,6 +171,4 @@ public class Match {
 				+ ", homeTeamInitials=" + homeTeamInitials + ", awayTeamInitials=" + awayTeamInitials + "]";
 	}
 	
-	
-
 }
