@@ -105,7 +105,7 @@ public class RecordApp {
 	}
 
 	public static void readData() {
-		File file = new File("records.csv");
+		File file = new File("cells.csv");
 		
 		try  {
 			FileReader fr = new FileReader(file); 
@@ -118,35 +118,51 @@ public class RecordApp {
 				// TODO Code to process current line
 				String[] parts = line.split(",");
 				
-				String fullName = parts[0];
-				String[] names = fullName.split(" ", 2);
+				//if (parts.length == 4) {
+					/*String fullName = parts[0];
+					String[] names = fullName.split(" ", 2);
 
-				String firstName = names[0];
-				String surname = names[1];
-				String title = parts[1];
-				int formatNum = Integer.parseInt(parts[2]);
-				Format format = Format.SINGLE;
-				switch (formatNum) {
-				case 1:
-					format = Format.SINGLE;
-					break;
-				case 2:
-					format = Format.ALBUM;
-					break;
-				case 3:
-					format = Format.CDSINGLE;
-					break;
-				case 4:
-					format = Format.CD;
-					break;
-				default:
-					System.out.println("Error in format enum");
-				}
-				int year = Integer.parseInt(parts[3]);
-				
-				Records record = new Records(firstName, surname, title, format, year);
-				// TODO and add to list
-				records.add(record);
+					String firstName = names[0];
+					String surname = names[1];
+					String title = parts[1];
+					int year = Integer.parseInt(parts[3]);
+					
+					Records record = new Records(firstName, surname, title, year);
+					// TODO and add to list
+					records.add(record);*/
+					
+				//} else {
+					String fullName = parts[0];
+					String[] names = fullName.split(" ", 2);
+
+					String firstName = names[0];
+					String surname = names[1];
+					String title = parts[1];
+					int formatNum = Integer.parseInt(parts[2]);
+					Format format = Format.SINGLE;
+					switch (formatNum) {
+					case 1:
+						format = Format.SINGLE;
+						break;
+					case 2:
+						format = Format.ALBUM;
+						break;
+					case 3:
+						format = Format.CDSINGLE;
+						break;
+					case 4:
+						format = Format.CD;
+						break;
+					default:
+						System.out.println("Error in format enum");
+					}
+					int year = Integer.parseInt(parts[3]);
+					
+					Records record = new Records(firstName, surname, title, format, year);
+					// TODO and add to list
+					records.add(record);
+					
+			//	}
 
 				line = br.readLine();// attempt to read next line and loop again
 			

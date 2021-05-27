@@ -16,6 +16,10 @@ public class Records {
 		this.setYear(year);
 	}
 	
+	public Records(String firstName, String surname, String Title, int year) {
+		
+	}
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -61,7 +65,7 @@ public class Records {
 		return "Records [firstName=" + firstName + ", surname=" + surname + ", title=" + title + ", format=" + format
 				+ ", year=" + year + "]";
 	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
