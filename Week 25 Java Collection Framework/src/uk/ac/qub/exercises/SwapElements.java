@@ -14,16 +14,23 @@ public class SwapElements {
 		linkList.add("have");
 		linkList.add("a");
 		
-		System.out.println(linkList.toString());
+		System.out.println("Pre swap : " + linkList.toString());
 		
 		swap(linkList, 1, 2);
+		
+		System.out.println("1st swap : " + linkList.toString());
+		
 		swap(linkList, 2, 3);
+		
+		System.out.println("2nd swap : " +linkList.toString());
 	}
 	
 	public static void swap(List<String> list, int position1, int position2) {
 		Collections.swap(list, position1, position2);
-		System.out.println(list.toString());
 		
+		/*String temp = list.get(position1);
+		list.set(position1, list.get(position2));
+		list.set(position2, temp);*/
 	}
 
 }

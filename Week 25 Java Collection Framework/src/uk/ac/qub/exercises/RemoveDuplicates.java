@@ -1,49 +1,32 @@
 package uk.ac.qub.exercises;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
+import java.util.Arrays;
 import java.util.List;
 
 public class RemoveDuplicates {
 
-	public static void main(String[] args) {
-
-		List<Integer> arrList = new ArrayList<Integer>();
-		arrList.add(2);
-		arrList.add(4);
-		arrList.add(2);
-		arrList.add(9);
-		arrList.add(7);
-		System.out.println("ArrayList: " + arrList.toString());
-
-		List<Integer> linkList = new LinkedList<Integer>();
-		linkList.add(3);
-		linkList.add(9);
-		linkList.add(2);
-		linkList.add(5);
-		linkList.add(1);
-		System.out.println("LinkedList: " + linkList.toString());
-
-		removeDuplicates(arrList, linkList);
-		addLists(arrList, linkList);
+	public static void main(String[] args ) {
+		Integer[] num1 = {5, 52, 65, 5, 21, 99, 5, 99};
 		
-		Collections.addAll(arrList, 10);
-		System.out.println(arrList);
-
+		List<Integer> nums1 = Arrays.asList(num1);
+		
+		System.out.println("Original list : " + nums1.toString());
+		
+		nums1 = removeDuplicates(nums1);
+		
+		System.out.println("Original list : " + nums1.toString());
+	
 	}
 
-	public static void removeDuplicates(List<Integer> originalList, List<Integer> listToRemove) {
-
-		originalList.removeAll(listToRemove);
-		System.out.println("Remove list: " + originalList.toString());
-
-	}
-
-	public static void addLists(List<Integer> originalList, List<Integer> listToAdd) {
-
-		originalList.addAll(listToAdd);
-		System.out.println("Joined lists: " + originalList.toString());
+	public static List<Integer> removeDuplicates(List<Integer> list) {
+		List<Integer> unique = new ArrayList<Integer>();
+		for (Integer val : list) {
+			if (!unique.contains(val)) {
+				unique.add(val);
+			}
+		}
+		return unique;
 	}
 
 }

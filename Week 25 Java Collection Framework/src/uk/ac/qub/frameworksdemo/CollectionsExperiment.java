@@ -13,9 +13,6 @@ public class CollectionsExperiment {
 		arrList.add("belfast");
 		arrList.add("paris");
 		
-		ArrayList<Integer> arrlist2 = new ArrayList<Integer>();
-		arrlist2.add(2);
-		
 		LinkedList<String> linkList = new LinkedList<String>();
 		linkList.add("barcelona");
 		linkList.add("dubai");
