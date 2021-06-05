@@ -1,5 +1,9 @@
 package uk.ac.qub.p3;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * 
  * @author Gerald Craig 40278046
@@ -197,16 +201,24 @@ public class TopTrumpCard {
 
 	public int getMaxStatID() {
 		int result = 0;
-		if (getSpeed() > getStrength()) {
-			result = 1;
-		}
+		Integer[] stats = { getSpeed(), getSpeed(), getAgility(), getIntelligence()};
+		List<Integer> list = Arrays.asList(stats);
+		//Collections.sort(list);
+		result = Collections.max(list);
 		
 		return result;
 	}
 
 	public int getStatScore(int statChoice) {
-		// TODO Auto-generated method stub
-		return 0;
+		if (statChoice == 0) {
+			return getSpeed();
+		} else if (statChoice == 1) {
+			return getStrength();
+		} else if (statChoice == 2) {
+			return getAgility();
+		} else {
+			return getIntelligence();
+		}
 	}
 
 	@Override
