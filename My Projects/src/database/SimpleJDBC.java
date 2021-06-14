@@ -11,7 +11,7 @@ public class SimpleJDBC {
 		Class.forName("com.mysql.jdbc.Driver");
 		System.out.println("Driver loaded");
 		
-		Connection connection = DriverManager.getConnection("jdbc:mysql//localhost/javabook" , "root", "Oce@ns11");
+		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/javabook" , "root", "Oce@ns11");
 		System.out.println("database connected");
 		
 		Statement statement = connection.createStatement();
