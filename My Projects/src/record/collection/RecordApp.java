@@ -118,20 +118,6 @@ public class RecordApp {
 				// TODO Code to process current line
 				String[] parts = line.split(",");
 				
-				//if (parts.length == 4) {
-					/*String fullName = parts[0];
-					String[] names = fullName.split(" ", 2);
-
-					String firstName = names[0];
-					String surname = names[1];
-					String title = parts[1];
-					int year = Integer.parseInt(parts[3]);
-					
-					Records record = new Records(firstName, surname, title, year);
-					// TODO and add to list
-					records.add(record);*/
-					
-				//} else {
 					String fullName = parts[0];
 					String[] names = fullName.split(" ", 2);
 
