@@ -200,13 +200,12 @@ public class TopTrumpCard {
 	}
 
 	public int getMaxStatID() {
-		int result = 0;
-		Integer[] stats = { getSpeed(), getStrength(), getAgility(), getIntelligence()};
-		List<Integer> list = Arrays.asList(stats);
-		//Collections.sort(list);
-		result = Collections.max(list);
 		
-		return result;
+		/*Integer[] stats = { getSpeed(), getStrength(), getAgility(), getIntelligence()};
+		List<Integer> list = Arrays.asList(stats);
+		return Collections.max(list);*/
+		return speed;
+		
 	}
 
 	public int getStatScore(int statChoice) {

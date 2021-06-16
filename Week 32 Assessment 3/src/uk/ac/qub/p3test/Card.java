@@ -10,7 +10,6 @@ public class Card {
 	
 	
 	public Card(String name, int speed, int strength, int agility, int intelligence) {
-		super();
 		this.name = name;
 		this.speed = speed;
 		this.strength = strength;
