@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
@@ -89,12 +90,14 @@ public class StartApp {
 				topFive(mainDeck);
 				break;
 			case 6:
-				System.out.println("Not yet implemented...");
+				System.out.println("6. Villains with agility rating of 75 or more...");
 				// TODO add required method call(s)
+				displayVillains(mainDeck);
 				break;
 			case 7:
-				System.out.println("Not yet implemented...");
+				System.out.println("7. Name and bio of card with longest bio...");
 				// TODO add required method call(s)
+				longestBio(mainDeck);
 				break;
 			case 8:
 				System.out.println("Not yet implemented...");
@@ -120,7 +123,6 @@ public class StartApp {
 		scanner.close();
 	}
 
-	
 
 	/**
 	 * Reads in the data from the provided csv and returns a list of TopTrumpCard
@@ -181,15 +183,46 @@ public class StartApp {
 	
 	private static void fullDetails(List<TopTrumpCard> deck) {
 		for (TopTrumpCard card : deck) {
-			System.out.println("name: \t" + card.getName());
-			System.out.println("realname: " + card.getRealName());
+			System.out.println("name: \t\t" + card.getName());
+			System.out.println("realname: \t" + card.getRealName());
+			System.out.println("filename: \t" + card.getImageFileName());
+			System.out.println("category: \t" + card.getCategory());
+			System.out.println("speed: \t\t" + card.getSpeed());
+			System.out.println("strength: \t" + card.getStrength());
+			System.out.println("agility: \t" + card.getAgility());
+			System.out.println("intelligence: \t" + card.getIntelligence());
+			System.out.println("bio: \t\t" + card.getBio());
 			System.out.println();
 		}
 		
 	}
 	
+	public static void longestBio(List<TopTrumpCard> deck) {
+		System.out.println(Collections.max(deck, new CompareByLength()));
+		
+	}
+	
+	public static void displayVillains(List<TopTrumpCard> deck) {
+		List<TopTrumpCard> deckCopy = new ArrayList<TopTrumpCard>();
+		for (TopTrumpCard card : deck)  {
+			if (card.getCategory().equals(Category.VILLAIN) && card.getAgility() >= 75) {
+				deckCopy.add(card);
+			}
+		}
+		Collections.sort(deckCopy, new CompareByName());
+		//Collections.sort(deckCopy, Collections.reverseOrder(new CompareByName()));
+		for (TopTrumpCard card : deckCopy) {
+			System.out.println(card);
+			System.out.println();
+		}
+	}
+	
 	public static void topFive(List<TopTrumpCard> deck) {
-		for (TopTrumpCard card : deck) {
+		List<TopTrumpCard> deckCopy = new ArrayList<TopTrumpCard>(deck);
+		
+		Collections.sort(deckCopy, new CompareByStrength());
+		Collections.sort(deckCopy, Collections.reverseOrder(new CompareByStrength()));
+		for (TopTrumpCard card : deckCopy) {
 			System.out.println(card.toString());
 			System.out.println();
 		}
