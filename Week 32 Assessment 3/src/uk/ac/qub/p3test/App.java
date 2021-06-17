@@ -1,6 +1,7 @@
 package uk.ac.qub.p3test;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class App {
@@ -26,10 +27,17 @@ public class App {
 		
 		diplayAll(card);
 		
-		getMaxStat();
+		getMaxStat(card);
 		
 		//getScore(stat);
 		
+	}
+
+	private static void getMaxStat(List<Card> card) {
+		
+		for (Card c : card) {
+			
+		}
 	}
 
 	private static void getScore(int stat) {
@@ -37,10 +45,7 @@ public class App {
 		
 	}
 
-	private static void getMaxStat() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	private static void diplayAll(List<Card> card) {
 		for (Card c : card) {
