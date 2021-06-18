@@ -1,5 +1,6 @@
 package uk.ac.qub.p3;
 
+import java.awt.Desktop;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -102,6 +103,7 @@ public class StartApp {
 			case 8:
 				System.out.println("Not yet implemented...");
 				// TODO add required method call(s)
+				displayDoubles(mainDeck);
 				break;
 			case 9:
 				System.out.println("9. Removing duplicates from the Deck...");
@@ -197,6 +199,15 @@ public class StartApp {
 		
 	}
 	
+	public static void displayDoubles(List<TopTrumpCard> deck) {
+		Collections.sort(deck, new CompareByName());
+		for (TopTrumpCard card : deck) {
+			System.out.println(card);
+			System.out.println();
+		}
+		
+	}
+	
 	public static void longestBio(List<TopTrumpCard> deck) {
 		System.out.println(Collections.max(deck, new CompareByLength()));
 		
@@ -210,7 +221,6 @@ public class StartApp {
 			}
 		}
 		Collections.sort(deckCopy, new CompareByName());
-		//Collections.sort(deckCopy, Collections.reverseOrder(new CompareByName()));
 		for (TopTrumpCard card : deckCopy) {
 			System.out.println(card);
 			System.out.println();
@@ -218,10 +228,16 @@ public class StartApp {
 	}
 	
 	public static void topFive(List<TopTrumpCard> deck) {
-		List<TopTrumpCard> deckCopy = new ArrayList<TopTrumpCard>(deck);
-		
+		List<TopTrumpCard> deckCopy = new ArrayList<TopTrumpCard>();
+		for (TopTrumpCard card : deck) {
+			if (card.getCategory().equals(Category.HERO)) {
+				deckCopy.add(card);
+			}
+		}
 		Collections.sort(deckCopy, new CompareByStrength());
 		Collections.sort(deckCopy, Collections.reverseOrder(new CompareByStrength()));
+		List<TopTrumpCard> five = new ArrayList<TopTrumpCard>();
+		
 		for (TopTrumpCard card : deckCopy) {
 			System.out.println(card.toString());
 			System.out.println();
@@ -232,13 +248,20 @@ public class StartApp {
 	public static void removeDuplicates(List<TopTrumpCard> deck) {
 		Set<TopTrumpCard> set = new HashSet<TopTrumpCard>(deck);
 		System.out.println(set.size());
+		for (TopTrumpCard card : set) {
+			System.out.println(card);
+			System.out.println();
+		}
 		
 	}
 	
 	public static void highLow(List<TopTrumpCard> deck) {
+		Collections.sort(deck, new CompareByStat());
 		for (TopTrumpCard card : deck) {
 			System.out.println(card.toString());
-			System.out.println("Average Stat: ");
+			double average = (double) (card.getSpeed() + card.getStrength() 
+			+card.getAgility() + card.getIntelligence())/4;
+			System.out.println("Average Stat: " +  average);
 			System.out.println();
 		}
 	}
