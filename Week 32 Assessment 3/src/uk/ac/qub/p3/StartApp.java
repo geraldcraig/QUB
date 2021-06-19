@@ -8,8 +8,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -101,7 +103,7 @@ public class StartApp {
 				longestBio(mainDeck);
 				break;
 			case 8:
-				System.out.println("Not yet implemented...");
+				System.out.println("8. Summary details of any duplicate cards...");
 				// TODO add required method call(s)
 				displayDoubles(mainDeck);
 				break;
@@ -200,10 +202,27 @@ public class StartApp {
 	}
 	
 	public static void displayDoubles(List<TopTrumpCard> deck) {
-		Collections.sort(deck, new CompareByName());
+		/*Collections.sort(deck, new CompareByName());
 		for (TopTrumpCard card : deck) {
 			System.out.println(card);
 			System.out.println();
+		}*/
+		Map<TopTrumpCard, Integer> myMap = new HashMap<TopTrumpCard, Integer>();
+		for (TopTrumpCard card : deck) {
+			if (myMap.containsKey(card)) {
+				int count = myMap.get(card);
+				myMap.put(card, count + 1);
+			} else {
+				myMap.put(card, 1);
+			}	
+		}
+		
+		for (TopTrumpCard key : myMap.keySet()) {
+			if (myMap.get(key) == 2) {
+				System.out.println(key);
+				System.out.println();
+			}
+			//System.out.println(myMap.get(key));
 		}
 		
 	}
