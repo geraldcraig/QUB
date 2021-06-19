@@ -70,7 +70,7 @@ public class StartApp {
 				mainDeck = readData();
 				break;
 			case 2:
-				System.out.println("2. Playing Demo Game...");
+				System.out.println("2. Playing Demo Game...\n");
 				/* TODO Uncomment method call to enable this option 
 				 * (requires TopTrumpCard class to match expectations of Game Method to compile successfully)
 				 * deliberately commented out initially to allow attempting other tasks
@@ -78,42 +78,42 @@ public class StartApp {
 				CardGame.playDemo(mainDeck);
 				break;
 			case 3:
-				System.out.println("3. Number of Cards in Current Deck...");
+				System.out.println("3. Number of Cards in Current Deck...\n");
 				// TODO add required method call(s)
 				numberOfCards(mainDeck);
 				break;
 			case 4:
-				System.out.println("4. Display full details...");
+				System.out.println("4. Display full details...\n");
 				// TODO add required method call(s)
 				fullDetails(mainDeck);
 				break;
 			case 5:
-				System.out.println("5. Top 5 strongest Heroes...");
+				System.out.println("5. Top 5 strongest Heroes...\n");
 				// TODO add required method call(s)
 				topFive(mainDeck);
 				break;
 			case 6:
-				System.out.println("6. Villains with agility rating of 75 or more...");
+				System.out.println("6. Villains with agility rating of 75 or more...\n");
 				// TODO add required method call(s)
 				displayVillains(mainDeck);
 				break;
 			case 7:
-				System.out.println("7. Name and bio of card with longest bio...");
+				System.out.println("7. Name and bio of card with longest bio...\n");
 				// TODO add required method call(s)
 				longestBio(mainDeck);
 				break;
 			case 8:
-				System.out.println("8. Summary details of any duplicate cards...");
+				System.out.println("8. Summary details of duplicate cards...\n");
 				// TODO add required method call(s)
 				displayDoubles(mainDeck);
 				break;
 			case 9:
-				System.out.println("9. Removing duplicates from the Deck...");
+				System.out.println("9. Removing duplicates from the Deck...\n");
 				// TODO add required method call(s)
 				removeDuplicates(mainDeck);
 				break;
 			case 10:
-				System.out.println("10. Sorted from highest to lowest by average of the 4 main stats...");
+				System.out.println("10. Sorted from highest to lowest by average of the 4 main stats...\n");
 				// TODO add required method call(s)
 				highLow(mainDeck);
 				break;
@@ -202,11 +202,6 @@ public class StartApp {
 	}
 	
 	public static void displayDoubles(List<TopTrumpCard> deck) {
-		/*Collections.sort(deck, new CompareByName());
-		for (TopTrumpCard card : deck) {
-			System.out.println(card);
-			System.out.println();
-		}*/
 		Map<TopTrumpCard, Integer> myMap = new HashMap<TopTrumpCard, Integer>();
 		for (TopTrumpCard card : deck) {
 			if (myMap.containsKey(card)) {
@@ -222,7 +217,6 @@ public class StartApp {
 				System.out.println(key);
 				System.out.println();
 			}
-			//System.out.println(myMap.get(key));
 		}
 		
 	}
@@ -256,8 +250,13 @@ public class StartApp {
 		Collections.sort(deckCopy, new CompareByStrength());
 		Collections.sort(deckCopy, Collections.reverseOrder(new CompareByStrength()));
 		List<TopTrumpCard> five = new ArrayList<TopTrumpCard>();
+		five.add(deckCopy.get(0));
+		five.add(deckCopy.get(1));
+		five.add(deckCopy.get(2));
+		five.add(deckCopy.get(3));
+		five.add(deckCopy.get(4));
 		
-		for (TopTrumpCard card : deckCopy) {
+		for (TopTrumpCard card : five) {
 			System.out.println(card.toString());
 			System.out.println();
 		}
@@ -285,5 +284,4 @@ public class StartApp {
 		}
 	}
 	
-
 }
