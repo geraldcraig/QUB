@@ -222,8 +222,23 @@ public class StartApp {
 	}
 	
 	public static void longestBio(List<TopTrumpCard> deck) {
-		System.out.println(Collections.max(deck, new CompareByLength()));
-		
+		//System.out.println(Collections.max(deck, new CompareByLength()));
+		List<TopTrumpCard> bioLength = new ArrayList<TopTrumpCard>();
+		int length = 0;
+		for (TopTrumpCard card : deck) {
+			if (card.getBio().length() > length) {
+				length += card.getBio().length();
+			}
+		}
+		System.out.println(length);
+		//List<TopTrumpCard> bioLength = new ArrayList<TopTrumpCard>();
+		for (TopTrumpCard card : deck) {
+			System.out.println(card.getBio().length());
+		}
+		System.out.println(bioLength.size());
+		for (TopTrumpCard card : bioLength) {
+			System.out.println("Name : \t" + card.getName() + "\nBio : \t" + card.getBio());
+		}
 	}
 	
 	public static void displayVillains(List<TopTrumpCard> deck) {
@@ -265,7 +280,7 @@ public class StartApp {
 	
 	public static void removeDuplicates(List<TopTrumpCard> deck) {
 		Set<TopTrumpCard> set = new HashSet<TopTrumpCard>(deck);
-		System.out.println(set.size());
+		System.out.println("Number of non duplicate cards in deck : " + set.size());
 		for (TopTrumpCard card : set) {
 			System.out.println(card);
 			System.out.println();
