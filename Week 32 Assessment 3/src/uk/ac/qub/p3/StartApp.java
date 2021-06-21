@@ -262,7 +262,7 @@ public class StartApp {
 				deckCopy.add(card);
 			}
 		}
-		Collections.sort(deckCopy, new CompareByStrength());
+		//Collections.sort(deckCopy, new CompareByStrength());
 		Collections.sort(deckCopy, Collections.reverseOrder(new CompareByStrength()));
 		List<TopTrumpCard> five = new ArrayList<TopTrumpCard>();
 		five.add(deckCopy.get(0));

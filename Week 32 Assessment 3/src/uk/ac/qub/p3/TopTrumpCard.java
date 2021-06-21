@@ -201,11 +201,21 @@ public class TopTrumpCard {
 
 	public int getMaxStatID() {
 		
-		/*Integer[] stats = { getSpeed(), getStrength(), getAgility(), getIntelligence()};
+		Integer[] stats = { getSpeed(), getStrength(), getAgility(), getIntelligence()};
 		List<Integer> list = Arrays.asList(stats);
-		return Collections.max(list);*/
-		return speed;
+		//Collections.sort(list);
 		
+		
+		System.out.println(Collections.max(list));
+		if (Collections.max(list).equals(speed)) {
+			return 0;
+		} else if (Collections.max(list).equals(strength)) {
+			return 1;
+		} else if (Collections.max(list).equals(agility)) {
+			return 2; 
+		} else {
+			return 3;
+		}
 	}
 
 	public int getStatScore(int statChoice) {
