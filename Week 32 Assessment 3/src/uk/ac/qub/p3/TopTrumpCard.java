@@ -203,10 +203,9 @@ public class TopTrumpCard {
 		
 		Integer[] stats = { getSpeed(), getStrength(), getAgility(), getIntelligence()};
 		List<Integer> list = Arrays.asList(stats);
-		//Collections.sort(list);
-		
-		
+
 		System.out.println(Collections.max(list));
+		
 		if (Collections.max(list).equals(speed)) {
 			return 0;
 		} else if (Collections.max(list).equals(strength)) {
