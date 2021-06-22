@@ -224,29 +224,23 @@ public class StartApp {
 	public static void longestBio(List<TopTrumpCard> deck) {
 		//System.out.println(Collections.max(deck, new CompareByLength()));
 		List<TopTrumpCard> bioLength = new ArrayList<TopTrumpCard>();
-		//int length = 0;
+		int length = 0;
 		for (TopTrumpCard card : deck) {
 			if (card.getBio().length() > length) {
-				length += card.getBio().length();
-			}
-			
-				//System.out.println(card.getBio().length());
-			}
+				length = card.getBio().length();
+			}	
 		}
-		System.out.println(length);
-		//List<TopTrumpCard> bioLength = new ArrayList<TopTrumpCard>();
+		
 		for (TopTrumpCard card : deck) {
 			if (card.getBio().length() == length) {
-				System.out.println("Name : \t" + card.getName() + "\nBio : \t" + card.getBio());
+				bioLength.add(card);	
 			}
-			//System.out.println(card.getBio().length());
 		}
-		/*System.out.println(bioLength.size());
+		
 		for (TopTrumpCard card : bioLength) {
-			System.out.println("Name : \t" + card.getName() + "\nBio : \t" + card.getBio());
-		}*/
-		
-		
+			System.out.println("Name : " + card.getName() + "Bio : " + card.getBio());
+			System.out.println();
+		}
 	}
 	
 	public static void displayVillains(List<TopTrumpCard> deck) {
