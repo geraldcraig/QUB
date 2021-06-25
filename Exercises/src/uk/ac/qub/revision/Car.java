@@ -56,6 +56,7 @@ public class Car {
 		System.out.println("Make : " + getMake());
 		System.out.println("Model : " + getModel());
 		System.out.println("Horsepower : " + getHorsePower());
+		System.out.println();
 	}
 
 }
