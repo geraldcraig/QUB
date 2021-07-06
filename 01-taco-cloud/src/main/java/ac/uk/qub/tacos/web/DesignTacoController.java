@@ -4,14 +4,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.validation.Valid;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import lombok.extern.slf4j.Slf4j;
 import ac.uk.qub.tacos.Taco;
@@ -21,10 +19,12 @@ import ac.uk.qub.tacos.Ingredient.Type;
 @Slf4j
 @Controller
 @RequestMapping("/design")
+@SessionAttributes("tacoOrder")
 public class DesignTacoController {
-  @GetMapping
-  public String showDesignForm(Model model) {
-    List<ac.uk.qub.tacos.Ingredient> ingredients = Arrays.asList(
+	
+  @ModelAttribute
+  public void addIngredientsToModel(Model model) {
+    List<Ingredient> ingredients = Arrays.asList(
       new Ingredient("FLTO", "Flour Tortilla", Type.WRAP),
       new Ingredient("COTO", "Corn Tortilla", Type.WRAP),
       new Ingredient("GRBF", "Ground Beef", Type.PROTEIN),
@@ -39,19 +39,24 @@ public class DesignTacoController {
 
     Type[] types = Ingredient.Type.values();
     for (Type type : types) {
-      model.addAttribute(type.toString().toLowerCase(), 
-    		  filterByType(ingredients, type));
+    	model.addAttribute(type.toString().toLowerCase(), 
+    			filterByType(ingredients, type));
     }
-
-    model.addAttribute("design", new Taco());
-    return "design";
+    
+  }
+  
+  @GetMapping
+  public String showDesignForm(Model model) {
+	  model.addAttribute("taco", new Taco());
+	  return "design";
   }
 
-  private List<Ingredient> filterByType (
-      <Ingredient> ingredients, Type type) {
+  private Iterable<Ingredient> filterByType (
+      List<Ingredient> ingredients, Type type) {
           return ingredients
           .stream()
           .filter(x -> x.getType().equals(type))
           .collect(Collectors.toList());
   }
+  
 }
