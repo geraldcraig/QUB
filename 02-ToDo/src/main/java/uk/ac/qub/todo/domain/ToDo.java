@@ -6,7 +6,6 @@ public class ToDo {
 	private int year;
 
 	public ToDo(String artist, String title, int year) {
-		super();
 		this.setArtist(artist);
 		this.setTitle(title);
 		this.setYear(year);

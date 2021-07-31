@@ -8,14 +8,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import uk.ac.qub.todo.service.ToDoService;
 
 @Controller
-@RequestMapping()
 public class HomeController {
 	
-	@GetMapping("/")
+	@GetMapping
 	public String home(Model model) {
 		ToDoService todoService = new ToDoService();
-		model.addAttribute("pageTitle", "1");
+		model.addAttribute("pageTitle", "Record Collection");
+		model.addAttribute("record", todoService.getToDo());
 		return "index";
+	}
+	
+	@GetMapping("/home")
+	public String homeNew(Model model) {
+		ToDoService todoService = new ToDoService();
+		model.addAttribute("pageTitle", "Record Collection");
+		model.addAttribute("record", todoService.getToDo());
+		return "records";
 	}
 
 }
