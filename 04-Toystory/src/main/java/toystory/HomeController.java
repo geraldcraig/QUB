@@ -13,14 +13,9 @@ public class HomeController {
 		return "index";
 	}
 	
-	@GetMapping("/shrekmovie")
-	public String shrekMovie() {
+	@GetMapping("/shrek") 
+	public String homeNew() {
 		return "shrek";
-	}
-	
-	@GetMapping("/toystorymovie")
-	public String toystoryMovie() {
-		return "toystory";
 	}
 
 
