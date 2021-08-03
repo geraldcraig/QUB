@@ -23,7 +23,7 @@ public class ToDoController {
 		//ToDoService todoService = new ToDoService();
 		//todoService.getNumberOfTasks();
 	
-		model.addAttribute("tasks", todoService.getTasks());
+		model.addAttribute("tasks", todoService.getTasksToDo());
 
 		return "index";
 	}
@@ -31,7 +31,7 @@ public class ToDoController {
 	@GetMapping("/Page2")
 	public String page2Page(Model model) {
 
-		model.addAttribute("tasks", todoService.getTasks());
+		model.addAttribute("tasks", todoService.getTasksToDo());
 
 		return "page2";
 	}
@@ -39,7 +39,7 @@ public class ToDoController {
 	@GetMapping("/Page3")
 	public String page3Page(Model model) {
 
-		model.addAttribute("tasks", todoService.getTasks());
+		model.addAttribute("tasks", todoService.getTasksToDo());
 		
 		return "page3";
 	}
