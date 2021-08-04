@@ -1,4 +1,4 @@
-package uk.ac.qub.todo.domain;
+package uk.ac.qub.records;
 
 public class ToDo {
 	private String artist;
