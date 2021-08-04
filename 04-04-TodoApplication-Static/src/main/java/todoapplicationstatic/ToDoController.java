@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 //import jdk.internal.org.jline.utils.Log;
 
-
-// JavaDocs shouldn't be empty, they should have info on the method and class in them
-
 /**
  * 
  * @author cra19171869
@@ -22,11 +19,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping
 public class ToDoController {
 
-	@Autowired
-	private ToDoService todoService;
-
-	Logger log = LoggerFactory.getLogger(ToDoController.class);
-
 	/**
 	 * 
 	 * @param model
@@ -35,16 +27,15 @@ public class ToDoController {
 
 	@GetMapping("/")
 	public String homePage(Model model) {
-		//ToDoService todoService = new ToDoService();
+		ToDoService todoService = new ToDoService();
 		//todoService.getNumberOfTasks();
 	
-		model.addAttribute("tasks", todoService.getTasks());
+		model.addAttribute("tasks", todoService.getTaskToDo());
 
 		String name = "Gerald";
 		model.addAttribute("myName", name);
 		//added a + name to the logger so that it prints out the name of the person in the console
-		log.info("index page" + name);
-		log.debug("there is a possible path error page one is not able to load");
+		
 		return "index";
 
 	}
@@ -58,14 +49,13 @@ public class ToDoController {
 	@GetMapping("/Page2")
 	public String page2Page(Model model) {
 
-
-		model.addAttribute("tasks", todoService.getTasks());
+		ToDoService todoService = new ToDoService();
+		model.addAttribute("tasks", todoService.getTaskToDo());
 
 		String name = "Gerald";
 		model.addAttribute("myName", name);
 		//added a + name to the logger so that it prints out the name of the person in the console
-		log.info("page 2" + name);
-		log.debug("there is a possible path error page two is not able to load");
+	
 		return "page2";
 
 	}
@@ -79,15 +69,12 @@ public class ToDoController {
 	@GetMapping("/Page3")
 	public String page3Page(Model model) {
 
-
-		model.addAttribute("tasks", todoService.getTasks());
+		ToDoService todoService = new ToDoService();
+		model.addAttribute("tasks", todoService.getTaskToDo());
 
 		String name = "Gerald";
 		model.addAttribute("myName", name);
 		//added a + name to the logger so that it prints out the name of the person in the console
-		log.info("page 3" + name);
-		log.debug("there is a possible path error page three is not able to load" + name);
-
 		return "page3";
 
 	}

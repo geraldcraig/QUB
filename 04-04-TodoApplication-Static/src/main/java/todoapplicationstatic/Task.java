@@ -13,27 +13,20 @@ import javax.persistence.Table;
  * @author cra19171869
  *
  */
-@Entity
-@Table(name = "task")
 public class Task {
 
-	// initialising the variables
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
 	private String name;
 	private String description;
 	private String date;
-	private String status;
+	private boolean status;
 	private String user;
 	private String priority;
 
-	// Constructors
 	public Task() {
 
 	}
 
-	public Task(String name, String description, String date, String status, String user, String priority) {
+	public Task(String name, String description, String date, boolean status, String user, String priority) {
 
 		this.name = name;
 		this.description = description;
@@ -42,20 +35,7 @@ public class Task {
 		this.user = user;
 		this.priority = priority;
 	}
-
-	// End of Constructors
-
-	// Getters and Setters for all the variables
 	
-	public long getId() {
-		return this.id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	@Column(name = "name")
 	public String getName() {
 		return name;
 	}
@@ -64,7 +44,6 @@ public class Task {
 		this.name = name;
 	}
 
-	@Column(name = "description")
 	public String getDescription() {
 		return description;
 	}
@@ -73,7 +52,6 @@ public class Task {
 		this.description = description;
 	}
 
-	@Column(name = "date")
 	public String getDate() {
 		return date;
 	}
@@ -82,16 +60,14 @@ public class Task {
 		this.date = date;
 	}
 
-	@Column(name = "status")
-	public String getStatus() {
+	public boolean getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(boolean status) {
 		this.status = status;
 	}
 
-	@Column(name = "user")
 	public String getUser() {
 		return user;
 	}
@@ -100,7 +76,6 @@ public class Task {
 		this.user = user;
 	}
 
-	@Column(name = "priority")
 	public String getPriority() {
 		return priority;
 	}
@@ -113,7 +88,5 @@ public class Task {
 	public String toString() {
 		return "name" + name + "description" + description + "date" + date + "status" + status + "user" + user + "priority" + priority;
 	}
-
-	// End of the Getters and Setters
 
 }

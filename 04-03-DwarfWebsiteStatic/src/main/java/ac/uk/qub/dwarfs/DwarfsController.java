@@ -21,7 +21,7 @@ public class DwarfsController {
 	public String homePage(Model model) {
 		
 		model.addAttribute("pageTitle", "Dwarfs rule");
-		model.addAttribute("numberOfDwarfs", "10");
+		model.addAttribute("numberOfDwarfs", "Number of dwarfs 10");
 		
 		return "index";
 	}

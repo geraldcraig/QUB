@@ -5,10 +5,6 @@ import java.util.ArrayList;
 import org.springframework.stereotype.Service;
 
 
-
-// javadoc needed for the class
-// I would remove all but one empty line between code blocks.
-
 @Service
 public class TopTenService {
 	

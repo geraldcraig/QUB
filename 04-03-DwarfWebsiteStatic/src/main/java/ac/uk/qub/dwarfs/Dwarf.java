@@ -7,21 +7,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "dwarfs")
 public class Dwarf {
 	
-	//instance variables
 	private String name;
 	private String author;
 	private long id;
 	private int age;
 	private String image;
 	
-	// Constructors
 	public Dwarf() {		
 		}
-	
 	
 	public Dwarf(String name, String author, int age, String image) {
 		super();
@@ -37,11 +32,6 @@ public class Dwarf {
 		this.image = image;
 	}
 	
-	//End of Constructors
-	
-	// Getters and Setters for all the variables
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	public long getId() {
 		return id;
 	}
@@ -50,7 +40,6 @@ public class Dwarf {
 		this.id = id;
 	}
 	
-	@Column(name = "name")
 	public String getName() {
 			return name;
 	}
@@ -59,7 +48,6 @@ public class Dwarf {
 		this.name = name;
 	}
 	
-	@Column(name = "author")
 	public String getAuthor() {
 		return author;
 	}
@@ -67,7 +55,6 @@ public class Dwarf {
 		this.author = author;
 	}
 	
-	@Column(name = "age")
 	public int getAge() {
 		return age;
 	}
@@ -75,7 +62,6 @@ public class Dwarf {
 		this.age = age;
 	}
 	
-	@Column(name = "height")
 	public String getImage() {
 		return image;
 	}
@@ -88,5 +74,4 @@ public class Dwarf {
 		return "name" + name +  "author" + author + "age" + age + "image" + image;
 	}
 	
-
 }

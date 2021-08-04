@@ -19,7 +19,6 @@ public class DwarfService {
 		
 		this.disneyDwarfs = new ArrayList<Dwarf>();
 		
-		//add dwarfs here!
 		this.disneyDwarfs.add(new Dwarf("Sleepy", "Disney", "Sleepy.png"));
 		this.disneyDwarfs.add(new Dwarf("Happy", "Disney", "Happy.png"));
 		this.disneyDwarfs.add(new Dwarf("Bashful", "Disney", "Bashful.png"));
@@ -36,7 +35,6 @@ public class DwarfService {
 		
 		this.tolkienDwarfs = new ArrayList<Dwarf>();
 		
-		//add dwarfs here!
 		this.tolkienDwarfs.add(new Dwarf("Balin", "Tolkien", "Balin.png"));
 		this.tolkienDwarfs.add(new Dwarf("Bifur", "Tolkien", "Bifur.png"));
 		this.tolkienDwarfs.add(new Dwarf("Bofur", "Tolkien", "Bofur.png"));
