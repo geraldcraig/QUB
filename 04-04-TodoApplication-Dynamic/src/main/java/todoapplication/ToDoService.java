@@ -54,7 +54,6 @@ public class ToDoService {
 	
 	public Iterable<Task> getTasks() {
 
-
 		log.info("looping through the database  ");
 		// iterator to loop through data from tasks database
 		Iterable<Task> tasks = taskRepository.findAll();
@@ -72,6 +71,5 @@ public class ToDoService {
 		return tasks;
 
 	}
-
 
 }

@@ -17,7 +17,6 @@ import javax.persistence.Table;
 @Table(name = "task")
 public class Task {
 
-	// initialising the variables
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
@@ -28,7 +27,6 @@ public class Task {
 	private String user;
 	private String priority;
 
-	// Constructors
 	public Task() {
 
 	}
@@ -42,10 +40,6 @@ public class Task {
 		this.user = user;
 		this.priority = priority;
 	}
-
-	// End of Constructors
-
-	// Getters and Setters for all the variables
 	
 	public long getId() {
 		return this.id;
@@ -113,7 +107,5 @@ public class Task {
 	public String toString() {
 		return "name" + name + "description" + description + "date" + date + "status" + status + "user" + user + "priority" + priority;
 	}
-
-	// End of the Getters and Setters
 
 }
