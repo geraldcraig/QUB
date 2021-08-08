@@ -1,20 +1,18 @@
 package toystory;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 @RequestMapping("/shrekmovie")
 public class ShrekController {
 	
-	@GetMapping("")
+	@GetMapping("/")
 	public String home() {
-		return "The characters in the movie Shrek";
-		//return "shrek";
-		
+		return "shrek";	
 	}
-	
 	
 	@GetMapping("/shrek")
 	public String shrek() {
