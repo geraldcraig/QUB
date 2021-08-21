@@ -98,7 +98,8 @@ public class CityCrime {
 
 	@Override
 	public String toString() {
-		return "CityCrime [city=" + city + ", state=" + state + ", population=" + population + ", murder=" + murder
+		return "City  : " + city + 
+				" state=" + state + ", population=" + population + ", murder=" + murder
 				+ ", robbery=" + robbery + ", assault=" + assault + ", burglary=" + burglary + ", larceny=" + larceny
 				+ ", motorTheft=" + motorTheft + "]";
 	}

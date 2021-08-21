@@ -33,29 +33,81 @@ public class StartApp {
 	 */
 	public static void readCrimeData() {
 		
+		File file = new File("crimeUSA.csv");
+		FileReader fr;
 		try {
-			File file = new File("videogamesalesdata.csv");
-			FileReader fr = new FileReader(file);
+			fr = new FileReader(file);
 			BufferedReader br = new BufferedReader(fr);
-			String line = br.readLine();
-			line = br.readLine();
-			
+
+			String line = br.readLine();// read header and discard
+			line = br.readLine(); // read actual first line of data
+
 			while (line != null) {
+				// process current line
 				String[] parts = line.split(",");
+
+				try {
+					// build a player object
+					CityCrime cityCrime = constructCityCrime(parts);
+					// add it to the list
+					cityCrimes.add(cityCrime);
+				} catch (IllegalArgumentException illegal) {
+					System.out.println("Error creating object..on line..");
+					System.out.println(illegal.getMessage());
+					System.out.println("Skipping to next line");
+				}
+
+				line = br.readLine();// read next line (if exists)
 			}
-			
-			fr.close();
+
 			br.close();
-			
+			fr.close();
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 
+	}
+
+	private static CityCrime constructCityCrime(String[] parts) {
+		String city = parts[0];
+		
+		String stateName = parts[1];
+		State state = State.AL;
+		switch (stateName) {
+		case "ALABAMA":
+			state = State.AL;
+			break;
+		case "ALASKA":
+			state = State.AK;
+			break;
+		case "ARIZONA":
+			state = State.AR;
+			break;
+		default:
+			//System.out.println("Error in state enum");
+			//throw new IllegalArgumentException("Invalid state in file");
+		}
+		
+		int population = Integer.parseInt(parts[2]);
+		int murder = Integer.parseInt(parts[3]);
+		int robbery = Integer.parseInt(parts[4]);
+		int assualt = Integer.parseInt(parts[5]);
+		int burglary = Integer.parseInt(parts[6]);
+		int larceny = Integer.parseInt(parts[7]);
+		int motorTheft = Integer.parseInt(parts[8]);
+
+		CityCrime result = new CityCrime(city, state, population, murder, robbery, assualt, burglary, larceny, motorTheft);
+		System.out.println(result.toString());
+		return result;
 	}
 
 	/**
