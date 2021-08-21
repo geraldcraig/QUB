@@ -1,5 +1,10 @@
 package resit;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class StartApp {
@@ -27,6 +32,29 @@ public class StartApp {
 	 * Reads the crime data for each city from file
 	 */
 	public static void readCrimeData() {
+		
+		try {
+			File file = new File("videogamesalesdata.csv");
+			FileReader fr = new FileReader(file);
+			BufferedReader br = new BufferedReader(fr);
+			String line = br.readLine();
+			line = br.readLine();
+			
+			while (line != null) {
+				String[] parts = line.split(",");
+			}
+			
+			fr.close();
+			br.close();
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 
 	}
 
