@@ -19,7 +19,6 @@ public class CardatabaseApplication {
 	}
 	
 	@Bean
-	
 	CommandLineRunner runner() {
 		return args -> {
 			repository.save(new Car("Ford", "Mustang", "Red", "ADF-1121", 2017, 59000));
