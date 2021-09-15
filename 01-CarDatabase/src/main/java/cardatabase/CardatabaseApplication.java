@@ -17,6 +17,8 @@ import cardatabase.domain.OwnerRepository;
 public class CardatabaseApplication {
 	@Autowired
 	private OwnerRepository orepository;
+	
+	@Autowired
 	private CarRepository repository;
 
 	public static void main(String[] args) {
@@ -28,15 +30,12 @@ public class CardatabaseApplication {
 		return args -> {
 			Owner owner1 = new Owner("John" , "Johnson");
 			Owner owner2 = new Owner("Mary" , "Robinson");
-			//orepository.save(owner1);
-			//orepository.save(owner2);
-			
-			Car car = new Car("Ford", "Mustang", "Red", "ADF-1121", 2017, 59000, owner1);
-			repository.save(car);
-			car = new Car("Nissan", "Leaf", "White", "SSJ-3002", 2014, 29000, owner2);
-			repository.save(car);
-			car = new Car("Toyota", "Prius", "Silver", "KKO-0212", 2018, 39000, owner2);	
-			repository.save(car);
+			orepository.save(owner1);
+			orepository.save(owner2);
+		
+			repository.save(new Car("Ford", "Mustang", "Red", "ADF-1121", 2017, 59000, owner1));
+			repository.save(new Car("Nissan", "Leaf", "White", "SSJ-3002", 2014, 29000, owner2));	
+			repository.save(new Car("Toyota", "Prius", "Silver", "KKO-0212", 2018, 39000, owner2));
 		};
 	}
 }
