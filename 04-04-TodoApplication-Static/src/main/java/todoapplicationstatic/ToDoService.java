@@ -1,4 +1,4 @@
-package todoapplicationstatic;
+ package todoapplicationstatic;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -25,6 +25,7 @@ public class ToDoService {
 		this.taskToDo.add(new Task("3", "learn css", "25 Sep 19", false, "Gerald", "high"));
 		this.taskToDo.add(new Task("4", "learn javascript", "26 Sep 19", false, "Gerald", "high"));
 		this.taskToDo.add(new Task("5", "learn spring boot", "27 Sep 19", false, "Gerald", "high"));
+		this.taskToDo.add(new Task("7", "learn php", "20 Sep 2021", true, "Gerald", "high"));
 		
 		return this.taskToDo;
 		
