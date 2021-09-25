@@ -30,9 +30,11 @@ public class CardatabaseApplication {
 			Owner owner1 = new Owner("John" , "Johnson");
 			Owner owner2 = new Owner("Mary" , "Robinson");
 			Owner owner3 = new Owner("Gerald", "Craig");
+			Owner owner4 = new Owner("Alison", "Craig");
 			orepository.save(owner1);
 			orepository.save(owner2);
 			orepository.save(owner3);
+			orepository.save(owner4);
 		
 		
 			repository.save(new Car("Ford", "Mustang", "Red", "ADF-1121", 2017, 59000, owner1));
