@@ -16,6 +16,8 @@ public class AppController {
 
 	@Autowired
 	private ProductService service; 
+	@Autowired
+	private CustomerService customerservice;
 	
 	@RequestMapping("/")
 	public String viewHomePage(Model model) {
@@ -23,6 +25,29 @@ public class AppController {
 		model.addAttribute("listProducts", listProducts);
 		
 		return "index";
+	}
+	
+	@RequestMapping("/customer")
+	public String viewCustomerPage(Model model) {
+		List<Customer> listCustomers = customerservice.listAll();
+		model.addAttribute("listCustomers",listCustomers);
+		
+		return "customer";
+	}
+	
+	@RequestMapping("/new_customer")
+	public String showNewCustomerPage(Model model) {
+		Customer customer = new Customer();
+		model.addAttribute("customer", customer);
+		
+		return "new_customer";
+	}
+	
+	@RequestMapping(value = "/save/customer", method = RequestMethod.POST)
+	public String saveCustomer(@ModelAttribute("customer") Customer customer) {
+		customerservice.save(customer);
+		
+		return "redirect:/customer";
 	}
 	
 	@RequestMapping("/new")
