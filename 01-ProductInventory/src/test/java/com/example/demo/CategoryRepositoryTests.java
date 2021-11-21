@@ -2,6 +2,7 @@ package com.example.demo;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -15,8 +16,8 @@ import com.example.category.CategoryRepository;
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 @Rollback(false)
-public class CategoryRepositoryTests {
-	
+class CategoryRepositoryTests {
+
 	@Autowired
 	private CategoryRepository repo;
 	
@@ -26,7 +27,5 @@ public class CategoryRepositoryTests {
 		
 		assertThat(savedCategory.getId()).isGreaterThan(0);
 	}
-
-	
 
 }
