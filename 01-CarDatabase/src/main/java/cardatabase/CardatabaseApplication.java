@@ -1,6 +1,7 @@
 package cardatabase;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,6 +12,13 @@ import cardatabase.domain.Car;
 import cardatabase.domain.CarRepository;
 import cardatabase.domain.Owner;
 import cardatabase.domain.OwnerRepository;
+
+/**
+ * 
+ * Hands-On Full Stack Development with Spring Boot 2 and React
+ *
+ */
+
 
 @SpringBootApplication
 public class CardatabaseApplication {
