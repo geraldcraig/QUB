@@ -1,7 +1,7 @@
 /**
  * 
  */
-package qub.ac.uk.assignment;
+package diceTest;
 
 /**
  * The dice object calls a single dice of X sides. By default there is a base value NUM_OF_SIDES = 6 or alternatively x number of sides can be specified via the constructor. 
