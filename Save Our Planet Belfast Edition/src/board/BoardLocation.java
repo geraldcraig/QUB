@@ -7,6 +7,7 @@ public abstract class BoardLocation {
 //initialise variables
 protected int index;
 protected String areaName;
+protected Boolean areaOwned;
 
 /**
  * constructor for BoardLoaction
@@ -42,6 +43,21 @@ public String getAreaName() {
 	return areaName;
 }
 
+/**
+ * gets areaOwned and returns it
+ * @return
+ */
+public Boolean getAreaOwned() {
+	return areaOwned;
+}
+
+/**
+ * sets areaOwned
+ * @param areaOwned
+ */
+public void setAreaOwned(Boolean areaOwned) {
+	this.areaOwned = areaOwned;
+}
 
 	
 }
