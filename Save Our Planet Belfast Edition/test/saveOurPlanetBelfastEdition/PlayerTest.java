@@ -10,12 +10,14 @@ class PlayerTest {
 	//Test Data
 	String validName;
 	int validBoardPosition;
+	
 
 	@BeforeEach
 	void setUp() throws Exception {
 		
 		validName = "Lee";
 		validBoardPosition = 10;
+		
 		
 		
 	}
