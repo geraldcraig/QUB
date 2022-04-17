@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class DiceTest {
-	
+
 	int ValidNumOfSides;
 	int ValidValue;
 

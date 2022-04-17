@@ -24,7 +24,7 @@ public enum Marker {
 		return this.title;
 	}
 	
-	 private Marker(String title) {
+	private Marker(String title) {
 		this.title = title;
 	}
 }

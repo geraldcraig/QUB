@@ -5,22 +5,23 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class MarkerTest {
+class UserInputTest {
 	
-	String validTitle;
-	Marker testMarker;
+	// test data
+	String validName;;
+	
 
 	@BeforeEach
 	void setUp() throws Exception {
 		
-		validTitle = "Windmill";
-		testMarker = Marker.WINDMILL;
+		validName = "Lee";
 	}
+	
 
 	@Test
-	void testGetTitle() {
-		testMarker.getTitle();
-		assertEquals(validTitle, testMarker.getTitle());
+	void testGetPlayerName() {
+		Player testPlayer = new Player(validName, Marker.ELECTRIC_CAR);
+		assertEquals(validName, testPlayer.getPlayerName());
 	}
 
 }

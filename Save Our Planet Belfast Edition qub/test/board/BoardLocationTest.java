@@ -31,4 +31,14 @@ class BoardLocationTest {
 		fail("Not yet implemented");
 	}
 
+	@Test
+	void testIsAreaOwned() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testSetAreaOwned() {
+		fail("Not yet implemented");
+	}
+
 }

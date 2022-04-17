@@ -27,6 +27,7 @@ public class Player {
 		this.playerName = playerName;
 		this.marker = marker;
 		this.boardPosition = 0;
+		this.playerFunds = 300;
 
 	}
 
@@ -71,8 +72,12 @@ public class Player {
 	this.boardPosition = boardPosition;
 	}
 	
-	public void updatePlayerFunds(double playerFunds) {
-		this.playerFunds = playerFunds;
+	public void updatePlayerFundsAdd(double playerFunds) {
+		this.playerFunds += playerFunds;
+	}
+	
+	public void updatePlayerFundsSubtract(double playerFunds) {
+		this.playerFunds -= playerFunds;
 	}
 
 	/**
@@ -88,8 +93,8 @@ public class Player {
 		
 	}
 	
-	public void updateOwnedAreas(ArrayList<Integer> ownedAreas) {
-		this.ownedAreas = ownedAreas;
+	public void updateOwnedAreas(int areaIndex) {
+		this.ownedAreas.add(areaIndex);
 	}
 
 
