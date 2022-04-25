@@ -17,6 +17,11 @@ class BoardLocationTest {
 	}
 
 	@Test
+	void testGetAreaField() {
+		fail("Not yet implemented");
+	}
+
+	@Test
 	void testPlayerLandsOnLocation() {
 		fail("Not yet implemented");
 	}
@@ -28,16 +33,6 @@ class BoardLocationTest {
 
 	@Test
 	void testGetAreaName() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testIsAreaOwned() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testSetAreaOwned() {
 		fail("Not yet implemented");
 	}
 

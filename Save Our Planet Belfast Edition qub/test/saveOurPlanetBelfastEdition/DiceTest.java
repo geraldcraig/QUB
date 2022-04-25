@@ -13,7 +13,7 @@ class DiceTest {
 	@BeforeEach
 	void setUp() throws Exception {
 		
-		ValidNumOfSides = 6;
+		ValidNumOfSides = 4;
 		ValidValue = 1;
 	}
 
