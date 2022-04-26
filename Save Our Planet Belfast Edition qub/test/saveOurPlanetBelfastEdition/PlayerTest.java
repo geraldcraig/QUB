@@ -35,6 +35,7 @@ class PlayerTest {
 		@Test
 		void testPlayerConstructor() {
 			Player testPlayer = new Player(validName, Marker.WINDMILL);
+			assertNotNull(testPlayer);
 			assertEquals(validName, testPlayer.getPlayerName());
 			assertEquals(Marker.WINDMILL, testPlayer.getMarker());
 		}
