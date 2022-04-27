@@ -18,6 +18,7 @@ class MarkerTest {
 		validTitle2 = "Electric Car";
 		validTitle3 = "Microscope";
 		validTitle4 = "Solar Panel";
+		
 		testMarker1 = Marker.WINDMILL;
 		testMarker2 = Marker.ELECTRIC_CAR;
 		testMarker3 = Marker.MICROSCOPE;
@@ -26,14 +27,19 @@ class MarkerTest {
 
 	@Test
 	void testGetTitle() {
+		
 		testMarker1.getTitle();
-		testMarker2.getTitle();
-		testMarker3.getTitle();
-		testMarker4.getTitle();
 		assertEquals(validTitle1, testMarker1.getTitle());
+		
+		testMarker2.getTitle();
 		assertEquals(validTitle2, testMarker2.getTitle());
+		
+		testMarker3.getTitle();
 		assertEquals(validTitle3, testMarker3.getTitle());
+		
+		testMarker4.getTitle();
 		assertEquals(validTitle4, testMarker4.getTitle());
+		
 	}
 
 }
