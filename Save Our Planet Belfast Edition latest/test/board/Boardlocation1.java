@@ -5,30 +5,43 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import saveOurPlanetBelfastEdition.Marker;
+import saveOurPlanetBelfastEdition.Player;
+
 class Boardlocation1 {
+
+	Areas boardlocation = new Areas(5, "Water Works", "North Belfast", 100, 30, .10, 60, .03, 120, .12);
+	
+	Player testPlayer = new Player("Lee", Marker.SOLAR_PANEL);
 
 	@BeforeEach
 	void setUp() throws Exception {
 	}
-
+	
 	@Test
 	void testBoardLocation() {
-		fail("Not yet implemented");
+	
+		assertEquals(5, boardlocation.getIndex());
+		assertEquals("Water Works", boardlocation.getAreaName());
 	}
 
 	@Test
 	void testGetIndex() {
-		fail("Not yet implemented");
+
+		assertEquals(5, boardlocation.getIndex());
 	}
 
 	@Test
 	void testGetAreaName() {
-		fail("Not yet implemented");
+
+		assertEquals("Water Works", boardlocation.getAreaName());
 	}
 
 	@Test
 	void testPlayerLandsOnLocation() {
-		fail("Not yet implemented");
+		
+		assertEquals("Lee", testPlayer.getPlayerName());
+		assertEquals(Marker.SOLAR_PANEL, testPlayer.getMarker());
 	}
 
 }

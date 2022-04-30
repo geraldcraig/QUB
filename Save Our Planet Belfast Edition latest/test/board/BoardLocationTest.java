@@ -13,8 +13,6 @@ class BoardLocationTest {
 	void setUp() throws Exception {
 	}
 
-
-
 	@Test
 	void testGetIndex() {
 		

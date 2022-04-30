@@ -9,7 +9,7 @@ import board.Areas;
 
 class PlayerTest {
 	
-	//Test Data
+	    //Test Data
 		String validName;
 		int validBoardPosition;
 		Player player;

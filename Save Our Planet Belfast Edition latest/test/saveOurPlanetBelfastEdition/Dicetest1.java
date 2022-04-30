@@ -7,28 +7,38 @@ import org.junit.jupiter.api.Test;
 
 class Dicetest1 {
 
+	int ValidNumOfSides;
+	int ValidValue;
+
 	@BeforeEach
 	void setUp() throws Exception {
+		
+		ValidNumOfSides = 4;
+		ValidValue = 1;
 	}
 
+	// test default constructor happy path
 	@Test
 	void testDice() {
-		fail("Not yet implemented");
+		Dice dice = new Dice();
+		assertEquals(ValidNumOfSides, dice.getNumOfSides());
+		assertEquals(ValidValue, dice.getValue());
 	}
-
+	
+	// test constructor with args happy path
 	@Test
 	void testDiceInt() {
-		fail("Not yet implemented");
+		Dice dice = new Dice(ValidNumOfSides);
+		assertEquals(ValidNumOfSides, dice.getNumOfSides());
+		assertEquals(ValidValue, dice.getValue());
 	}
-
+	
+	// test value getter and setter happy path
 	@Test
-	void testSetValue() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetValue() {
-		fail("Not yet implemented");
+	void testGetSetValue() {
+		Dice dice = new Dice();
+		dice.setValue(ValidValue);
+		assertEquals(ValidValue, dice.getValue());
 	}
 
 	@Test
@@ -55,10 +65,11 @@ class Dicetest1 {
 	void testSumDice() {
 		fail("Not yet implemented");
 	}
-
+	
 	@Test
-	void testPrintDice() {
+	void testToString() {
 		fail("Not yet implemented");
 	}
+
 
 }
